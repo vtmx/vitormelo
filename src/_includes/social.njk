@@ -1,0 +1,14 @@
+<footer class="section" id="social">
+	<div class="container">	
+		<h2 class="title">{{ social.title }}</h2>
+
+		{% for item in social.social %}
+			<a class="social-link" rel="me" target="_blank" href="{{ item.link }}">{{ item.name }}</a>
+		{% endfor %}
+
+		<a class="to-top" href="#header">
+			<svg class="icon icon-angle-up"><use xlink:href="#icon-angle-up"></use></svg>
+			<span class="text-hide">Retornar ao topo</span>
+		</a>		
+	</div>
+</footer>

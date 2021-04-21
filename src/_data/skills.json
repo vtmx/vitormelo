@@ -1,0 +1,97 @@
+{
+  "title": "Competências",
+  "skills": [
+    {
+      "name": "Windows",
+      "description": "Sistema Operacional Proprietário."
+    },
+    {
+      "name": "Linux",
+      "description": "Sistema Operacional de Código Aberto."
+    },
+    {
+      "name": "Pacote Office",
+      "description": "Suite de aplicativos que incluem Word, Excel, PowerPoint, Acess, Outlook, Project, Vision entre outros."
+    },
+    {
+      "name": "Photoshop",
+      "description": "Software de edição de imagens."
+    },
+    {
+      "name": "Illustrator",
+      "description": "Software de editoração para livros e revistas."
+    },
+    {
+      "name": "Premiere",
+      "description": "Software de edição de vídeos."
+    },
+    {
+      "name": "Vegas",
+      "description": "Software de edição de vídeos."
+    },
+    {
+      "name": "Sublime Text",
+      "description": "Editor de código."
+    },
+    {
+      "name": "Atom",
+      "description": "Editor de código open source desenvolvido pelo GitHub."
+    },
+    {
+      "name": "UI",
+      "description": "Interface do usuário do inglês (User Interface), estudo para concepção de uma interface."
+    },
+    {
+      "name": "UX",
+      "description": "Experiência do usuário do inglês (User Expirience), estudo de como o usuário irá interagir com a interface."
+    },
+    {
+      "name": "HTML",
+      "description": "Linguagem de Marcação de Hipertexto do inglês (HyperText Markup Language), linguagem responsável de criar páginas de internet."
+    },
+    {
+      "name": "Markdown",
+      "description": "Linguagem simplificada para gerar códigos em HTML."
+    },
+    {
+      "name": "CSS",
+      "description": "Folha de Estilos em Cascata do inglês (Cascading Style Sheet), linguagem responsável por criar estilos de páginas para internet."
+    },
+    {
+      "name": "SASS",
+      "description": "Linguagem simplificada, que após compilada gera um arquivo CSS."
+    },
+    {
+      "name": "JavaScrpt",
+      "description": "Linguagem responsável por criar os comportamento do site a interação dos seus usuários."
+    },
+    {
+      "name": "jQuery",
+      "description": "Framework que visa simplificar a escrita do JavaScript."
+    },
+    {
+      "name": "Responsive Design",
+      "description": "Nova tendência que visa adaptar as páginas web, de forma que se adaptem a todos os tipos de dispositivos."
+    },
+    {
+      "name": "PHP",
+      "description": "Linguagem de servidor do inglês (Hypertext Preprocessor)."
+    },
+    {
+      "name": "SQL",
+      "description": "Linguagem de Consulta Estruturada do inglês (Structured Query Language), é a linguagem de pesquisa declarativa padrão para banco de dados relacional."
+    },
+    {
+      "name": "Wordpress",
+      "description": "Sistema de Gerenciamento de Contedúdo, que visa simplificar a inserção e edição de conteúdo em uma página."
+    },
+    {
+      "name": "WAI-ARIA",
+      "description": "Aplicações de Internet Ricas e Acessíveis do inglês (Accessible Rich Internet Applications)."
+    },
+    {
+      "name": "Github",
+      "description": "Serviço de Web Hosting Compartilhado para projetos que usam o controle de versionamento Git."
+    }
+  ]
+}

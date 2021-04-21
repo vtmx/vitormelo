@@ -1,0 +1,14 @@
+<section class="section" id="portfolio">
+	<div class="container">
+		<h2 class="title">{{ portfolio.title }}</h2>
+
+		<div class="projects">
+			 {% for project in portfolio.projects %}
+				<a class="project" href="{{ project.link }}" title="{{ project.title }}" data-sub-html="{{ project.title }}" target="_blank">
+					<img class="img loading" src="{{ project.thumb }}" alt="Projeto {{ project.title }}" width="300" height="200">
+					<h3 class="name">{{ project.title }}</h3>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>

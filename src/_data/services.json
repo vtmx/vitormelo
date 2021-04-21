@@ -1,0 +1,20 @@
+{
+  "title": "Serviços",
+  "services": [
+    {
+      "name": "Manutenção de Computadores",
+      "description": "Formatação e instalação de softwares, manutenção e limpeza de S.O.",
+      "icon": "cog"
+    },
+    {
+      "name": "Edição de Imagens",
+      "description": "Criação de banners, fotomontagens, e tudo relacionado ao tratamento de imagens.",
+      "icon": "paint-brush"
+    },
+    {
+      "name": "Desenvolvimento de Sites",
+      "description": "Desenvolvo, e faço manutenção em sites, priorizando a acessibilidade e simplicidade.",
+      "icon": "globe"
+    }
+  ]
+}

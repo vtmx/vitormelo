@@ -1,0 +1,13 @@
+<section class="section" id="certifications">
+	<div class="container">	
+		<h2 class="title">{{ certifications.title }}</h2>
+
+		{% for certification in certifications.certifications %}
+			<div class="certification">
+				<div class="name"><a href="{{ certification.file }}" target="_blank">{{ certification.name }}</a></div>
+				<div class="org"><a href="{{ certification.org_link }}" target="_blank">{{ certification.org_name }}</a></div>
+				<div class="time">{{ certification.year }}</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,17 @@
+<section class="section" id="services">
+	<div class="container">
+		<h2 class="title">{{ services.title }}</h2>
+
+		<div class="services">
+			{% for service in services.services %}
+				<div class="service">
+					<div class="circle">
+						<img class="icon" src="../img/icons/{{ service.icon }}.svg" alt="Ícone de {{ service.name }}" width="128" height="128" onerror="this.src='../img/icons/{{ service.icon }}.png'; this.onerror=null;">
+					</div>
+					<h3 class="name">{{ service.name }}</h3>
+					<p class="description">{{ service.description }}</p>
+				</div>
+			{% endfor %}
+		</div>		
+	</div>
+</section>

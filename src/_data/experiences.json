@@ -1,0 +1,40 @@
+{
+  "title": "Experiências",
+  "experiences": [
+    {
+      "name": "Técnico de Campo 3",
+      "org_name": "TIVIT",
+      "org_link": "https://tivit.com",
+      "date_start": "21/02/2018",
+      "date_end": "atualmente"
+    },
+    {
+      "name": "Técnico de Campo 2",
+      "org_name": "Hewlett Packard Enterprise",
+      "org_link": "http://www.hp-enterprisesolutions.com/",
+      "date_start": "01/11/2015",
+      "date_end": "21/02/2018"
+    },
+    {
+      "name": "Técnico de Campo 2",
+      "org_name": "Hewlett Pack (HP)",
+      "org_link": "http://www8.hp.com/br/pt/home.html",
+      "date_start": "04/04/2011",
+      "date_end": "31/10/2015"
+    },
+    {
+      "name": "Analista de Suporte Crítico",
+      "org_name": "Stefanini",
+      "org_link": "http://stefanini.com/br/",
+      "date_start": "08/07/2009",
+      "date_end": "01/04/2011"
+    },
+    {
+      "name": "Desenvolvimento de Sistemas",
+      "org_name": "BRQ IT Services",
+      "org_link": "http://www.brq.com/",
+      "date_start": "12/11/2007",
+      "date_end": "13/05/2008"
+    }
+  ]
+}
