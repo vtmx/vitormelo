@@ -7,10 +7,18 @@
   "author": "vtmx <vtmx22@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "dev": "clear & npx @11ty/eleventy --serve",
+    "build": "clear & npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "css-loader": "^5.2.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "sass-loader": "^11.0.1",
+    "simple-nunjucks-loader": "^3.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
