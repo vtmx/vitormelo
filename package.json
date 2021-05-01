@@ -8,14 +8,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "clear & npx @11ty/eleventy --serve",
-    "build": "clear & npx @11ty/eleventy"
+    "build": "clear & npx webpack & npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
+    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.6.0",
+    "nunjucks-loader": "^3.0.0",
+    "nunjucks-webpack-plugin": "^5.0.0",
+    "sass": "^1.32.12",
     "sass-loader": "^11.0.1",
-    "simple-nunjucks-loader": "^3.1.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",

@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('src/_data');
+  /* eleventyConfig.addPassthroughCopy('src/_data'); */
   /*   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/js'); */
 
@@ -7,6 +7,8 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: 'src',
       output: 'dist',
+      data: 'data',
+      includes: 'components',
     },
     passthroughFileCopy: true,
   };
