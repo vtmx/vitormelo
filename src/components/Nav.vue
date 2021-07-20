@@ -149,7 +149,7 @@ export default {
       display: flex;
       align-items: center;
       flex-grow: 1;
-      height: auto;
+      min-height: 100%;
       padding: 0;
 
       i {
