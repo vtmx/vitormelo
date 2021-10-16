@@ -1,24 +1,20 @@
 // https://themer.dev
-// https://material.io/resources/color
 // https://www.materialui.co/colors
-// https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637
+// https://www.carbondesignsystem.com/guidelines/color/overview
 // Accent: Light Blue 600
 
 :root {
   // color shades
-  --shade1: #000;
-  --shade2: #121212;
-  --shade3: #212121;
-  --shade4: #424242;
-  --shade7: #9e9e9e;
-  --shade5: #616161;
-  --shade6: #757575;
-  --shade8: #bdbdbd;
+  --shade1: #161616;
+  --shade2: #262626;
+  --shade3: #393939;
+  --shade4: #525252;
+  --shade5: #6f6f6f;
+  --shade6: #8d8d8d;
+  --shade7: #a8a8a8;
+  --shade8: #c6c6c6;
   --shade9: #e0e0e0;
-  --shade10: #eeeeee;
-  --shade11: #f5f5f5;
-  --shade12: #fafafa;
-  --shade13: #fff;
+  --shade10: #f4f4f4;
 
   // color accents
   --accent1: #006db3;
@@ -26,7 +22,7 @@
   --accent3: #63ccff;
 
   // body
-  --body-bg: var(--shade13);
+  --body-bg: white;
   --body-fg: var(--shade5);
 
   // scroll
@@ -53,21 +49,21 @@
   --section-title-fg: var(--shade4);
 
   // skill
-  --skill-bg: var(--shade11);
+  --skill-bg: var(--shade10);
   --skill-fg: var(--shade4);
 
   // button
-  --btn-bg: var(--shade11);
+  --btn-bg: var(--shade10);
   --btn-fg: var(--shade7);
   --btn-hover-bg: var(--accent2);
-  --btn-hover-fg: var(--shade13);
+  --btn-hover-fg: white;
   --btn-active-bg: var(--shade4);
-  --btn-active-fg: var(--shade13);
+  --btn-active-fg: white;
 
   // =dark
   .dark {
     // body
-    --body-bg: var(--shade2);
+    --body-bg: var(--shade1);
     --body-fg: var(--shade9);
 
     // scroll
@@ -78,14 +74,14 @@
 
     // selection
     --selection-bg: var(--accent3);
-    --selection-fg: var(--shade4);
+    --selection-fg: var(--shade1);
 
     // nav
-    --nav-bg: var(--shade3);
+    --nav-bg: var(--shade2);
 
     // menu
-    --logo-fg: var(--shade12);
-    --menu-fg: var(--shade12);
+    --logo-fg: var(--shade10);
+    --menu-fg: var(--shade8);
     --menu-fg-hover: var(--accent2);
     --menu-fg-active: var(--accent2);
     --menu-ripple-bg: var(--shade5);
@@ -95,18 +91,18 @@
 
     // skill
     --skill-bg: var(--shade3);
-    --skill-fg: var(--shade13);
+    --skill-fg: white;
 
     // button
     --btn-bg: #1e1e1e;
     --btn-fg: var(--shade10);
     --btn-hover-bg: var(--accent1);
-    --btn-hover-fg: var(--shade13);
+    --btn-hover-fg: white;
     --btn-active-bg: var(--shade4);
-    --btn-active-fg: var(--shade13);
+    --btn-active-fg: white;
 
     // section
-    --section-title-fg: var(--shade12);
+    --section-title-fg: var(--shade10);
 
     .avatar {
       opacity: 0.75;
@@ -116,31 +112,28 @@
   // =contrast
   .contrast {
     // colors
-    --shade13: white;
-    --shade12: black;
-    --shade11: black;
-    --shade10: black;
-    --shade9: black;
-    --shade8: black;
-    --shade7: black;
-    --shade6: black;
-    --shade5: black;
-    --shade4: black;
-    --shade3: black;
-    --shade2: black;
     --shade1: black;
+    --shade2: black;
+    --shade3: black;
+    --shade4: black;
+    --shade5: black;
+    --shade6: black;
+    --shade7: black;
+    --shade8: black;
+    --shade9: black;
+    --shade10: black;
 
     // primary
+    --accent1: blue;
     --accent2: blue;
     --accent3: blue;
-    --accent1: blue;
 
     // body
     --body-bg: white;
     --body-fg: black;
 
     // scroll
-    --scroll-bg: lightgray;
+    --scroll-bg: var(--shade9);
     --scroll-thumb-bg: black;
     --scroll-thumb-bg-hover: blue;
     --scroll-thumb-bg-active: purple;
@@ -171,7 +164,7 @@
     // button
     --btn-bg: black;
     --btn-fg: white;
-    --btn-hover-bg: var(--accent2);
+    --btn-hover-bg: var(--accent1);
     --btn-hover-fg: white;
     --btn-active-bg: purple;
     --btn-active-fg: white;
@@ -179,9 +172,9 @@
   // =dark.contrast
   .dark.contrast {
     // primary
+    --accent1: aqua;
     --accent2: aqua;
     --accent3: aqua;
-    --accent1: aqua;
 
     // body
     --body-bg: black;
@@ -203,7 +196,7 @@
     // menu
     --logo-fg: white;
     --menu-fg: white;
-    --menu-bg-hover: var(--accent2);
+    --menu-bg-hover: var(--accent1);
     --menu-fg-hover: black;
     --menu-bg-active: yellow;
     --menu-fg-active: black;
@@ -218,7 +211,7 @@
     // button
     --btn-bg: white;
     --btn-fg: black;
-    --btn-hover-bg: var(--accent2);
+    --btn-hover-bg: var(--accent1);
     --btn-hover-fg: black;
     --btn-active-bg: yellow;
     --btn-active-fg: black;
