@@ -1,111 +1,112 @@
+// https://themer.dev
 // https://material.io/resources/color
 // https://www.materialui.co/colors
 // https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637
-// Primary: Light Blue 600
+// Accent: Light Blue 600
 
 :root {
-  // colors
-  --white: #fff;
-  --grey050: #fafafa;
-  --grey100: #f5f5f5;
-  --grey200: #eeeeee;
-  --grey300: #e0e0e0;
-  --grey400: #bdbdbd;
-  --grey500: #9e9e9e;
-  --grey600: #757575;
-  --grey700: #616161;
-  --grey800: #424242;
-  --grey900: #212121;
-  --dark-grey: #121212;
-  --black: #000;
+  // color shades
+  --shade1: #000;
+  --shade2: #121212;
+  --shade3: #212121;
+  --shade4: #424242;
+  --shade7: #9e9e9e;
+  --shade5: #616161;
+  --shade6: #757575;
+  --shade8: #bdbdbd;
+  --shade9: #e0e0e0;
+  --shade10: #eeeeee;
+  --shade11: #f5f5f5;
+  --shade12: #fafafa;
+  --shade13: #fff;
 
-  // primary
-  --primary: #039be5;
-  --primary-light: #63ccff;
-  --primary-dark: #006db3;
+  // color accents
+  --accent1: #006db3;
+  --accent2: #039be5;
+  --accent3: #63ccff;
 
   // body
-  --body-bg: var(--white);
-  --body-fg: var(--grey700);
+  --body-bg: var(--shade13);
+  --body-fg: var(--shade5);
 
   // scroll
-  --scroll-bg: var(--grey200);
-  --scroll-thumb-bg: var(--grey400);
-  --scroll-thumb-bg-hover: var(--grey500);
-  --scroll-thumb-bg-active: var(--grey600);
+  --scroll-bg: var(--shade10);
+  --scroll-thumb-bg: var(--shade8);
+  --scroll-thumb-bg-hover: var(--shade7);
+  --scroll-thumb-bg-active: var(--shade6);
 
   // selection
-  --selection-bg: var(--primary-light);
-  --selection-fg: var(--grey800);
+  --selection-bg: var(--accent3);
+  --selection-fg: var(--shade4);
 
   // nav
-  --nav-bg: var(--grey200);
+  --nav-bg: var(--shade10);
 
   // menu
-  --logo-fg: var(--grey800);
-  --menu-fg: var(--grey600);
-  --menu-fg-hover: var(--primary);
-  --menu-fg-active: var(--primary);
-  --menu-ripple-bg: var(--grey300);
+  --logo-fg: var(--shade4);
+  --menu-fg: var(--shade6);
+  --menu-fg-hover: var(--accent2);
+  --menu-fg-active: var(--accent2);
+  --menu-ripple-bg: var(--shade9);
 
   // section
-  --section-title-fg: var(--grey800);
+  --section-title-fg: var(--shade4);
 
   // skill
-  --skill-bg: var(--grey100);
-  --skill-fg: var(--grey800);
+  --skill-bg: var(--shade11);
+  --skill-fg: var(--shade4);
 
   // button
-  --btn-bg: var(--grey100);
-  --btn-fg: var(--grey500);
-  --btn-hover-bg: var(--primary);
-  --btn-hover-fg: var(--white);
-  --btn-active-bg: var(--grey800);
-  --btn-active-fg: var(--white);
+  --btn-bg: var(--shade11);
+  --btn-fg: var(--shade7);
+  --btn-hover-bg: var(--accent2);
+  --btn-hover-fg: var(--shade13);
+  --btn-active-bg: var(--shade4);
+  --btn-active-fg: var(--shade13);
 
   // =dark
   .dark {
     // body
-    --body-bg: var(--dark-grey);
-    --body-fg: var(--grey300);
+    --body-bg: var(--shade2);
+    --body-fg: var(--shade9);
 
     // scroll
-    --scroll-bg: var(--grey900);
-    --scroll-thumb-bg: var(--grey800);
-    --scroll-thumb-bg-hover: var(--grey700);
-    --scroll-thumb-bg-active: var(--grey800);
+    --scroll-bg: var(--shade3);
+    --scroll-thumb-bg: var(--shade4);
+    --scroll-thumb-bg-hover: var(--shade5);
+    --scroll-thumb-bg-active: var(--shade4);
 
     // selection
-    --selection-bg: var(--primary-light);
-    --selection-fg: var(--grey800);
+    --selection-bg: var(--accent3);
+    --selection-fg: var(--shade4);
 
     // nav
-    --nav-bg: var(--grey900);
+    --nav-bg: var(--shade3);
 
     // menu
-    --logo-fg: var(--grey050);
-    --menu-fg: var(--grey050);
-    --menu-fg-hover: var(--primary);
-    --menu-fg-active: var(--primary);
-    --menu-ripple-bg: var(--grey700);
+    --logo-fg: var(--shade12);
+    --menu-fg: var(--shade12);
+    --menu-fg-hover: var(--accent2);
+    --menu-fg-active: var(--accent2);
+    --menu-ripple-bg: var(--shade5);
 
     // section
-    --section-title-fg: var(--grey200);
+    --section-title-fg: var(--shade10);
 
     // skill
-    --skill-bg: var(--grey900);
-    --skill-fg: var(--white);
+    --skill-bg: var(--shade3);
+    --skill-fg: var(--shade13);
 
     // button
     --btn-bg: #1e1e1e;
-    --btn-fg: var(--grey200);
-    --btn-hover-bg: var(--primary-dark);
-    --btn-hover-fg: var(--white);
-    --btn-active-bg: var(--grey800);
-    --btn-active-fg: var(--white);
+    --btn-fg: var(--shade10);
+    --btn-hover-bg: var(--accent1);
+    --btn-hover-fg: var(--shade13);
+    --btn-active-bg: var(--shade4);
+    --btn-active-fg: var(--shade13);
 
     // section
-    --section-title-fg: var(--grey050);
+    --section-title-fg: var(--shade12);
 
     .avatar {
       opacity: 0.75;
@@ -115,24 +116,24 @@
   // =contrast
   .contrast {
     // colors
-    --white: white;
-    --grey050: black;
-    --grey100: black;
-    --grey200: black;
-    --grey300: black;
-    --grey400: black;
-    --grey500: black;
-    --grey600: black;
-    --grey700: black;
-    --grey800: black;
-    --grey900: black;
-    --dark-grey: black;
-    --black: black;
+    --shade13: white;
+    --shade12: black;
+    --shade11: black;
+    --shade10: black;
+    --shade9: black;
+    --shade8: black;
+    --shade7: black;
+    --shade6: black;
+    --shade5: black;
+    --shade4: black;
+    --shade3: black;
+    --shade2: black;
+    --shade1: black;
 
     // primary
-    --primary: blue;
-    --primary-light: blue;
-    --primary-dark: blue;
+    --accent2: blue;
+    --accent3: blue;
+    --accent1: blue;
 
     // body
     --body-bg: white;
@@ -170,7 +171,7 @@
     // button
     --btn-bg: black;
     --btn-fg: white;
-    --btn-hover-bg: var(--primary);
+    --btn-hover-bg: var(--accent2);
     --btn-hover-fg: white;
     --btn-active-bg: purple;
     --btn-active-fg: white;
@@ -178,9 +179,9 @@
   // =dark.contrast
   .dark.contrast {
     // primary
-    --primary: aqua;
-    --primary-light: aqua;
-    --primary-dark: aqua;
+    --accent2: aqua;
+    --accent3: aqua;
+    --accent1: aqua;
 
     // body
     --body-bg: black;
@@ -202,7 +203,7 @@
     // menu
     --logo-fg: white;
     --menu-fg: white;
-    --menu-bg-hover: var(--primary);
+    --menu-bg-hover: var(--accent2);
     --menu-fg-hover: black;
     --menu-bg-active: yellow;
     --menu-fg-active: black;
@@ -217,7 +218,7 @@
     // button
     --btn-bg: white;
     --btn-fg: black;
-    --btn-hover-bg: var(--primary);
+    --btn-hover-bg: var(--accent2);
     --btn-hover-fg: black;
     --btn-active-bg: yellow;
     --btn-active-fg: black;
