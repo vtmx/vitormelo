@@ -1,7 +1,12 @@
 # Vitor Melo
 
 ```sh
+# install packages
 yarn
-npm dev
-npm build
+
+# run in dev mode
+yarn dev
+
+# build project
+yarn build
 ```
