@@ -1,0 +1,58 @@
+[
+  {
+    "id": 7,
+    "name": "Agile Scrum Foundation",
+    "file": "certificacoes/exin-agile-scrum-foundation.pdf",
+    "org_name": "EXIN",
+    "year": 2019
+  },
+  {
+    "id": 6,
+    "name": "Cloud Computing",
+    "file": "certificacoes/exin-cloud-computing-foundation.pdf",
+    "org_name": "EXIN",
+    "year": 2016
+  },
+  {
+    "id": 5,
+    "name": "Green IT Citizen",
+    "file": "certificacoes/exin-green-it-citizen.pdf",
+    "org_name": "EXIN",
+    "year": 2015
+  },
+  {
+    "id": 4,
+    "name": "ISO/IEC 27002",
+    "file": "certificacoes/exin-iso-27002.pdf",
+    "org_name": "EXIN",
+    "year": 2015
+  },
+  {
+    "id": 1,
+    "name": "ISO/IEC 20000",
+    "file": "certificacoes/exin-iso-20000.pdf",
+    "org_name": "EXIN",
+    "year": 2014
+  },
+  {
+    "id": 3,
+    "name": "MCTS 70-480",
+    "file": "certificacoes/mcp-070-480.pdf",
+    "org_name": "Microsoft",
+    "year": 2013
+  },
+  {
+    "id": 2,
+    "name": "MCTS 70-680",
+    "file": "certificacoes/mcp-070-680.pdf",
+    "org_name": "Microsoft",
+    "year": 2013
+  },
+  {
+    "id": 1,
+    "name": "Itil V3",
+    "file": "certificacoes/exin-itil-v3.pdf",
+    "org_name": "EXIN",
+    "year": 2012
+  }
+]

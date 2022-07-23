@@ -1,0 +1,21 @@
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+
+  &:hover {
+    background: var(--btn-hover-bg);
+    color: var(--btn-hover-fg);
+  }
+
+  &:active {
+    background: var(--btn-active-bg);
+    color: var(--btn-active-fg);
+    transition: none;
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "slug": "about",
+    "name": "Sobre",
+    "link": "#about",
+    "icon": "fas fa-user"
+  },
+  {
+    "id": 2,
+    "slug": "experiences",
+    "name": "Experiências",
+    "link": "#experiences",
+    "icon": "fas fa-clipboard-list"
+  },
+  {
+    "id": 3,
+    "slug": "education",
+    "name": "Formação",
+    "link": "#education",
+    "icon": "fas fa-graduation-cap"
+  },
+  {
+    "id": 4,
+    "slug": "certifications",
+    "name": "Certificações",
+    "link": "#certifications",
+    "icon": "fas fa-certificate"
+  },
+  {
+    "id": 5,
+    "slug": "services",
+    "name": "Serviços",
+    "link": "#services",
+    "icon": "fas fa-tools"
+  },
+  {
+    "id": 6,
+    "slug": "skills",
+    "name": "Habilidades",
+    "link": "#skills",
+    "icon": "fas fa-tag"
+  },
+  {
+    "id": 7,
+    "slug": "contact",
+    "name": "Contato",
+    "link": "#contact",
+    "icon": "fas fa-paper-plane"
+  }
+]
