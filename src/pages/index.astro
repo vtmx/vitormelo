@@ -1,4 +1,7 @@
 ---
+// style
+import "../../public/style/global.scss";
+
 // components
 import Nav from "../components/Nav.vue";
 import Main from "../components/Main.astro";
@@ -12,13 +15,12 @@ import Controls from "../components/Controls.astro";
   <meta name="theme-color" content="#121212">
   <title>Vitor Melo</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.png">
-  <link rel="stylesheet" href="/style/global.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
   <div id="app">
-    <Nav:load />
+    <Nav client:load />
     <Main />
     <Controls />
   </div>
