@@ -1,10 +1,17 @@
 [
   {
-    "id": 7,
+    "id": 8,
     "name": "Field Technical Spt Rep III",
     "org_name": "DXC",
-    "date_start": "21/05/2021",
+    "date_start": "01/01/2022",
     "date_end": "atualmente"
+  },
+  {
+    "id": 7,
+    "name": "Field Technical Spt Rep II",
+    "org_name": "DXC",
+    "date_start": "21/05/2021",
+    "date_end": "31/12/2021"
   },
   {
     "id": 6,
