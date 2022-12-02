@@ -42,8 +42,8 @@
   --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
 
   // skill
-  --skill-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
-  --skill-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
+  --skill-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 95%));
+  --skill-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 50%));
 
   // button
   --btn-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 95%));
@@ -91,12 +91,12 @@
     --btn-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 15%));
     --btn-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
     --btn-hover-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --btn-hover-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
+    --btn-hover-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
     --btn-active-bg: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%));
-    --btn-active-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
+    --btn-active-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
 
     // section
-    --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
+    --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
 
     .avatar {
       opacity: 0.75;
