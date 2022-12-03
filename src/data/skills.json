@@ -1,25 +1,25 @@
-[
-  "Windows",
-  "Linux",
-  "Office",
-  "Photoshop",
-  "Illustrator",
-  "VS Code",
-  "VIM",
-  "UI",
-  "UX",
-  "Bash",
-  "HTML",
-  "Markdown",
-  "CSS",
-  "SASS",
-  "JavaScrpt",
-  "jQuery",
-  "Vue",
-  "Responsive Design",
-  "PHP",
-  "SQL",
-  "Wordpress",
-  "WAI-ARIA",
-  "Github"
-]
+{
+  "sos": [{ "name": "Windows" }, { "name": "Linux" }],
+  "softwares": [
+    { "name": "Office" },
+    { "name": "Photoshop" },
+    { "name": "Illustrator" },
+    { "name": "VS Code" },
+    { "name": "NeoVim" }
+  ],
+  "languages": [
+    { "name": "Bash" },
+    { "name": "HTML" },
+    { "name": "Markdown" },
+    { "name": "CSS" },
+    { "name": "SASS" },
+    { "name": "JavaScrpt" },
+    { "name": "Json" },
+    { "name": "jQuery" },
+    { "name": "Vue" },
+    { "name": "PHP" },
+    { "name": "SQL" }
+  ],
+  "systems": [{ "name": "Wordpress" }, { "name": "Github" }, { "name": "Service Now" }],
+  "accessibles": [{ "name": "UI" }, { "name": "UX" }, { "name": "Responsive Design" }, { "name": "WAI-ARIA" }]
+}

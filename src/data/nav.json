@@ -4,28 +4,28 @@
     "slug": "about",
     "name": "Sobre",
     "link": "#about",
-    "icon": "fas fa-user"
+    "icon": "fa-regular fa-user"
   },
   {
     "id": 2,
     "slug": "experiences",
     "name": "Experiências",
     "link": "#experiences",
-    "icon": "fas fa-clipboard-list"
+    "icon": "fa-solid fa-code"
   },
   {
     "id": 3,
     "slug": "education",
     "name": "Formação",
     "link": "#education",
-    "icon": "fas fa-graduation-cap"
+    "icon": "fa-solid fa-graduation-cap"
   },
   {
     "id": 4,
     "slug": "certifications",
     "name": "Certificações",
     "link": "#certifications",
-    "icon": "fas fa-certificate"
+    "icon": "fa-solid fa-award"
   },
   {
     "id": 5,
@@ -39,6 +39,6 @@
     "slug": "skills",
     "name": "Habilidades",
     "link": "#skills",
-    "icon": "fas fa-tag"
+    "icon": "fa-solid fa-keyboard"
   }
 ]

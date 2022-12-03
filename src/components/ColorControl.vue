@@ -1,7 +1,11 @@
 <template>
   <div class="color-control">
-    <a href="#" class="btn-icon" title="Alterar tema" @click.prevent="toggleColorSheme"><i class="fas fa-moon"></i></a>
-    <a href="#" class="btn-icon" title="Alterar contraste" @click.prevent="toggleHighCoontrast"><i class="fas fa-adjust"></i></a>
+    <a href="#" class="btn-icon btn-color-scheme" title="Alterar tema" @click.prevent="toggleColorSheme">
+      <i class="fa fa-moon"></i>
+    </a>
+    <a href="#" class="btn-icon btn-contrast-control" title="Alterar contraste" @click.prevent="toggleHighCoontrast">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </a>
   </div>
 </template>
 
@@ -13,41 +17,50 @@ export default {
     return {};
   },
   mounted() {
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.querySelector('body').classList.add('dark');
+    let iconBtnColorScheme = document.querySelector('.btn-color-scheme i');
+
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.body.classList.add('dark');
+      iconBtnColorScheme.classList.add('fa-sun');
+      iconBtnColorScheme.classList.remove('fa-moon');
       localStorage.theme = 'dark';
     } else {
-      document.querySelector('body').classList.remove('dark');
+      document.body.classList.remove('dark');
+      iconBtnColorScheme.classList.add('fa-sun');
+      iconBtnColorScheme.classList.remove('fa-moon');
       localStorage.theme = 'light';
     }
 
     if (localStorage.contrast === 'true' || !('theme' in localStorage)) {
-      document.querySelector('body').classList.add('contrast');
+      document.body.classList.add('contrast');
       localStorage.contrast = 'true';
     } else {
-      document.querySelector('body').classList.remove('contrast');
+      document.body.classList.remove('contrast');
       localStorage.contrast = 'false';
     }
   },
   methods: {
     toggleColorSheme() {
+      let iconBtnColorScheme = document.querySelector('.btn-color-scheme i');
+
       if (localStorage.theme === 'dark') {
-        document.querySelector('body').classList.remove('dark');
+        document.body.classList.remove('dark');
+        iconBtnColorScheme.classList.add('fa-moon');
+        iconBtnColorScheme.classList.remove('fa-sun');
         localStorage.theme = 'light';
       } else {
-        document.querySelector('body').classList.add('dark');
+        document.body.classList.add('dark');
+        iconBtnColorScheme.classList.add('fa-sun');
+        iconBtnColorScheme.classList.remove('fa-moon');
         localStorage.theme = 'dark';
       }
     },
-    toggleHighCoontrast(e) {
+    toggleHighCoontrast() {
       if (localStorage.contrast === 'true') {
-        document.querySelector('body').classList.remove('contrast');
+        document.body.classList.remove('contrast');
         localStorage.contrast = 'false';
       } else {
-        document.querySelector('body').classList.add('contrast');
+        document.body.classList.add('contrast');
         localStorage.contrast = 'true';
       }
     },

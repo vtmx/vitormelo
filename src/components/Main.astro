@@ -1,10 +1,10 @@
 ---
 import About from '../components/About.vue';
-import Experiences from "../components/Experiences.vue";
-import Education from "../components/Education.vue";
-import Certifications from "../components/Certifications.vue";
-import Services from "../components/Services.vue";
-import Skills from "../components/Skills.vue";
+import Experiences from '../components/Experiences.vue';
+import Education from '../components/Education.vue';
+import Certifications from '../components/Certifications.vue';
+import Services from '../components/Services.vue';
+import Skills from '../components/Skills.vue';
 ---
 
 <main>
@@ -19,3 +19,81 @@ import Skills from "../components/Skills.vue";
 <script>
   document.querySelector('main section').classList.add('active');
 </script>
+
+<style is:global lang="scss">
+  main {
+    grid-area: main;
+    position: relative;
+    max-width: 720px;
+
+    section {
+      display: none;
+      margin-bottom: var(--gap3);
+      opacity: 0;
+
+      > div > div {
+        margin-bottom: var(--gap3);
+      }
+
+      > div > div:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+      animation: fade-in 1s;
+    }
+
+    h2 {
+      padding: var(--gap3) 0;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--section-title-fg);
+    }
+
+    .name {
+      font: 600 1.1rem/1.8 Inter, sans serif;
+      color: var(--section-title-fg);
+    }
+
+    .org,
+    .time {
+      line-height: 1.8;
+    }
+
+    .org {
+      color: var(--org-fg);
+    }
+
+    .time {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 960px) {
+    main {
+      min-width: 100%;
+      padding: 16px 16px 72px 16px;
+
+      section {
+        display: none;
+        position: relative;
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+      }
+
+      section.active {
+        display: block;
+      }
+
+      h2 {
+        margin-bottom: var(--gap3);
+        padding: 0;
+      }
+    }
+  }
+</style>

@@ -70,6 +70,34 @@ export default {
 </script>
 
 <style lang="scss">
+nav {
+  grid-area: menu;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: auto;
+  height: 100vh;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  padding: var(--gap3);
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--logo-fg);
+}
+
+.social {
+  display: flex;
+  gap: 8px;
+  margin: 16px;
+  line-height: 0;
+}
+
 .menu {
   a {
     overflow: hidden;
@@ -98,9 +126,10 @@ export default {
       display: flex;
       transition: all 0.2s;
     }
-    &:hover .name,
-    &:active .name,
-    &.active .name {
+
+    &:hover,
+    &:active,
+    &.active {
       transform: translate3d(4px, 0, 0);
     }
 
@@ -129,6 +158,23 @@ export default {
 }
 
 @media (max-width: 960px) {
+  .logo,
+  .social {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    height: 56px;
+    background: var(--nav-bg);
+    z-index: 1;
+  }
+
   .menu a[data-page='services'],
   .menu a[data-page='education'] {
     display: none;
@@ -136,18 +182,18 @@ export default {
 
   .menu {
     display: flex;
-    flex-direction: row-reverse;
     flex-grow: 1;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+    place-items: stretch;
+    min-width: 100%;
 
     a {
       display: flex;
-      align-items: center;
+      place-items: center;
       flex-grow: 1;
       min-height: 100%;
       padding: 0;
+      transition: none;
 
       i {
         display: block;
@@ -160,9 +206,9 @@ export default {
         font-size: 13px;
       }
 
-      &:hover .name,
-      &:active .name,
-      &.active .name {
+      &:hover,
+      &:active,
+      &.active {
         transform: none;
       }
 

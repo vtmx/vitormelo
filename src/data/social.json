@@ -3,13 +3,13 @@
     "id": 1,
     "name": "E-mail",
     "link": "mailto:vtmx22@gmail.com",
-    "icon": "fas fa-envelope"
+    "icon": "fa-regular fa-envelope"
   },
   {
     "id": 2,
     "name": "Currículo",
     "link": "/doc/cv-vitor-melo.pdf",
-    "icon": "fas fa-file-alt"
+    "icon": "fa-regular fa-file-alt"
   },
   {
     "id": 3,

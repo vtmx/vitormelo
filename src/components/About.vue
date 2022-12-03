@@ -1,5 +1,5 @@
 <template>
-  <section id="about">
+  <section id="about" class="active">
     <h2 class="title">{{ about.title }}</h2>
     <img class="avatar" :src="'/' + about.image" :alt="about.alt" />
     <p>{{ about.text }}</p>

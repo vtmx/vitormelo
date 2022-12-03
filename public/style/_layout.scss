@@ -8,98 +8,6 @@
   gap: var(--gap3);
 }
 
-nav {
-  grid-area: menu;
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  width: auto;
-  height: 100vh;
-}
-
-.logo a {
-  display: flex;
-  align-items: center;
-  padding: var(--gap3);
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: uppercase;
-  line-height: 1;
-  color: var(--logo-fg);
-}
-
-.social {
-  display: flex;
-  gap: 8px;
-  margin: 16px;
-  line-height: 0;
-}
-
-main {
-  grid-area: main;
-  position: relative;
-  max-width: 720px;
-
-  section {
-    display: none;
-    margin-bottom: var(--gap3);
-    opacity: 0;
-  }
-
-  section.active {
-    display: block;
-    opacity: 1;
-    animation: fade-in 1s;
-  }
-
-  h2 {
-    padding: var(--gap3) 0;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1;
-    color: var(--section-title-fg);
-  }
-
-  .education,
-  .certification,
-  .experience {
-    margin-bottom: var(--gap3);
-  }
-
-  section .education:last-child,
-  section .certification:last-child,
-  section .experience:last-child {
-    margin-bottom: 0;
-  }
-
-  .education,
-  .certification,
-  .experience,
-  .service {
-    .name {
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--section-title-fg);
-    }
-  }
-
-  .service {
-    .description {
-      color: #999;
-    }
-  }
-
-  .org {
-    color: var(--org-fg);
-  }
-
-  .time {
-    font-size: 0.9rem;
-  }
-
-}
-
 #controls {
   grid-area: controls;
   position: sticky;
@@ -116,48 +24,9 @@ main {
 }
 
 @media (max-width: 960px) {
-  .logo,
-  .social {
-    display: none;
-  }
-
   #app {
     display: flex;
     gap: 0;
-  }
-
-  nav {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    min-width: 100%;
-    height: 56px;
-    background: var(--nav-bg);
-    z-index: 1;
-  }
-
-  main {
-    min-width: 100%;
-    padding: 16px 16px 72px 16px;
-
-    section {
-      display: none;
-      position: relative;
-      width: auto;
-      height: auto;
-      margin-bottom: 0;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    h2 {
-      margin-bottom: 16px;
-      padding: 0;
-    }
   }
 
   #controls {

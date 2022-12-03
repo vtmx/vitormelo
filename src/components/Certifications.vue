@@ -1,16 +1,14 @@
 <template>
   <section id="certifications">
-    <div class="container">
-      <h2 class="title">{{ title }}</h2>
-      <div class="certifications">
-        <template v-for="certification in certifications" :key="certification.id">
-          <div class="certification">
-            <div class="name">{{ certification.name }}</div>
-            <div class="org">{{ certification.org_name }}</div>
-            <div class="time">{{ certification.year }}</div>
-          </div>
-        </template>
-      </div>
+    <h2 class="title">{{ title }}</h2>
+    <div class="certifications">
+      <template v-for="certification in certifications" :key="certification.id">
+        <div class="certification">
+          <div class="name">{{ certification.name }}</div>
+          <div class="org">{{ certification.org_name }}</div>
+          <div class="time">{{ certification.year }}</div>
+        </div>
+      </template>
     </div>
   </section>
 </template>

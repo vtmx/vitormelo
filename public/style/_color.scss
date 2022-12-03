@@ -44,9 +44,12 @@
   --skill-bg: hsl(var(--shade-h) var(--shade-s) 95%);
   --skill-fg: hsl(var(--shade-h) var(--shade-s) 50%);
 
+    // org
+  --org-fg: hsl(var(--shade-h) var(--shade-s) 60%);
+
   // button
-  --btn-bg: hsl(var(--shade-h) var(--shade-s) 95%);
-  --btn-fg: hsl(var(--shade-h) var(--shade-s) 70%);
+  --btn-bg: hsl(var(--shade-h) var(--shade-s) 94%);
+  --btn-fg: hsl(var(--shade-h) var(--shade-s) 60%);
   --btn-hover-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
   --btn-hover-fg: hsl(var(--shade-h) var(--shade-s) 100%);
   --btn-active-bg: hsl(var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%));
@@ -101,7 +104,9 @@
     --section-title-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
     .avatar {
-      opacity: 0.75;
+      // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+      filter: brightness(.8) contrast(1.2);
+      // opacity: 0.75;
     }
   }
 
