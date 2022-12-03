@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .skill {
   display: inline-block;
   margin: 0 8px 8px 0;

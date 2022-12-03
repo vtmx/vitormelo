@@ -7,7 +7,6 @@
   // shade
   --shade-h: 0;
   --shade-s: 0%;
-  --shade-l: 0%;
 
   // accent
   --accent-h: 200;
@@ -15,88 +14,91 @@
   --accent-l: 45%;
 
   // body
-  --body-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
-  --body-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 50%));
+  --body-bg: hsl(var(--shade-h) var(--shade-s) 100%);
+  --body-fg: hsl(var(--shade-h) var(--shade-s) 50%);
 
   // scroll
-  --scroll-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
-  --scroll-thumb-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 70%));
-  --scroll-thumb-bg-hover: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 60%));
-  --scroll-thumb-bg-active: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 50%));
+  --scroll-bg: hsl(var(--shade-h) var(--shade-s) 90%);
+  --scroll-thumb-bg: hsl(var(--shade-h) var(--shade-s) 70%);
+  --scroll-thumb-bg-hover: hsl(var(--shade-h) var(--shade-s) 60%);
+  --scroll-thumb-bg-active: hsl(var(--shade-h) var(--shade-s) 50%);
 
   // selection
   --selection-bg: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 40%));
-  --selection-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
+  --selection-fg: hsl(var(--shade-h) var(--shade-s) 40%);
 
   // nav
-  --nav-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
+  --nav-bg: hsl(var(--shade-h) var(--shade-s) 100%);
 
   // menu
-  --logo-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
-  --menu-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 60%));
-  --menu-fg-hover: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --menu-fg-active: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --menu-ripple-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+  --logo-fg: hsl(var(--shade-h) var(--shade-s) 40%);
+  --menu-fg: hsl(var(--shade-h) var(--shade-s) 60%);
+  --menu-fg-hover: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+  --menu-fg-active: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+  --menu-ripple-bg: hsl(var(--shade-h) var(--shade-s) 90%);
 
   // section
-  --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
+  --section-title-fg: hsl(var(--shade-h) var(--shade-s) 40%);
 
   // skill
-  --skill-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 95%));
-  --skill-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 50%));
+  --skill-bg: hsl(var(--shade-h) var(--shade-s) 95%);
+  --skill-fg: hsl(var(--shade-h) var(--shade-s) 50%);
 
   // button
-  --btn-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 95%));
-  --btn-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 70%));
-  --btn-hover-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --btn-hover-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
-  --btn-active-bg: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 5%));
-  --btn-active-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 100%));
+  --btn-bg: hsl(var(--shade-h) var(--shade-s) 95%);
+  --btn-fg: hsl(var(--shade-h) var(--shade-s) 70%);
+  --btn-hover-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+  --btn-hover-fg: hsl(var(--shade-h) var(--shade-s) 100%);
+  --btn-active-bg: hsl(var(--accent-h) var(--accent-s) calc(var(--accent-l) - 5%));
+  --btn-active-fg: hsl(var(--shade-h) var(--shade-s) 100%);
 
   // =dark
 
   .dark {
     // body
-    --body-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 10%));
-    --body-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --body-bg: hsl(var(--shade-h) var(--shade-s) 10%);
+    --body-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
     // scroll
-    --scroll-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 15%));
-    --scroll-thumb-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 25%));
-    --scroll-thumb-bg-hover: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 30%));
-    --scroll-thumb-bg-active: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 25%));
+    --scroll-bg: hsl(var(--shade-h) var(--shade-s) 15%);
+    --scroll-thumb-bg: hsl(var(--shade-h) var(--shade-s) 25%);
+    --scroll-thumb-bg-hover: hsl(var(--shade-h) var(--shade-s) 30%);
+    --scroll-thumb-bg-active: hsl(var(--shade-h) var(--shade-s) 25%);
 
     // selection
-    --selection-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --selection-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 10%));
+    --selection-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+    --selection-fg: hsl(var(--shade-h) var(--shade-s) 10%);
 
     // nav
-    --nav-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 20%)); 
+    --nav-bg: hsl(var(--shade-h) var(--shade-s) 20%); 
 
     // menu
-    --logo-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
-    --menu-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
-    --menu-fg-hover: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --menu-fg-active: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --menu-ripple-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 40%));
+    --logo-fg: hsl(var(--shade-h) var(--shade-s) 90%);
+    --menu-fg: hsl(var(--shade-h) var(--shade-s) 90%);
+    --menu-fg-hover: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+    --menu-fg-active: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+    --menu-ripple-bg: hsl(var(--shade-h) var(--shade-s) 40%);
 
     // section
-    --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --section-title-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
     // skill
-    --skill-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 15%));
-    --skill-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --skill-bg: hsl(var(--shade-h) var(--shade-s) 15%);
+    --skill-fg: hsl(var(--shade-h) var(--shade-s) 90%);
+
+    // org
+    --org-fg: hsl(var(--shade-h) var(--shade-s) 50%);
 
     // button
-    --btn-bg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 15%));
-    --btn-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
-    --btn-hover-bg: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-    --btn-hover-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --btn-bg: hsl(var(--shade-h) var(--shade-s) 15%);
+    --btn-fg: hsl(var(--shade-h) var(--shade-s) 90%);
+    --btn-hover-bg: hsl(var(--accent-h) var(--accent-s) var(--accent-l));
+    --btn-hover-fg: hsl(var(--shade-h) var(--shade-s) 90%);
     --btn-active-bg: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%));
-    --btn-active-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --btn-active-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
     // section
-    --section-title-fg: hsl(var(--shade-h), var(--shade-s), calc(var(--shade-l) + 90%));
+    --section-title-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
     .avatar {
       opacity: 0.75;
@@ -111,7 +113,7 @@
     --body-fg: black;
 
     // scroll
-    --scroll-bg: hsl(0, 0%, 90%);
+    --scroll-bg: hsl(0 0% 90%);
     --scroll-thumb-bg: black;
     --scroll-thumb-bg-hover: blue;
     --scroll-thumb-bg-active: purple;
@@ -156,7 +158,7 @@
     --body-fg: white;
 
     // scroll
-    --scroll-bg: hsl(0, 0%, 10%);
+    --scroll-bg: hsl(0 0% 10%);
     --scroll-thumb-bg: white;
     --scroll-thumb-bg-hover: aqua;
     --scroll-thumb-bg-active: yellow;

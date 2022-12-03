@@ -1,14 +1,8 @@
 <template>
   <div class="page-control">
-    <a href="#" id="prev-page" class="btn-icon" title="Página anterior" @click.prevent="prevPage"
-      ><i class="fas fa-chevron-left"></i
-    ></a>
-    <a href="#" id="next-page" class="btn-icon" title="Próxima página" @click.prevent="nextPage"
-      ><i class="fas fa-chevron-right"></i
-    ></a>
-    <a href="#" id="to-top" class="btn-icon" title="Ir para topo" @click.prevent="toTop"
-      ><i class="fas fa-chevron-up"></i
-    ></a>
+    <a href="#" id="prev-page" class="btn-icon" title="Página anterior" @click.prevent="prevPage"><i class="fas fa-chevron-left"></i></a>
+    <a href="#" id="next-page" class="btn-icon" title="Próxima página" @click.prevent="nextPage"><i class="fas fa-chevron-right"></i></a>
+    <a href="#" id="to-top" class="btn-icon" title="Ir para topo" @click.prevent="toTop"><i class="fas fa-chevron-up"></i></a>
   </div>
 </template>
 
@@ -34,7 +28,6 @@ export default {
     this.keyRight = ['KeyD', 'KeyS', 'KeyL', 'KeyJ', 'Space', 'ArrowRight', 'ArrowDown'];
 
     window.addEventListener('keydown', (e) => {
-      e.preventDefault();
       if (this.keyRight.indexOf(e.code) !== -1) {
         this.nextPage();
       } else if (this.keyLeft.indexOf(e.code) !== -1) {

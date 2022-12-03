@@ -1,9 +1,7 @@
 <template>
   <div class="color-control">
     <a href="#" class="btn-icon" title="Alterar tema" @click.prevent="toggleColorSheme"><i class="fas fa-moon"></i></a>
-    <a href="#" class="btn-icon" title="Alterar contraste" @click.prevent="toggleHighCoontrast"
-      ><i class="fas fa-adjust"></i
-    ></a>
+    <a href="#" class="btn-icon" title="Alterar contraste" @click.prevent="toggleHighCoontrast"><i class="fas fa-adjust"></i></a>
   </div>
 </template>
 

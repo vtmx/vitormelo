@@ -6,17 +6,13 @@
     <div class="menu">
       <h2 class="invisible">Menu</h2>
       <template v-for="link in nav" :key="link.id">
-        <a :data-page="link.slug" :href="link.link" @click.prevent="toggleActive($event)"
-          ><i :class="link.icon"></i> <span class="name">{{ link.name }}</span></a
-        >
+        <a :data-page="link.slug" :href="link.link" @click.prevent="toggleActive($event)"><i :class="link.icon"></i> <span class="name">{{ link.name }}</span></a>
       </template>
     </div>
 
     <div class="social">
       <template v-for="social in social" :key="social.name">
-        <a class="btn-icon" :href="social.link" :title="social.name" target="_blank"
-          ><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a
-        >
+        <a class="btn-icon" :href="social.link" :title="social.name" target="_blank"><i :class="social.icon"></i> <span class="invisible">{{ social.name }}</span></a>
       </template>
     </div>
   </nav>
@@ -94,6 +90,7 @@ export default {
     &:active {
       background: var(--menu-bg-active);
       color: var(--menu-fg-active);
+      transform: translate3d(0, 1px, 0);
       transition: none;
     }
 

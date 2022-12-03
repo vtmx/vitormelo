@@ -30,15 +30,14 @@ export default {
 </script>
 
 <style scoped>
-.services {
-  display: flex;
-  gap: 32px;
+.service {
+  margin-bottom: 32px;
 }
 
 .icon {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 96px;
 }
 </style>
