@@ -103,7 +103,8 @@
     // section
     --section-title-fg: hsl(var(--shade-h) var(--shade-s) 90%);
 
-    .avatar {
+    // img
+    img {
       // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
       filter: brightness(.8) contrast(1.2);
       // opacity: 0.75;

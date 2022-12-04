@@ -1,17 +1,3 @@
-:root {
-  --transition: all 0.2s;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
 .animation {
   animation-fill-mode: forwards;
 }
@@ -22,21 +8,6 @@ html {
 
 .fade-out {
   animation: fade-out;
-}
-
-.slide-up {
-  animation: slide-up;
-}
-
-.slide-down {
-  animation: slide-down;
-}
-.slide-left {
-  animation: slide-left;
-}
-
-.slide-right {
-  animation: slide-right;
 }
 
 @keyframes ripple {
@@ -63,31 +34,3 @@ html {
     opacity: 0;
   }
 }
-
-@keyframes slide-up {
-}
-
-@keyframes slide-down {
-}
-
-@keyframes slide-left {
-  from {
-    margin-left: 100%;
-    width: 300%;
-    opacity: 0;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes slide-right {
-}
-
-// @media (prefers-reduced-motion: reduce) {
-//   .animation {
-//     animation: none !important;
-//   }
-// }

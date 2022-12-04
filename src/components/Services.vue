@@ -29,9 +29,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .service {
   margin-bottom: 32px;
+}
+
+.dark {
+  .description {
+    color: var(--org-fg);
+  }
 }
 
 .icon {
