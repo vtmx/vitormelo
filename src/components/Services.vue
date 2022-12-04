@@ -34,12 +34,6 @@ export default {
   margin-bottom: 32px;
 }
 
-.dark {
-  .description {
-    color: var(--org-fg);
-  }
-}
-
 .icon {
   display: flex;
   align-items: center;

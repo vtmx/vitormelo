@@ -45,6 +45,7 @@ h4,
 h5,
 h6 {
   font-family: Poppins, sans-serif;
+  color: var(--title-fg);
 }
 
 h1,
@@ -85,6 +86,12 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.dark {
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

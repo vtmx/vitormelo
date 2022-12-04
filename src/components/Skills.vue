@@ -72,8 +72,15 @@ export default {
     display: inline-block;
     margin: 0 8px 8px 0;
     padding: 4px 12px;
-    background: var(--skill-bg);
-    color: var(--skill-fg);
+    background: var(--shade50);
+    color: var(--shade500);
+  }
+}
+
+.dark {
+  .skills .skill {
+    background: var(--shade800);
+    color: var(--shade100);
   }
 }
 
