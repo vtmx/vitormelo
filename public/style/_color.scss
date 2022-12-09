@@ -5,98 +5,98 @@
 // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
 
 :root {
-  // shade
-  --shade50: #f2f2f2;
-  --shade100: #e6e6e6;
-  --shade200: #cccccc;
-  --shade300: #b3b3b3;
-  --shade400: #999999;
-  --shade500: #808080;
-  --shade600: #666666;
-  --shade700: #4d4d4d;
-  --shade800: #333333;
-  --shade900: #1a1a1a;
+  // neutral
+  --neutral5: #f2f2f2;
+  --neutral10: #e6e6e6;
+  --neutral20: #cccccc;
+  --neutral30: #b3b3b3;
+  --neutral40: #999999;
+  --neutral50: #808080;
+  --neutral60: #666666;
+  --neutral70: #4d4d4d;
+  --neutral80: #333333;
+  --neutral90: #1a1a1a;
 
-  // accent
-  --accent50: #e5f6ff;
-  --accent100: #c7ecff;
-  --accent200: #8fdaff;
-  --accent300: #57c7ff;
-  --accent400: #1fb4ff;
-  --accent500: #0099e6;
-  --accent600: #007ab8;
-  --accent700: #005c8a;
-  --accent800: #003d5c;
-  --accent900: #001f2e;
+  // primary
+  --primary5: #e5f6ff;
+  --primary10: #c7ecff;
+  --primary20: #8fdaff;
+  --primary30: #57c7ff;
+  --primary40: #1fb4ff;
+  --primary50: #0099e6;
+  --primary60: #007ab8;
+  --primary70: #005c8a;
+  --primary80: #003d5c;
+  --primary90: #001f2e;
 
   // body
   --body-bg: white;
-  --body-fg: var(--shade500);
+  --body-fg: var(--neutral50);
 
   // scroll
-  --scroll-bg: var(--shade100);
-  --scroll-thumb-bg: var(--shade300);
-  --scroll-thumb-bg-hover: var(--shade400);
-  --scroll-thumb-bg-active: var(--shade500);
+  --scroll-bg: var(--neutral10);
+  --scroll-thumb-bg: var(--neutral30);
+  --scroll-thumb-bg-hover: var(--neutral40);
+  --scroll-thumb-bg-active: var(--neutral50);
 
   // selection
-  --selection-bg: var(--accent200);
-  --selection-fg: var(--shade600);
+  --selection-bg: var(--primary20);
+  --selection-fg: var(--neutral60);
 
   // nav
   --nav-bg: white;
-  --logo-fg: var(--shade600);
-  --menu-fg: var(--shade400);
-  --menu-fg-hover: var(--accent500);
-  --menu-fg-active: var(--accent500);
-  --menu-ripple-bg: var(--shade100);
+  --logo-fg: var(--neutral60);
+  --menu-fg: var(--neutral40);
+  --menu-fg-hover: var(--primary50);
+  --menu-fg-active: var(--primary50);
+  --menu-ripple-bg: var(--neutral10);
 
   // button
-  --btn-bg: var(--shade50);
-  --btn-fg: var(--shade500);
-  --btn-hover-bg: var(--accent500);
+  --btn-bg: var(--neutral5);
+  --btn-fg: var(--neutral50);
+  --btn-hover-bg: var(--primary50);
   --btn-hover-fg: white;
-  --btn-active-bg: var(--accent400);
+  --btn-active-bg: var(--primary40);
   --btn-active-fg: white;
 
   // main
-  --title-fg: var(--shade600);
-  --subtitle-fg: var(--shade400);
+  --title-fg: var(--neutral60);
+  --subtitle-fg: var(--neutral40);
 
   .dark {
     // body
-    --body-bg: var(--shade900);
-    --body-fg: var(--shade100);
+    --body-bg: var(--neutral90);
+    --body-fg: var(--neutral10);
 
     // scroll
-    --scroll-bg: var(--shade800);
-    --scroll-thumb-bg: var(--shade700);
-    --scroll-thumb-bg-hover: var(--shade600);
-    --scroll-thumb-bg-active: var(--shade700);
+    --scroll-bg: var(--neutral80);
+    --scroll-thumb-bg: var(--neutral70);
+    --scroll-thumb-bg-hover: var(--neutral60);
+    --scroll-thumb-bg-active: var(--neutral70);
 
     // selection
-    --selection-bg: var(--accent500);
-    --selection-fg: var(--shade900);
+    --selection-bg: var(--primary50);
+    --selection-fg: var(--neutral90);
 
     // nav
-    --nav-bg: var(--shade900); 
-    --logo-fg: var(--shade100);
-    --menu-fg: var(--shade200);
-    --menu-fg-hover: var(--accent500);
-    --menu-fg-active: var(--accent500);
-    --menu-ripple-bg: var(--shade400);
+    --nav-bg: var(--neutral90); 
+    --logo-fg: var(--neutral10);
+    --menu-fg: var(--neutral20);
+    --menu-fg-hover: var(--primary50);
+    --menu-fg-active: var(--primary50);
+    --menu-ripple-bg: var(--neutral40);
 
     // button
-    --btn-bg: var(--shade800);
-    --btn-fg: var(--shade100);
-    --btn-hover-bg: var(--accent600);
+    --btn-bg: var(--neutral80);
+    --btn-fg: var(--neutral10);
+    --btn-hover-bg: var(--primary60);
     --btn-hover-fg: white;
-    --btn-active-bg: var(--accent500);
+    --btn-active-bg: var(--primary50);
     --btn-active-fg: white;
 
     // main
-    --title-fg: var(--shade100);
-    --subtitle-fg: var(--shade500);
+    --title-fg: var(--neutral10);
+    --subtitle-fg: var(--neutral50);
   }
 
   .contrast {
@@ -109,7 +109,7 @@
     --body-fg: black;
 
     // scroll
-    --scroll-bg: var(--shade200);
+    --scroll-bg: var(--neutral20);
     --scroll-thumb-bg: black;
     --scroll-thumb-bg-hover: blue;
     --scroll-thumb-bg-active: purple;
@@ -149,7 +149,7 @@
     --body-fg: white;
 
     // scroll
-    --scroll-bg: var(--shade800);
+    --scroll-bg: var(--neutral80);
     --scroll-thumb-bg: white;
     --scroll-thumb-bg-hover: aqua;
     --scroll-thumb-bg-active: yellow;
