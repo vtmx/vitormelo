@@ -72,15 +72,15 @@ export default {
     display: inline-block;
     margin: 0 8px 8px 0;
     padding: 4px 12px;
-    background: var(--neutral5);
-    color: var(--neutral50);
+    background: var(--gray5);
+    color: var(--gray50);
   }
 }
 
 .dark {
   .skill {
-    background: var(--neutral80);
-    color: var(--neutral10);
+    background: var(--gray80);
+    color: var(--gray10);
   }
 }
 

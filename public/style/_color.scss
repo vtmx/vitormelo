@@ -5,17 +5,17 @@
 // https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
 
 :root {
-  // neutral
-  --neutral5: #f2f2f2;
-  --neutral10: #e6e6e6;
-  --neutral20: #cccccc;
-  --neutral30: #b3b3b3;
-  --neutral40: #999999;
-  --neutral50: #808080;
-  --neutral60: #666666;
-  --neutral70: #4d4d4d;
-  --neutral80: #333333;
-  --neutral90: #1a1a1a;
+  // gray
+  --gray5: #f2f2f2;
+  --gray10: #e6e6e6;
+  --gray20: #cccccc;
+  --gray30: #b3b3b3;
+  --gray40: #999999;
+  --gray50: #808080;
+  --gray60: #666666;
+  --gray70: #4d4d4d;
+  --gray80: #333333;
+  --gray90: #1a1a1a;
 
   // primary
   --primary5: #e5f6ff;
@@ -31,72 +31,72 @@
 
   // body
   --body-bg: white;
-  --body-fg: var(--neutral50);
+  --body-fg: var(--gray50);
 
   // scroll
-  --scroll-bg: var(--neutral10);
-  --scroll-thumb-bg: var(--neutral30);
-  --scroll-thumb-bg-hover: var(--neutral40);
-  --scroll-thumb-bg-active: var(--neutral50);
+  --scroll-bg: var(--gray10);
+  --scroll-thumb-bg: var(--gray30);
+  --scroll-thumb-bg-hover: var(--gray40);
+  --scroll-thumb-bg-active: var(--gray50);
 
   // selection
   --selection-bg: var(--primary20);
-  --selection-fg: var(--neutral60);
+  --selection-fg: var(--gray60);
 
   // nav
   --nav-bg: white;
-  --logo-fg: var(--neutral60);
-  --menu-fg: var(--neutral40);
+  --logo-fg: var(--gray60);
+  --menu-fg: var(--gray40);
   --menu-fg-hover: var(--primary50);
   --menu-fg-active: var(--primary50);
-  --menu-ripple-bg: var(--neutral10);
+  --menu-ripple-bg: var(--gray10);
 
   // button
-  --btn-bg: var(--neutral5);
-  --btn-fg: var(--neutral50);
+  --btn-bg: var(--gray5);
+  --btn-fg: var(--gray50);
   --btn-hover-bg: var(--primary50);
   --btn-hover-fg: white;
   --btn-active-bg: var(--primary40);
   --btn-active-fg: white;
 
   // main
-  --title-fg: var(--neutral60);
-  --subtitle-fg: var(--neutral40);
+  --title-fg: var(--gray60);
+  --subtitle-fg: var(--gray40);
 
   .dark {
     // body
-    --body-bg: var(--neutral90);
-    --body-fg: var(--neutral10);
+    --body-bg: var(--gray90);
+    --body-fg: var(--gray10);
 
     // scroll
-    --scroll-bg: var(--neutral80);
-    --scroll-thumb-bg: var(--neutral70);
-    --scroll-thumb-bg-hover: var(--neutral60);
-    --scroll-thumb-bg-active: var(--neutral70);
+    --scroll-bg: var(--gray80);
+    --scroll-thumb-bg: var(--gray70);
+    --scroll-thumb-bg-hover: var(--gray60);
+    --scroll-thumb-bg-active: var(--gray70);
 
     // selection
     --selection-bg: var(--primary50);
-    --selection-fg: var(--neutral90);
+    --selection-fg: var(--gray90);
 
     // nav
-    --nav-bg: var(--neutral90); 
-    --logo-fg: var(--neutral10);
-    --menu-fg: var(--neutral20);
+    --nav-bg: var(--gray90);
+    --logo-fg: var(--gray10);
+    --menu-fg: var(--gray20);
     --menu-fg-hover: var(--primary50);
     --menu-fg-active: var(--primary50);
-    --menu-ripple-bg: var(--neutral40);
+    --menu-ripple-bg: var(--gray40);
 
     // button
-    --btn-bg: var(--neutral80);
-    --btn-fg: var(--neutral10);
+    --btn-bg: var(--gray80);
+    --btn-fg: var(--gray10);
     --btn-hover-bg: var(--primary60);
     --btn-hover-fg: white;
     --btn-active-bg: var(--primary50);
     --btn-active-fg: white;
 
     // main
-    --title-fg: var(--neutral10);
-    --subtitle-fg: var(--neutral50);
+    --title-fg: var(--gray10);
+    --subtitle-fg: var(--gray50);
   }
 
   .contrast {
@@ -109,7 +109,7 @@
     --body-fg: black;
 
     // scroll
-    --scroll-bg: var(--neutral20);
+    --scroll-bg: var(--gray20);
     --scroll-thumb-bg: black;
     --scroll-thumb-bg-hover: blue;
     --scroll-thumb-bg-active: purple;
@@ -149,7 +149,7 @@
     --body-fg: white;
 
     // scroll
-    --scroll-bg: var(--neutral80);
+    --scroll-bg: var(--gray80);
     --scroll-thumb-bg: white;
     --scroll-thumb-bg-hover: aqua;
     --scroll-thumb-bg-active: yellow;
@@ -180,6 +180,5 @@
     // main
     --title-fg: white;
     --subtitle-fg: white;
-
   }
 }
