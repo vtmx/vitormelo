@@ -1,5 +1,12 @@
 [
   {
+    "id": 8,
+    "name": "Microsoft Azure 900",
+    "file": "certificacoes/az-900.pdf",
+    "org_name": "Microsoft",
+    "year": 2023
+  },
+  {
     "id": 7,
     "name": "Agile Scrum Foundation",
     "file": "certificacoes/exin-agile-scrum-foundation.pdf",
