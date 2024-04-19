@@ -1,0 +1,77 @@
+/* about */
+
+#about {
+  .avatar {
+    display: block;
+  }
+
+  .description {
+    padding-block: 16px;
+  }
+}
+
+/* services */
+
+#services{
+  .service {
+    margin-bottom: 32px;
+  }
+}
+
+/* skills  */
+
+#skills {
+  .name {
+    margin-bottom: 8px;
+  }
+
+  .skills {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .skill {
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 4px 12px;
+    background: var(--neutral95);
+    color: var(--neutral40);
+  }
+}
+
+.dark {
+  #skills {
+    .skill {
+      background: var(--neutral25);
+      color: var(--neutral90);
+    }
+  }
+}
+
+.contrast {
+  .skill {
+    background: transparent;
+    color: black;
+  }
+}
+
+.dark.contrast {
+  .skill {
+    background: transparent;
+    color: white;
+  }
+}
+
+@media (max-width: 960px) {
+  .skill {
+    padding: 8px 18px;
+  }
+}
+

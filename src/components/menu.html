@@ -1,0 +1,14 @@
+---
+import 'data/menu.md';
+---
+
+<ul id="menu">
+  ${for(menu)}
+    <li>
+      <a href="${menu.link}">
+        <i class="${menu.icon}"></i>
+        <span class="name">${menu.name}</span>
+      </a>
+    </li>
+  ${endfor}
+</ul>

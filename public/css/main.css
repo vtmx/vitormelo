@@ -1,0 +1,11 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap';
+@import 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css';
+@import 'variables.css';
+@import 'base.css';
+@import 'layout.css';
+@import 'color.css';
+@import 'nav.css';
+@import 'controls.css';
+@import 'components.css';
+@import 'pages.css';
+@import 'animation.css';

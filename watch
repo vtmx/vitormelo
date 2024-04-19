@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Loop watch
+while true; do
+  inotifywait -m -e modify src/** | \
+    ./build;
+done

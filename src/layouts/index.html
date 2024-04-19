@@ -1,0 +1,40 @@
+<!-- https://pandoc.org/MANUAL.html#templates -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#121212">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitor Melo</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/page-control.js"></script>
+  <script defer src="js/color-control.js"></script>
+</head>
+<body>
+  <div id="app">
+    <nav aria-label="Main">
+      <include src="includes/logo.html">
+      <include src="includes/menu.html">
+      <include src="includes/social.html">
+    </nav>
+
+    <main>
+      <include src="includes/about.html">
+      <include src="includes/experiences.html">
+      <include src="includes/education.html">
+      <include src="includes/certifications.html">
+      <include src="includes/services.html">
+      <include src="includes/skills.html">
+    </main>
+
+    <nav aria-label="Controls">
+      <include src="includes/page-control.html">
+      <include src="includes/color-control.html">
+    </nav>
+  </div><!-- #app -->
+</body>
+</html>

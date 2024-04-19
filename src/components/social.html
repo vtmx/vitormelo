@@ -1,0 +1,10 @@
+---
+import 'data/social.md';
+---
+
+<div id="social">
+  ${for(social)}
+    <a class="btn-icon" href="${social.link}" title="${social.name}" target="_blank"><i class="${social.icon}"></i> <span class="invisible">${social.name}</span></a>
+  ${endfor}
+</div>
+

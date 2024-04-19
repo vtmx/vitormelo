@@ -1,0 +1,216 @@
+/* https://themer.dev */
+/* https://www.materialui.co/colors */
+/* https://www.carbondesignsystem.com/guidelines/color/overview */
+/* https://tailwind.simeongriggs.dev/brand */
+/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
+
+:root {
+  /* neutral*/
+  --neutralc: .01;
+  --neutralh: 250;
+  --neutral5: oklch(5% var(--neutralc) var(--neutralh));
+  --neutral10: oklch(10% var(--neutralc) var(--neutralh));
+  --neutral15: oklch(15% var(--neutralc) var(--neutralh));
+  --neutral20: oklch(20% var(--neutralc) var(--neutralh));
+  --neutral25: oklch(25% var(--neutralc) var(--neutralh));
+  --neutral30: oklch(30% var(--neutralc) var(--neutralh));
+  --neutral35: oklch(35% var(--neutralc) var(--neutralh));
+  --neutral40: oklch(40% var(--neutralc) var(--neutralh));
+  --neutral45: oklch(45% var(--neutralc) var(--neutralh));
+  --neutral50: oklch(50% var(--neutralc) var(--neutralh));
+  --neutral55: oklch(55% var(--neutralc) var(--neutralh));
+  --neutral60: oklch(60% var(--neutralc) var(--neutralh));
+  --neutral65: oklch(65% var(--neutralc) var(--neutralh));
+  --neutral70: oklch(70% var(--neutralc) var(--neutralh));
+  --neutral75: oklch(75% var(--neutralc) var(--neutralh));
+  --neutral85: oklch(85% var(--neutralc) var(--neutralh));
+  --neutral90: oklch(90% var(--neutralc) var(--neutralh));
+  --neutral95: oklch(95% var(--neutralc) var(--neutralh));
+
+  /* primary */
+  --primaryc: 0.15;
+  --primaryh: 240;
+  --primary10: oklch(10% var(--primaryc) var(--primaryh));
+  --primary15: oklch(15% var(--primaryc) var(--primaryh));
+  --primary20: oklch(20% var(--primaryc) var(--primaryh));
+  --primary25: oklch(25% var(--primaryc) var(--primaryh));
+  --primary30: oklch(30% var(--primaryc) var(--primaryh));
+  --primary35: oklch(75% var(--primaryc) var(--primaryh));
+  --primary40: oklch(40% var(--primaryc) var(--primaryh));
+  --primary45: oklch(45% var(--primaryc) var(--primaryh));
+  --primary50: oklch(50% var(--primaryc) var(--primaryh));
+  --primary55: oklch(55% var(--primaryc) var(--primaryh));
+  --primary60: oklch(60% var(--primaryc) var(--primaryh));
+  --primary65: oklch(65% var(--primaryc) var(--primaryh));
+  --primary70: oklch(70% var(--primaryc) var(--primaryh));
+  --primary75: oklch(75% var(--primaryc) var(--primaryh));
+  --primary80: oklch(80% var(--primaryc) var(--primaryh));
+  --primary85: oklch(85% var(--primaryc) var(--primaryh));
+  --primary90: oklch(90% var(--primaryc) var(--primaryh));
+  --primary95: oklch(95% var(--primaryc) var(--primaryh));
+
+  /* body */
+  --body-bg: white;
+  --body-fg: var(--neutral60);
+
+  /* scroll */
+  --scroll-bg: var(--neutral90);
+  --scroll-thumb-bg: var(--neutral75);
+  --scroll-thumb-bg-hover: var(--neutral70);
+  --scroll-thumb-bg-active: var(--neutral60);
+
+  /* selection */
+  --selection-bg: var(--primary85);
+  --selection-fg: var(--neutral50);
+
+  /* focus */
+  --focus-outline: var(--primary70);
+
+  /* nav */
+  --nav-bg: white;
+  --logo-fg: var(--neutral50);
+  --menu-fg: var(--neutral70);
+  --menu-fg-hover: var(--primary70);
+  --menu-fg-active: var(--primary70);
+  --menu-ripple-bg: var(--neutral90);
+
+  /* button */
+  --btn-bg: var(--neutral95);
+  --btn-fg: var(--neutral60);
+  --btn-hover-bg: var(--primary65);
+  --btn-hover-fg: white;
+  --btn-active-bg: var(--primary70);
+  --btn-active-fg: white;
+
+  /* main */
+  --title-fg: var(--neutral50);
+  --subtitle-fg: var(--neutral70);
+
+  .dark {
+    /* body */
+    --body-bg: var(--neutral20);
+    --body-fg: var(--neutral90);
+
+    /* scroll */
+    --scroll-bg: var(--neutral30);
+    --scroll-thumb-bg: var(--neutral40);
+    --scroll-thumb-bg-hover: var(--neutral50);
+    --scroll-thumb-bg-active: var(--neutral40);
+
+    /* selection */
+    --selection-bg: var(--primary70);
+    --selection-fg: var(--neutral20);
+
+    /* focus */
+    --focus-outline: var(--primary70);
+
+    /* nav */
+    --nav-bg: var(--neutral20);
+    --logo-fg: var(--neutral90);
+    --menu-fg: var(--neutral85);
+    --menu-fg-hover: var(--primary70);
+    --menu-fg-active: var(--primary70);
+    --menu-ripple-bg: var(--neutral70);
+
+    /* button */
+    --btn-bg: var(--neutral25);
+    --btn-fg: var(--neutral90);
+    --btn-hover-bg: var(--primary55);
+    --btn-hover-fg: white;
+    --btn-active-bg: var(--primary60);
+    --btn-active-fg: white;
+
+    /* main */
+    --title-fg: var(--neutral90);
+    --subtitle-fg: var(--neutral90);
+  }
+
+  .contrast {
+    a {
+      transition: none;
+    }
+
+    /* body */
+    --body-bg: white;
+    --body-fg: black;
+
+    /* scroll */
+    --scroll-bg: var(--neutral85);
+    --scroll-thumb-bg: black;
+    --scroll-thumb-bg-hover: blue;
+    --scroll-thumb-bg-active: purple;
+
+    /* selection */
+    --selection-bg: blue;
+    --selection-fg: white;
+
+    /* focus */
+    --focus-outline: var(blue);
+
+    /* nav */
+    --nav-bg: white;
+
+    /* menu */
+    --logo-fg: black;
+    --menu-fg: black;
+    --menu-bg-hover: blue;
+    --menu-fg-hover: white;
+    --menu-bg-active: purple;
+    --menu-fg-active: white;
+    --menu-ripple-bg: transparent;
+
+    /* button */
+    --btn-bg: black;
+    --btn-fg: white;
+    --btn-hover-bg: blue;
+    --btn-hover-fg: white;
+    --btn-active-bg: purple;
+    --btn-active-fg: white;
+
+    /* main */
+    --title-fg: black;
+    --subtitle-fg: black;
+  }
+
+  .dark.contrast {
+    /* body */
+    --body-bg: black;
+    --body-fg: white;
+
+    /* scroll */
+    --scroll-bg: var(--neutral30);
+    --scroll-thumb-bg: white;
+    --scroll-thumb-bg-hover: aqua;
+    --scroll-thumb-bg-active: yellow;
+
+    /* selection */
+    --selection-bg: yellow;
+    --selection-fg: black;
+
+    /* focus */
+    --focus-outline: var(cyan);
+
+    /* nav */
+    --nav-bg: black;
+
+    /* menu */
+    --logo-fg: white;
+    --menu-fg: white;
+    --menu-bg-hover: aqua;
+    --menu-fg-hover: black;
+    --menu-bg-active: yellow;
+    --menu-fg-active: black;
+
+    /* button */
+    --btn-bg: white;
+    --btn-fg: black;
+    --btn-hover-bg: aqua;
+    --btn-hover-fg: black;
+    --btn-active-bg: yellow;
+    --btn-active-fg: black;
+
+    /* main */
+    --title-fg: white;
+    --subtitle-fg: white;
+  }
+}

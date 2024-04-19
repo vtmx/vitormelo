@@ -1,0 +1,16 @@
+---
+import 'data/experiences.md';
+---
+
+<section id="experiences">
+  <h2 class="title">${title}</h2>
+  <div class="experiences">
+    ${for(experiences)}
+      <div class="experience">
+        <div class="name">${experiences.name}</div>
+        <div class="org">${experiences.org_name}</div>
+        <div class="time"><span>${experiences.date_start}</span> - <span>${experiences.date_end}</span></div>
+      </div>
+    ${endfor}
+  </div>
+</section>

@@ -1,0 +1,170 @@
+#!/usr/bin/env bash
+
+# set -e
+
+usage() {
+  echo '
+stc - static web page generator
+
+USAGE:
+  stc [OPTIONS]
+
+DEPENDENCIES:
+  entr, pandoc
+
+OPTIONS:
+  i, init     Init a project
+  h, help     Help
+  v, version  Version
+
+AUTHOR:
+  Vitor Melo'
+}
+
+# Import sources
+sources() {
+  . $project_dir/sh/log
+}
+
+# Check dependêncies
+check_deps() {
+  local deps=(\
+    'browser-sync' \
+    'inotifywait' \
+    'pandoc')
+
+  for dep in ${deps[@]}; do
+    type $dep &> /dev/null || { log err "dependencie '$dep' not exist"; exit 1; }
+  done
+}
+
+# Init project
+init() {
+  local dirs=(\
+    'cache' \
+    'public' \
+    'src/data' \
+    'src/components' \
+    'src/layouts')
+
+  local files=(\
+    'src/pages/index.md' \
+    'src/layouts/default.html')
+
+  # Creater dirs
+  for dir in ${dirs[@]}; do
+    [[ -d "$project_dir/$dir" ]] || log "creating tmp dir '$dir'"; mkdir -p "$project_dir/$dir"
+  done
+
+  # Create files
+  for file in ${files[@]}; do
+    [[ -f "$project_dir/$file" ]] || log "create file '$file'"; > "$project_dir/$file"
+  done
+
+}
+
+# Build
+build() {
+  local includes_dir="$public_dir/includes"
+
+  # Create cache/includes dir if not exist
+  [[ -d "$includes_dir" ]] || log "create tmp dir '$0/public/tmp'"; mkdir -p "$includes_dir"
+
+  # Copy files to public
+  cp "$components_dir"/*.html "$includes_dir"
+  cp "$layouts_dir"/*.html "$public_dir"
+
+  # Get all components files
+  readarray -t components_files <<< "$(ls $includes_dir/*.html)"
+
+  for file in "${components_files[@]}"; do
+    local file_text=$(< $file)
+
+    # Remove new line to \n
+    file_text="${file_text//$'\n'/}"
+
+    # Get filename
+    local file_name="${file//*\//}"
+    local include_file="$includes_dir/$file_name"
+
+    # Get only first match
+    local regex=$(grep -Eom1 "import [\"'].*[\"']" $file)
+
+    # If has include
+    if [[ "$regex" ]]; then
+      local import_file=$(sed -E "s/import [\"'](.*)[\"']/\1/" <<< $regex)
+
+      # Remove --- in import
+      file_text=$(sed -E "s/---.*---//" <<< $file_text)
+
+      # Create file in public directory
+      echo "$file_text" > "$include_file"
+
+      # Convert md to html
+      log "converting '${import_file##*/}' to '${include_file##*/}'"
+      pandoc "$src_dir/$import_file" --template "$include_file" --wrap=none -o "$include_file"
+      # md2html "$src_dir/$import_file" "$include_file" "$include_file"
+    fi
+  done
+
+  # Get pages
+  readarray -t pages <<< "$(ls ${public_dir}/*.html)"
+  for page in "${pages[@]}"; do
+    insert_includes "$page"
+  done
+
+  # Remove includes_dir
+  log "removing tmp dir '$0/public/tmp'"
+  rm -rf "$includes_dir"
+}
+
+# Includes
+insert_includes() {
+  local page="$1"
+
+  # Recive array of includes of file
+  readarray -t includes <<< $(grep -Eo '<include src=".*">' $page)
+
+  # Loop for includes tag
+  for include in "${includes[@]}"; do
+    # Format name
+    local include_src=${include#*\"};include_src=${include_src%\"*}
+
+    # Check if include file exist
+    [[ -f "$public_dir/$include_src" ]] || { log err "file '$public_dir/$include_src' not exist to include"; exit 1; }
+
+    local include_tag="<include src=\"$include_src\">"
+    local include_text="$(< $public_dir/$include_src)"
+
+    # Change " to \"
+    include_text="${include_text//\"/\\\"}"
+
+    # Change line break to \n
+    include_text="${include_text//$'\n'/}"
+
+    log "replacing tag '$include_tag' in '${page##*/}' to content"
+    sed -Ei "s^$include_tag^$include_text^" $page
+  done
+}
+
+# Main
+main() {
+  project_dir=$(pwd)
+  src_dir="$project_dir/src"
+  components_dir="$src_dir/components"
+  data_dir="$src_dir/data"
+  layouts_dir="$src_dir/layouts"
+  public_dir="$project_dir/public"
+
+  # Import files
+  sources
+
+  case $1 in
+    i|init) init ;;
+    v|version) echo '0.0.1' ;;
+    h|help) usage ;;
+    *) build ;;
+  esac
+}
+
+main $1

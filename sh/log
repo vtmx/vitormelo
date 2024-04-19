@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+logfile="$(pwd)/log/stc.log"
+
+# Create logfile if not exist
+[[ "${logfile%/*}" && ! -d "${logfile%/*}" ]] && { mkdir -p "${logfile%/*}"; }
+
+
+log() {
+  # Get status if exist
+  [[ $2 ]] && { local status=$1; shift; }
+
+  # Get message
+  local msg="${1^}"
+
+  # Open brackets status
+  printf '['
+
+  # Get status and change output color
+  case $status in
+    err*) status=ERR; tput setaf 1 ;;
+    suc*) status=SUC; tput setaf 2 ;;
+    war*) status=WAR; tput setaf 3 ;;
+    inf*) status=INF; tput setaf 4 ;;
+       *) status=LOG ;;
+  esac
+
+  # Echo status in color
+  printf $status
+
+  # Reset color and close brackets
+  tput sgr0; printf '] '
+
+  # Show message in screen hightlight 'words'
+  sed -E "s/'(.[^']+)'/$(tput setaf 6)'$(tput setaf 2)\1$(tput setaf 6)'$(tput setaf sgr0)/g" <<< "$msg"
+
+  # If logfile redirect to log file
+  if [[ "$logfile" ]]; then
+    printf "%([%Y-%m-%d %H:%M:%S])T [$status] $msg\n" >> "$logfile"
+  fi
+}
+
