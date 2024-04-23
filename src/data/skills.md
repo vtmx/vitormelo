@@ -28,7 +28,6 @@ languages:
 
 systems:
   - name: Wordpress
-  - name: BashGithub
   - name: Service Now
 
 accessibles:
