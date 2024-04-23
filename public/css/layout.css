@@ -90,8 +90,7 @@ main {
     grid-template-columns: 1fr auto;
     place-content: space-between;
     gap: var(--gap2);
-    height: 100vh;
-    height: 100dvh;
+    height: 100svh;
   }
 
   main {
