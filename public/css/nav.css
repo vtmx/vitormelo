@@ -63,9 +63,28 @@
 
 #social {
   display: flex;
-  gap: 8px;
-  margin: 16px;
+  gap: var(--gap1);
+  margin: var(--gap2);
   line-height: 0;
+}
+
+.contrast {
+  #menu a {
+    border: 3px solid var(--menu-fg);
+    margin-block: var(--gap1);
+    /**/
+    /* &:hover { */
+    /*   border-color: var(--menu-bg-hover); */
+    /* } */
+    /**/
+    /* &:active, &.active { */
+    /*   border-color: var(--menu-bg-active); */
+    /* } */
+  }
+
+  #social {
+    margin: var(--gap2) 0;
+  }
 }
 
 @media (width <= 960px) {

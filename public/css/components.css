@@ -21,3 +21,11 @@
     transition: none;
   }
 }
+
+.contrast .btn-icon {
+  border: 3px solid black;
+}
+
+.contrast.dark .btn-icon {
+  border: 3px solid white;
+}

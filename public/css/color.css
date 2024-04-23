@@ -160,8 +160,8 @@
     --menu-ripple-bg: transparent;
 
     /* button */
-    --btn-bg: black;
-    --btn-fg: white;
+    --btn-bg: white;
+    --btn-fg: black;
     --btn-hover-bg: blue;
     --btn-hover-fg: white;
     --btn-active-bg: purple;
@@ -202,8 +202,8 @@
     --menu-fg-active: black;
 
     /* button */
-    --btn-bg: white;
-    --btn-fg: black;
+    --btn-bg: black;
+    --btn-fg: white;
     --btn-hover-bg: aqua;
     --btn-hover-fg: black;
     --btn-active-bg: yellow;
