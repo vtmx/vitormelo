@@ -86,7 +86,7 @@ main {
 
 @media (width <= 960px) {
   #app {
-    grid-template-areas: 'main' 'menu';
+    grid-template-areas: 'main main main' 'menu menu menu';
     grid-template-columns: 1fr auto;
     place-content: space-between;
     gap: var(--gap2);
