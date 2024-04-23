@@ -91,6 +91,7 @@ main {
     place-content: space-between;
     gap: var(--gap2);
     height: 100vh;
+    height: 100dvh;
   }
 
   main {
