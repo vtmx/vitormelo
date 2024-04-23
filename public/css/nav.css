@@ -69,19 +69,14 @@
 }
 
 @media (width <= 960px) {
-  #logo,
-  #menu li:has(a[href='#services']),
-  #menu li:has(a[href='#education']),
-  #social {
+  #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
     display: none;
   }
 
   #menu {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-grow: 1;
-    flex-wrap: nowrap;
-    place-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    direction: rtl;
     min-width: 100%;
 
     & i {
