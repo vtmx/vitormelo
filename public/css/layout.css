@@ -88,13 +88,14 @@ main {
   #app {
     grid-template-areas: 'main' 'menu';
     grid-template-columns: 1fr auto;
-    gap: 0;
+    place-content: space-between;
+    gap: var(--gap2);
     height: 100vh;
   }
 
   main {
     min-width: 100%;
-    padding: 0 var(--gap2) 72px;
+    padding: 0 var(--gap2);
 
     section {
       display: none;
@@ -114,7 +115,7 @@ main {
   }
 
   [aria-label='Main'] {
-    position: fixed;
+    position: sticky;
     top: auto;
     bottom: 0;
     display: flex;

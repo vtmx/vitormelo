@@ -121,3 +121,9 @@
     }
   }
 }
+
+@media (width <= 300px) {
+  #menu .name {
+    display: none;
+  }
+}
