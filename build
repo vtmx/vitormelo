@@ -103,7 +103,6 @@ build() {
       # Convert md to html
       log "converting '${import_file##*/}' to '${include_file##*/}'"
       pandoc "$src_dir/$import_file" --template "$include_file" --wrap=none -o "$include_file"
-      # md2html "$src_dir/$import_file" "$include_file" "$include_file"
     fi
   done
 
@@ -114,8 +113,8 @@ build() {
   done
 
   # Remove includes_dir
-  log "removing tmp dir '$0/public/tmp'"
-  rm -rf "$includes_dir"
+  # log "removing tmp dir '$0/public/tmp'"
+  # rm -rf "$includes_dir"
 }
 
 # Includes
