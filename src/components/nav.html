@@ -6,7 +6,7 @@ import 'data/nav.md';
   ${for(nav)}
     <li>
       <a href="${nav.link}">
-        <i class="${nav.icon}" aria-hidden="true"></i>
+        <svg class="icon icon-${nav.icon}"><use href="#icon-${nav.icon}"></use></svg>
         <span class="name">${nav.name}</span>
       </a>
     </li>

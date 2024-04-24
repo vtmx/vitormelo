@@ -4,7 +4,10 @@ import 'data/social.md';
 
 <div id="social">
   ${for(social)}
-    <a class="btn-icon" href="${social.link}" title="${social.name}" target="_blank"><i class="${social.icon}"></i> <span class="invisible">${social.name}</span></a>
+    <a class="btn-icon" href="${social.link}" title="${social.name}" target="_blank">
+      <svg class="icon icon-${social.icon}"><use href="#icon-${social.icon}"></use></svg>
+      <span class="invisible">${social.name}</span>
+    </a>
   ${endfor}
 </div>
 

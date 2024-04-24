@@ -9,14 +9,44 @@
   color: var(--logo-fg);
 }
 
-#menu {
-  & i {
+#menu a {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--gap3);
+  line-height: 1;
+  color: var(--menu-fg);
+  transition: all .2s;
+  will-change: all;
+  gap: 0 var(--gap1);
+
+  &:hover {
+    background: var(--menu-bg-hover);
+    color: var(--menu-fg-hover);
+  }
+
+  &:active, &.active {
+    background: var(--menu-bg-active);
+    color: var(--menu-fg-active);
+    transform: translate(0, 1px);
+    transition: none;
+  }
+
+  &:hover, &:active, &.active {
+    transform: translate(4px, 0);
+  }
+
+  .icon {
     display: none;
+    width: var(--gap2);
+    height: var(--gap2);
+    fill: currentcolor;
   }
 
   .name {
     display: flex;
-    transition: all 0.2s;
   }
 
   .ripple {
@@ -33,33 +63,6 @@
   }
 }
 
-#menu a {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 56px;
-  padding: 0 var(--gap3);
-  line-height: 1;
-  color: var(--menu-fg);
-
-  &:hover {
-    background: var(--menu-bg-hover);
-    color: var(--menu-fg-hover);
-  }
-
-  &:active, &.active {
-    background: var(--menu-bg-active);
-    color: var(--menu-fg-active);
-    transform: translate3d(0, 1px, 0);
-    transition: none;
-  }
-
-  &:hover, &:active, &.active {
-    transform: translate3d(4px, 0, 0);
-  }
-}
 
 #social {
   display: flex;
@@ -98,11 +101,34 @@
     direction: rtl;
     min-width: 100%;
 
+  }
+
+  #menu li {
+    display: flex;
+    place-items: center;
+    flex-grow: 1;
+  }
+
+  #menu a {
+    flex-direction: column;
+    place-content: center;
+    flex-grow: 1;
+    gap: var(--gap1);
+    padding: 0;
+
+    &:hover, &:active, &.active {
+      transform: none;
+    }
+
     & i {
       display: block;
       margin-bottom: 6px;
       text-align: center;
       font-size: 18px;
+    }
+
+    .icon {
+      display: block;
     }
 
     .name {
@@ -122,27 +148,10 @@
       opacity: 0.4;
     }
   }
-
-  #menu li {
-    display: flex;
-    place-items: center;
-    flex-grow: 1;
-  }
-
-  #menu a {
-    display: flex;
-    place-items: center;
-    flex-grow: 1;
-    padding: 0;
-
-    &:hover, &:active, &.active {
-      transform: none;
-    }
-  }
 }
 
 @media (width <= 300px) {
-  #menu .name {
+  #menu a .name {
     display: none;
   }
 }

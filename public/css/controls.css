@@ -1,4 +1,4 @@
-[aria-label="Controls"] {
+#nav-controls {
   #page-control {
     grid-area: page;
     display: flex;
