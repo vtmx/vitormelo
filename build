@@ -112,6 +112,10 @@ build() {
   for page in "${pages[@]}"; do
     insert_includes "$page"
   done
+
+  # Remove includes_dir
+  log "removing tmp '$0/public/includes'"
+  rm -rf "$includes_dir"
 }
 
 # Includes
