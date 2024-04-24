@@ -107,7 +107,7 @@
     /* nav */
     --nav-bg: var(--neutral20);
     --logo-fg: var(--neutral90);
-    --menu-fg: var(--neutral85);
+    --menu-fg: var(--neutral90);
     --menu-fg-hover: var(--primary70);
     --menu-fg-active: var(--primary70);
     --menu-ripple-bg: var(--neutral70);

@@ -1,0 +1,14 @@
+---
+import 'data/nav.md';
+---
+
+<ul id="menu">
+  ${for(nav)}
+    <li>
+      <a href="${nav.link}">
+        <i class="${nav.icon}" aria-hidden="true"></i>
+        <span class="name">${nav.name}</span>
+      </a>
+    </li>
+  ${endfor}
+</ul>

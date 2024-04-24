@@ -10,7 +10,7 @@
   margin-inline: auto;
 }
 
-[aria-label="Controls"] {
+#nav-controls {
   grid-area: controls;
   position: sticky;
   top: 0;
@@ -74,7 +74,7 @@ main {
   }
 }
 
-[aria-label='Main'] {
+#nav-main {
   grid-area: menu;
   position: sticky;
   top: 0;
@@ -114,7 +114,7 @@ main {
     }
   }
 
-  [aria-label='Main'] {
+  #nav-main {
     position: sticky;
     top: auto;
     bottom: 0;
@@ -126,7 +126,7 @@ main {
     z-index: 1;
   }
 
-  [aria-label='Controls'] {
+  #nav-controls {
     display: none;
   }
 }

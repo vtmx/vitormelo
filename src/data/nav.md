@@ -1,7 +1,7 @@
 ---
-title: Menu
+title: Nav
 
-menu:
+nav:
   - {
     id: 1,
     name: Sobre,
