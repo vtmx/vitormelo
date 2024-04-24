@@ -43,8 +43,9 @@ init() {
   local dirs=(\
     'cache' \
     'public' \
-    'src/data' \
     'src/components' \
+    'src/data' \
+    'src/includes' \
     'src/layouts')
 
   local files=(\
@@ -111,10 +112,6 @@ build() {
   for page in "${pages[@]}"; do
     insert_includes "$page"
   done
-
-  # Remove includes_dir
-  # log "removing tmp dir '$0/public/tmp'"
-  # rm -rf "$includes_dir"
 }
 
 # Includes
