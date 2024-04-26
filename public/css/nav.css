@@ -118,7 +118,7 @@
   }
 }
 
-@media (width <= var(--lg)) {
+@media(width <= 720px) {
   #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
     display: none;
   }
@@ -178,7 +178,7 @@
   }
 }
 
-@media (width <= var(--xm)) {
+@media (width <= 320px) {
   #menu a .name {
     display: none;
   }
