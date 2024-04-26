@@ -118,7 +118,7 @@
   }
 }
 
-@media (width <= var(--md)) {
+@media (width <= var(--lg)) {
   .skill {
     padding: 8px 18px;
   }

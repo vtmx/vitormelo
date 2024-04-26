@@ -118,7 +118,7 @@
   }
 }
 
-@media (width <= var(--md)) {
+@media (width <= var(--lg)) {
   #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
     display: none;
   }
