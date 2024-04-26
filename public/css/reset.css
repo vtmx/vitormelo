@@ -1,24 +1,24 @@
 @font-face {
-  font-family: 'Poppins';
+  font-display: swap;
+  font-family: 'Poppins-SemiBold';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
   src: url(../assets/fonts/Poppins-SemiBold.woff2) format('woff2');
 }
 
 @font-face {
+  font-display: swap;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
   src: url(../assets/fonts/Inter-Medium.woff2) format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-display: swap;
+  font-family: 'Inter-SemiBold';
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
   src: url(../assets/fonts/Inter-SemiBold.woff2) format('woff2');
 }
 

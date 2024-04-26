@@ -54,7 +54,7 @@
   --primary-20: oklch(20% var(--primary-c) var(--primary-h));
   --primary-25: oklch(25% var(--primary-c) var(--primary-h));
   --primary-30: oklch(30% var(--primary-c) var(--primary-h));
-  --primary-35: oklch(75% var(--primary-c) var(--primary-h));
+  --primary-35: oklch(35% var(--primary-c) var(--primary-h));
   --primary-40: oklch(40% var(--primary-c) var(--primary-h));
   --primary-45: oklch(45% var(--primary-c) var(--primary-h));
   --primary-50: oklch(50% var(--primary-c) var(--primary-h));

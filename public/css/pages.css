@@ -20,17 +20,17 @@
 
   .title {
     padding-block: var(--size-4);
-    font: 600 2rem/1 'Poppins', system-ui, sans-serif;
+    font: 600 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
     text-transform: uppercase;
     color: var(--title-fg);
   }
 
   .name {
-    font: 600 1.1rem/1.8 Inter, sans serif;
+    font: 600 1.1rem Inter, sans serif;
     color: var(--title-fg);
   }
 
-  .org, .time {
+  .name, .org, .time {
     line-height: 1.8;
   }
 
@@ -41,10 +41,6 @@
   .time {
     font-size: 0.9rem;
   }
-}
-
-.dark #content img {
-  filter: brightness(.8) contrast(1.2);
 }
 
 /* about */
@@ -63,12 +59,10 @@
 
 #skills {
   .name {
-    margin-bottom: 8px;
+    margin-bottom: var(--size-2);
   }
 
   .skills {
-    margin-bottom: 24px;
-
     &:last-child {
       margin: 0;
     }
@@ -85,6 +79,24 @@
     background: var(--neutral-95);
     color: var(--neutral-40);
   }
+}
+
+
+@media(width <= 720px) {
+  #content {
+    .title {
+      padding-block: var(--size-3);
+      font-size: 1.5rem;
+    }
+
+    .skill {
+      margin: 0 var(--size-2) var(--size-2) 0;
+    }
+  }
+}
+
+.dark #content img {
+  filter: brightness(.8) contrast(1.2);
 }
 
 .dark {

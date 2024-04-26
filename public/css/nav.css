@@ -39,7 +39,7 @@
 }
 
 #logo {
-  font: 600 2rem/1 'Poppins', system-ui, sans-serif;
+  font: 600 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
   text-transform: uppercase;
 
   & a {
@@ -118,7 +118,12 @@
 }
 
 @media(width <= 720px) {
-  #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
+  #nav-main {
+    padding: 0;
+    border-top: 1px solid var(--neutral-25);
+  }
+
+  #logo, #social, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']) {
     display: none;
   }
 
@@ -127,7 +132,6 @@
     grid-template-columns: repeat(4, 1fr);
     direction: rtl;
     min-width: 100%;
-
   }
 
   #menu li {
@@ -143,6 +147,8 @@
     gap: var(--size-2);
     padding: 0;
     border-top: 2px solid transparent;
+    font-family: 'Inter-SemiBold', system-ui, sans-serif;
+    -webkit-tap-highlight-color: rgba(255 255 255 / .1);
 
     &:hover, &:active, &.active {
       transform: none;
