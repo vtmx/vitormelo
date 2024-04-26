@@ -5,9 +5,26 @@
     'menu main controls'
     'menu main controls';
   grid-template-columns: auto 1fr auto;
-  gap: var(--gap3);
   max-width: 1200px;
   margin-inline: auto;
+}
+
+#nav-main {
+  grid-area: menu;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: auto;
+  height: 100vh;
+  padding: var(--gap2);
+}
+
+#content {
+  grid-area: main;
+  position: relative;
+  max-width: 720px;
+  padding: 0 var(--gap2) var(--gap2);
 }
 
 #nav-controls {
@@ -19,72 +36,25 @@
   grid-template-rows: auto minmax(8px, 1fr) auto;
   height: 100vh;
   justify-items: end;
-  padding: var(--gap2) var(--gap2) var(--gap2) 0;
-}
+  padding: var(--gap2);
 
-main {
-  grid-area: main;
-  position: relative;
-  max-width: 720px;
-
-  section {
-    display: none;
-    margin-bottom: var(--gap3);
-    opacity: 0;
-
-    > div > div {
-      margin-bottom: var(--gap3);
-    }
-
-    > div > div:last-child {
-      margin-bottom: 0;
-    }
+  #page-control {
+    grid-area: page;
+    display: flex;
+    gap: 8px;
+    line-height: 0;
   }
 
-  section.active {
-    display: block;
-    opacity: 1;
-    animation: fade-in 1s;
-  }
-
-  h2 {
-    padding-block: var(--gap3);
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: var(--title-fg);
-  }
-
-  .name {
-    font: 600 1.1rem/1.8 Inter, sans serif;
-    color: var(--title-fg);
-  }
-
-  .org, .time {
-    line-height: 1.8;
-  }
-
-  .org {
-    color: var(--subtitle-fg);
-  }
-
-  .time {
-    font-size: 0.9rem;
+  #color-control {
+    grid-area: color;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 0;
   }
 }
 
-#nav-main {
-  grid-area: menu;
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  width: auto;
-  height: 100vh;
-}
-
-@media (width <= 960px) {
+@media (width <= 720px) {
   #app {
     grid-template-areas: 'main main main' 'menu menu menu';
     grid-template-columns: 1fr auto;
@@ -93,7 +63,7 @@ main {
     height: 100svh;
   }
 
-  main {
+  #content {
     min-width: 100%;
     padding: 0 var(--gap2);
 

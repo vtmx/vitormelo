@@ -1,37 +1,39 @@
-.btn-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  font-size: 1.5rem;
-  background: var(--btn-bg);
-  border-radius: 4px;
-  color: var(--btn-fg);
+#nav-main, #nav-controls {
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    background: var(--btn-bg);
+    border-radius: 4px;
+    color: var(--btn-fg);
 
-  &:hover {
-    background: var(--btn-hover-bg);
-    color: var(--btn-hover-fg);
+    &:hover {
+      background: var(--btn-hover-bg);
+      color: var(--btn-hover-fg);
+    }
+
+    &:active {
+      background: var(--btn-active-bg);
+      color: var(--btn-active-fg);
+      transform: translate3d(0, 1px, 0);
+      transition: none;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: currentcolor;
+    }
   }
 
-  &:active {
-    background: var(--btn-active-bg);
-    color: var(--btn-active-fg);
-    transform: translate3d(0, 1px, 0);
-    transition: none;
+  .contrast .btn-icon {
+    border: 3px solid black;
   }
 
-  .icon {
-    width: 24px;
-    height: 24px;
-    fill: currentcolor;
+  .contrast.dark .btn-icon {
+    border: 3px solid white;
   }
-}
-
-.contrast .btn-icon {
-  border: 3px solid black;
-}
-
-.contrast.dark .btn-icon {
-  border: 3px solid white;
 }

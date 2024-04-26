@@ -1,12 +1,53 @@
-#logo a {
-  display: flex;
-  align-items: center;
-  padding: var(--gap3);
-  font-weight: bold;
-  font-size: 2rem;
+#nav-main, #nav-controls {
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    background: var(--btn-bg);
+    border-radius: 4px;
+    color: var(--btn-fg);
+
+    &:hover {
+      background: var(--btn-hover-bg);
+      color: var(--btn-hover-fg);
+    }
+
+    &:active {
+      background: var(--btn-active-bg);
+      color: var(--btn-active-fg);
+      transform: translate3d(0, 1px, 0);
+      transition: none;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: currentcolor;
+    }
+  }
+}
+
+.contrast .btn-icon {
+  border: 3px solid black;
+}
+
+.contrast.dark .btn-icon {
+  border: 3px solid white;
+}
+
+#logo {
+  font: 600 2rem/1 'Poppins', system-ui, sans-serif;
   text-transform: uppercase;
-  line-height: 1;
-  color: var(--logo-fg);
+
+  & a {
+    display: flex;
+    align-items: center;
+    padding: var(--gap2);
+    color: var(--logo-fg);
+  }
 }
 
 #menu a {
@@ -15,7 +56,7 @@
   display: flex;
   align-items: center;
   height: 56px;
-  padding: 0 var(--gap3);
+  padding: 0 var(--gap2);
   line-height: 1;
   color: var(--menu-fg);
   transition: all .2s;
@@ -67,7 +108,6 @@
 #social {
   display: flex;
   gap: var(--gap1);
-  margin: var(--gap2);
   line-height: 0;
 }
 
@@ -75,22 +115,10 @@
   #menu a {
     border: 3px solid var(--menu-fg);
     margin-block: var(--gap1);
-    /**/
-    /* &:hover { */
-    /*   border-color: var(--menu-bg-hover); */
-    /* } */
-    /**/
-    /* &:active, &.active { */
-    /*   border-color: var(--menu-bg-active); */
-    /* } */
-  }
-
-  #social {
-    margin: var(--gap2) 0;
   }
 }
 
-@media (width <= 960px) {
+@media (width <= 720px) {
   #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
     display: none;
   }
@@ -150,7 +178,7 @@
   }
 }
 
-@media (width <= 300px) {
+@media (width <= 480px) {
   #menu a .name {
     display: none;
   }

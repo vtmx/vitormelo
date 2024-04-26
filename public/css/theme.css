@@ -5,6 +5,15 @@
 /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
 
 :root {
+  --gap1: .5rem; /* 8px */
+  --gap2: 1rem;  /* 16px */
+  --gap3: 2rem;  /* 32px */
+  --xm: 480px;
+  --sm: 600px;
+  --md: 720px;
+  --lg: 960px;
+  --xl: 1280px;
+
   /* neutral*/
   --neutralc: .01;
   --neutralh: 250;
