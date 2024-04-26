@@ -89,6 +89,14 @@
       font-size: 1.5rem;
     }
 
+    section > div > div {
+      margin-bottom: var(--size-3);
+    }
+
+    .name, .org, .time {
+      line-height: 1.5;
+    }
+
     .skill {
       margin: 0 var(--size-2) var(--size-2) 0;
     }
