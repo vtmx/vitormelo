@@ -4,15 +4,11 @@
     opacity: 0;
 
     > div > div {
-      margin-bottom: var(--gap3);
-    }
+      margin-bottom: var(--size-4);
 
-    > div > div:last-of-type {
-      margin-bottom: 0;
-    }
-
-    > div > div:last-child {
-      margin-bottom: 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -22,8 +18,8 @@
     animation: fade-in 1s;
   }
 
-  h2 {
-    padding-block: var(--gap3);
+  .title {
+    padding-block: var(--size-4);
     font: 600 2rem/1 'Poppins', system-ui, sans-serif;
     text-transform: uppercase;
     color: var(--title-fg);
@@ -45,6 +41,10 @@
   .time {
     font-size: 0.9rem;
   }
+}
+
+.dark #content img {
+  filter: brightness(.8) contrast(1.2);
 }
 
 /* about */
@@ -80,18 +80,18 @@
 
   .skill {
     display: inline-block;
-    margin: 0 var(--gap2) var(--gap2) 0;
+    margin: 0 var(--size-3) var(--size-3) 0;
     padding: 4px 12px;
-    background: var(--neutral95);
-    color: var(--neutral40);
+    background: var(--neutral-95);
+    color: var(--neutral-40);
   }
 }
 
 .dark {
   #skills {
     .skill {
-      background: var(--neutral25);
-      color: var(--neutral90);
+      background: var(--neutral-25);
+      color: var(--neutral-90);
     }
   }
 }
@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 720px) {
+@media (width <= var(--md)) {
   .skill {
     padding: 8px 18px;
   }

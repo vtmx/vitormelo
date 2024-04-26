@@ -17,14 +17,14 @@
   grid-template-rows: auto 1fr auto;
   width: auto;
   height: 100vh;
-  padding: var(--gap2);
+  padding: var(--size-3);
 }
 
 #content {
   grid-area: main;
   position: relative;
   max-width: 720px;
-  padding: 0 var(--gap2) var(--gap2);
+  padding: 0 var(--size-3) var(--size-3);
 }
 
 #nav-controls {
@@ -36,7 +36,7 @@
   grid-template-rows: auto minmax(8px, 1fr) auto;
   height: 100vh;
   justify-items: end;
-  padding: var(--gap2);
+  padding: var(--size-3);
 
   #page-control {
     grid-area: page;
@@ -59,13 +59,13 @@
     grid-template-areas: 'main main main' 'menu menu menu';
     grid-template-columns: 1fr auto;
     place-content: space-between;
-    gap: var(--gap2);
+    gap: var(--size-3);
     height: 100svh;
   }
 
   #content {
     min-width: 100%;
-    padding: 0 var(--gap2);
+    padding: 0 var(--size-3);
 
     section {
       display: none;
@@ -80,7 +80,7 @@
     }
 
     h2 {
-      padding-block: var(--gap2);
+      padding-block: var(--size-3);
     }
   }
 

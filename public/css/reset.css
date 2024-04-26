@@ -96,12 +96,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--primary-);
   transition: all 0.2s;
-}
-
-img {
-  max-width: 100%;
 }
 
 .invisible {
@@ -113,22 +109,4 @@ img {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.dark {
-  img {
-    filter: brightness(.8) contrast(1.2);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-@media (width <= 960px) {
-  a {
-    transition: none;
-  }
 }

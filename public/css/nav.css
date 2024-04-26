@@ -7,7 +7,7 @@
     height: 48px;
     font-size: 1.5rem;
     background: var(--btn-bg);
-    border-radius: 4px;
+    border-radius: var(--radius);
     color: var(--btn-fg);
 
     &:hover {
@@ -45,7 +45,7 @@
   & a {
     display: flex;
     align-items: center;
-    padding: var(--gap2);
+    padding: var(--size-3);
     color: var(--logo-fg);
   }
 }
@@ -56,12 +56,12 @@
   display: flex;
   align-items: center;
   height: 56px;
-  padding: 0 var(--gap2);
+  padding: 0 var(--size-3);
   line-height: 1;
   color: var(--menu-fg);
   transition: all .2s;
   will-change: all;
-  gap: 0 var(--gap1);
+  gap: 0 var(--size-2);
 
   &:hover {
     background: var(--menu-bg-hover);
@@ -76,13 +76,13 @@
   }
 
   &:hover, &:active, &.active {
-    transform: translate(4px, 0);
+    transform: translate(var(--size-1), 0);
   }
 
   .icon {
     display: none;
-    width: var(--gap2);
-    height: var(--gap2);
+    width: var(--size-3);
+    height: var(--size-3);
     fill: currentcolor;
   }
 
@@ -107,18 +107,18 @@
 
 #social {
   display: flex;
-  gap: var(--gap1);
+  gap: var(--size-2);
   line-height: 0;
 }
 
 .contrast {
   #menu a {
     border: 3px solid var(--menu-fg);
-    margin-block: var(--gap1);
+    margin-block: var(--size-2);
   }
 }
 
-@media (width <= 720px) {
+@media (width <= var(--md)) {
   #logo, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']), #social {
     display: none;
   }
@@ -141,7 +141,7 @@
     flex-direction: column;
     place-content: center;
     flex-grow: 1;
-    gap: var(--gap1);
+    gap: var(--size-2);
     padding: 0;
 
     &:hover, &:active, &.active {
@@ -178,7 +178,7 @@
   }
 }
 
-@media (width <= 480px) {
+@media (width <= var(--xm)) {
   #menu a .name {
     display: none;
   }
