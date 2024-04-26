@@ -104,7 +104,6 @@
   }
 }
 
-
 #social {
   display: flex;
   gap: var(--size-2);
@@ -143,6 +142,7 @@
     flex-grow: 1;
     gap: var(--size-2);
     padding: 0;
+    border-top: 2px solid transparent;
 
     &:hover, &:active, &.active {
       transform: none;
@@ -153,6 +153,10 @@
       margin-bottom: 6px;
       text-align: center;
       font-size: 18px;
+    }
+
+    &.active {
+      border-color: currentcolor;
     }
 
     .icon {
