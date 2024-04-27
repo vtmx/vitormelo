@@ -23,7 +23,7 @@ AUTHOR:
 
 # Import sources
 sources() {
-  . $project_dir/sh/log
+  source $project_dir/sh/log
 }
 
 # Check dependêncies

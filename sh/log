@@ -13,30 +13,20 @@ log() {
   # Get message
   local msg="${1^}"
 
-  # Open brackets status
-  printf '['
-
-  # Get status and change output color
+  # Add style in msg
   case $status in
-    err*) status=ERR; tput setaf 1 ;;
-    suc*) status=SUC; tput setaf 2 ;;
-    war*) status=WAR; tput setaf 3 ;;
-    inf*) status=INF; tput setaf 4 ;;
-       *) status=LOG ;;
+    err*) status=ERR; msgo="$(echo [$(tput setaf 1)${status}$(tput sgr0)] $msg)" ;;
+    suc*) status=SUC; msgo="$(echo [$(tput setaf 2)${status}$(tput sgr0)] $msg)" ;;
+    war*) status=WAR; msgo="$(echo [$(tput setaf 3)${status}$(tput sgr0)] $msg)" ;;
+    inf*) status=INF; msgo="$(echo [$(tput setaf 4)${status}$(tput sgr0)] $msg)" ;;
+       *) status=LOG; msgo="[$status] $msg" ;;
   esac
 
-  # Echo status in color
-  printf $status
-
-  # Reset color and close brackets
-  tput sgr0; printf '] '
-
   # Show message in screen hightlight 'words'
-  sed -E "s/'(.[^']+)'/$(tput setaf 6)'$(tput setaf 2)\1$(tput setaf 6)'$(tput setaf sgr0)/g" <<< "$msg"
+  sed -E "s/'(.[^']+)'/$(tput setaf 6)'$(tput setaf 2)\1$(tput setaf 6)'$(tput setaf sgr0)/g" <<< "$msgo"
 
   # If logfile redirect to log file
   if [[ "$logfile" ]]; then
     printf "%([%Y-%m-%d %H:%M:%S])T [$status] $msg\n" >> "$logfile"
   fi
 }
-
