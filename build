@@ -150,11 +150,11 @@ insert_includes() {
 # Main
 main() {
   project_dir=$(pwd)
+  public_dir="$project_dir/public"
   src_dir="$project_dir/src"
   components_dir="$src_dir/components"
   data_dir="$src_dir/data"
   layouts_dir="$src_dir/layouts"
-  public_dir="$project_dir/public"
 
   # Import files
   sources
