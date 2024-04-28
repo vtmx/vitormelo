@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-logfile="$(pwd)/log/stc.log"
+logfile="$(pwd)/log/site.log"
 
 # Create logfile if not exist
 [[ "${logfile%/*}" && ! -d "${logfile%/*}" ]] && { mkdir -p "${logfile%/*}"; }

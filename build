@@ -57,30 +57,37 @@ init() {
 
   # Creater dirs
   for dir in ${dirs[@]}; do
-    [[ -d "$project_dir/$dir" ]] || {
-      log "creating tmp dir '$dir'"
-      mkdir -p "$project_dir/$dir"
-    }
+    create_dir "$dir"
   done
 
   # Create files
   for file in ${files[@]}; do
-    [[ -f "$project_dir/$file" ]] || {
-      log "create file '$file'"
-      > "$project_dir/$file"
-    }
+    create_file "$file"
   done
+}
+
+# Create directory if not exist
+create_dir() {
+  local dir="$1"
+  [[ -d "$dir" ]] || {
+    log "creating dir '$dir'"
+    mkdir -p "$dir"
+  }
+}
+
+# Create file if not exist
+create_file() {
+  local file="$1"
+  [[ -f "$file" ]] || {
+    log "creating file '$file'"
+    > "$file"
+  }
 }
 
 # Build
 build() {
   local includes_dir="$public_dir/includes"
-
-  # Create cache/includes dir if not exist
-  [[ -d "$includes_dir" ]] || {
-    log "create tmp includes '$0/public/includes'"
-    mkdir -p "$includes_dir"
-  }
+  create_dir "$includes_dir"
 
   # Copy files to public
   cp "$components_dir"/*.html "$includes_dir"
@@ -90,32 +97,7 @@ build() {
   readarray -t components_files <<< "$(ls $includes_dir/*.html)"
 
   for file in "${components_files[@]}"; do
-    local file_text=$(< $file)
-
-    # Remove new line to \n
-    file_text="${file_text//$'\n'/}"
-
-    # Get filename
-    local file_name="${file//*\//}"
-    local include_file="$includes_dir/$file_name"
-
-    # Get only first match
-    local regex=$(grep -Eom1 "import [\"'].*[\"']" $file)
-
-    # If has include
-    if [[ "$regex" ]]; then
-      local import_file=$(sed -E "s/import [\"'](.*)[\"']/\1/" <<< $regex)
-
-      # Remove --- in import
-      file_text=$(sed -E "s/---.*---//" <<< $file_text)
-
-      # Create file in public directory
-      echo "$file_text" > "$include_file"
-
-      # Convert md to html
-      log "converting '${import_file##*/}' to '${include_file##*/}'"
-      pandoc "$src_dir/$import_file" --template "$include_file" --wrap=none -o "$include_file"
-    fi
+    md2html "$file"
   done
 
   # Get pages
@@ -129,7 +111,37 @@ build() {
   rm -rf "$includes_dir"
 }
 
-# Includes
+# Convert md to html
+md2html() {
+  local file_text=$(<$1)
+
+  # Remove new line to \n
+  file_text="${file_text//$'\n'/}"
+
+  # Get filename
+  local file_name="${file//*\//}"
+  local include_file="$includes_dir/$file_name"
+
+  # Get only first match
+  local regex=$(grep -Eom1 "import [\"'].*[\"']" $file)
+
+  # If has include
+  if [[ "$regex" ]]; then
+    local import_file=$(sed -E "s/import [\"'](.*)[\"']/\1/" <<< $regex)
+
+    # Remove --- in import
+    file_text=${file_text//---*---/}
+
+    # Create file in public directory
+    echo "$file_text" > "$include_file"
+
+    # Convert md to html
+    log "converting '${import_file##*/}' to '${include_file##*/}'"
+    pandoc "$src_dir/$import_file" --template "$include_file" --wrap=none -o "$include_file"
+  fi
+}
+
+# Convert includes tag to text
 insert_includes() {
   local page="$1"
 
@@ -173,7 +185,7 @@ main() {
   # Check dependencies
   check_deps
 
-  # Import files
+  # Source files
   sources
 
   case $1 in
