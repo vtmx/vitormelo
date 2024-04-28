@@ -34,7 +34,10 @@ check_deps() {
     'pandoc')
 
   for dep in ${deps[@]}; do
-    type $dep &> /dev/null || { log err "dependencie '$dep' not exist"; exit 1; }
+    type $dep &> /dev/null || {
+      log err "dependencie '$dep' not exist"
+      exit 1
+    }
   done
 }
 
@@ -54,14 +57,19 @@ init() {
 
   # Creater dirs
   for dir in ${dirs[@]}; do
-    [[ -d "$project_dir/$dir" ]] || log "creating tmp dir '$dir'"; mkdir -p "$project_dir/$dir"
+    [[ -d "$project_dir/$dir" ]] || {
+      log "creating tmp dir '$dir'"
+      mkdir -p "$project_dir/$dir"
+    }
   done
 
   # Create files
   for file in ${files[@]}; do
-    [[ -f "$project_dir/$file" ]] || log "create file '$file'"; > "$project_dir/$file"
+    [[ -f "$project_dir/$file" ]] || {
+      log "create file '$file'"
+      > "$project_dir/$file"
+    }
   done
-
 }
 
 # Build
@@ -69,7 +77,10 @@ build() {
   local includes_dir="$public_dir/includes"
 
   # Create cache/includes dir if not exist
-  [[ -d "$includes_dir" ]] || log "create tmp dir '$0/public/tmp'"; mkdir -p "$includes_dir"
+  [[ -d "$includes_dir" ]] || {
+    log "create tmp includes '$0/public/includes'"
+    mkdir -p "$includes_dir"
+  }
 
   # Copy files to public
   cp "$components_dir"/*.html "$includes_dir"
@@ -114,7 +125,7 @@ build() {
   done
 
   # Remove includes_dir
-  log "removing tmp '$0/public/includes'"
+  log "removing tmp includes '$0/public/includes'"
   rm -rf "$includes_dir"
 }
 
@@ -128,10 +139,13 @@ insert_includes() {
   # Loop for includes tag
   for include in "${includes[@]}"; do
     # Format name
-    local include_src=${include#*\"};include_src=${include_src%\"*}
+    local include_src=${include#*\"}; include_src=${include_src%\"*}
 
     # Check if include file exist
-    [[ -f "$public_dir/$include_src" ]] || { log err "file '$public_dir/$include_src' not exist to include"; exit 1; }
+    [[ -f "$public_dir/$include_src" ]] || {
+      log err "file '$public_dir/$include_src' not exist to include"
+      exit 1
+    }
 
     local include_tag="<include src=\"$include_src\">"
     local include_text="$(< $public_dir/$include_src)"
@@ -155,6 +169,9 @@ main() {
   components_dir="$src_dir/components"
   data_dir="$src_dir/data"
   layouts_dir="$src_dir/layouts"
+
+  # Check dependencies
+  check_deps
 
   # Import files
   sources
