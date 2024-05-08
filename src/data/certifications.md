@@ -5,7 +5,7 @@ certifications:
   - {
     id: 10,
     name: Microsoft Azure SC-900,
-    file: certificacoes/sc-900.pdf,
+    file: sc-900.pdf,
     org_name: Microsoft,
     year: 2024
   }
@@ -13,7 +13,7 @@ certifications:
   - {
     id: 9,
     name: Microsoft Azure AZ-900,
-    file: certificacoes/az-900.pdf,
+    file: az-900.pdf,
     org_name: Microsoft,
     year: 2023
   }
@@ -21,7 +21,7 @@ certifications:
   - {
     id: 8,
     name: Agile Scrum Foundation,
-    file: certificacoes/exin-agile-scrum-foundation.pdf,
+    file: exin-agile-scrum-foundation.pdf,
     org_name: EXIN,
     year: 2019
   }
@@ -29,7 +29,7 @@ certifications:
   - {
     id: 7,
     name: Cloud Computing,
-    file: certificacoes/exin-cloud-computing-foundation.pdf,
+    file: exin-cloud-computing-foundation.pdf,
     org_name: EXIN,
     year: 2016
   }
@@ -37,7 +37,7 @@ certifications:
   - {
     id: 6,
     name: Green IT Citizen,
-    file: certificacoes/exin-green-it-citizen.pdf,
+    file: exin-green-it-citizen.pdf,
     org_name: EXIN,
     year: 2015
   }
@@ -45,7 +45,7 @@ certifications:
   - {
     id: 5,
     name: ISO/IEC 27002,
-    file: certificacoes/exin-iso-27002.pdf,
+    file: exin-iso-27002.pdf,
     org_name: EXIN,
     year: 2015
   }
@@ -53,7 +53,7 @@ certifications:
   - {
     id: 4,
     name: ISO/IEC 20000,
-    file: certificacoes/exin-iso-20000.pdf,
+    file: exin-iso-20000.pdf,
     org_name: EXIN,
     year: 2014
   }
@@ -61,7 +61,7 @@ certifications:
   - {
     id: 3,
     name: MCTS 70-480,
-    file: certificacoes/mcp-070-480.pdf,
+    file: mcp-070-480.pdf,
     org_name: Microsoft,
     year: 2013
   }
@@ -69,7 +69,7 @@ certifications:
   - {
     id: 2,
     name: MCTS 70-680,
-    file: certificacoes/mcp-070-680.pdf,
+    file: mcp-070-680.pdf,
     org_name: Microsoft,
     year: 2013
   }
@@ -77,7 +77,7 @@ certifications:
   - {
     id: 1,
     name: Itil V3,
-    file: certificacoes/exin-itil-v3.pdf,
+    file: exin-itil-v3.pdf,
     org_name: EXIN,
     year: 2012
   }

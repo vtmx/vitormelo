@@ -41,10 +41,6 @@
     transition: none;
   }
 
-  #menu a:hover, #menu .active {
-    transform: none;
-  }
-
   .animation, section.active  {
     animation: none;
   }

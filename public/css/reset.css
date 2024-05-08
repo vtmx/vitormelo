@@ -69,8 +69,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--focus-outline);
-  transition: none;
+  outline: var(--contrast-border) solid var(--focus-outline);
 }
 
 h1, h2, h3, h4, h5, h6 {
