@@ -23,7 +23,7 @@ AUTHOR:
 
 # Import sources
 sources() {
-  source $project_dir/sh/log
+  source $project_dir/log
 }
 
 # Check dependêncies
@@ -106,9 +106,16 @@ build() {
     insert_includes "$page"
   done
 
+  # Concat files
+  local css_src="$src_dir/assets/css"
+  local css_files=("theme.css" "reset.css" "layout.css" "nav.css" "pages.css" "animation.css")
+  local css_concat="$public_dir/assets/css/style.css"
+  concat_files "$css_src" css_files "$css_concat"
+
   # Remove includes_dir
   log "removing tmp includes '$0/public/includes'"
   rm -rf "$includes_dir"
+
 }
 
 # Convert md to html
@@ -173,6 +180,21 @@ insert_includes() {
   done
 }
 
+# Concatenate files
+concat_files() {
+  local src="$1"
+  local -n files="$2"
+  local concat_file="$3"
+
+  # Create a cleaner file
+  > "$concat_file"
+
+  for file in "${files[@]}"; do
+    log "concat file '$file' to ${concat_file##*/}..."
+    cat "$src/$file" >> "$concat_file"
+  done
+}
+
 # Main
 main() {
   project_dir=$(pwd)
@@ -182,11 +204,11 @@ main() {
   data_dir="$src_dir/data"
   layouts_dir="$src_dir/layouts"
 
-  # Check dependencies
-  check_deps
-
   # Source files
   sources
+
+  # Check dependencies
+  check_deps
 
   case $1 in
     i|init) init ;;

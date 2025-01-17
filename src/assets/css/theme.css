@@ -5,6 +5,7 @@
 /* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
 
 :root {
+  color-scheme: light;
   --contrast-border: 3px;
   --radius: 4px;
 
@@ -107,6 +108,8 @@
   --subtitle-fg: var(--neutral-70);
 
   .dark {
+    color-scheme: dark;
+
     /* body */
     --body-bg: var(--neutral-20);
     --body-fg: var(--neutral-90);
@@ -165,7 +168,7 @@
     --selection-fg: white;
 
     /* focus */
-    --focus-outline: var(blue);
+    --focus-outline: blue;
 
     /* nav */
     --nav-bg: white;
@@ -208,7 +211,7 @@
     --selection-fg: black;
 
     /* focus */
-    --focus-outline: var(cyan);
+    --focus-outline: cyan;
 
     /* nav */
     --nav-bg: black;
