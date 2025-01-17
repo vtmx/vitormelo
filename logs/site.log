@@ -54,3 +54,31 @@
 [2025-01-16 21:39:20] [LOG] Concat file 'pages.css' to style.css...
 [2025-01-16 21:39:20] [LOG] Concat file 'animation.css' to style.css...
 [2025-01-16 21:39:20] [LOG] Removing tmp includes './build/public/includes'
+[2025-01-17 11:11:51] [LOG] Creating dir '/home/vitor/Dev/projects/vitormelo/public/includes'
+[2025-01-17 11:11:51] [LOG] Converting 'about.md' to 'about.html'
+[2025-01-17 11:11:58] [LOG] Converting 'certifications.md' to 'certifications.html'
+[2025-01-17 11:11:58] [LOG] Converting 'education.md' to 'education.html'
+[2025-01-17 11:11:58] [LOG] Converting 'experiences.md' to 'experiences.html'
+[2025-01-17 11:11:58] [LOG] Converting 'nav.md' to 'nav.html'
+[2025-01-17 11:11:58] [LOG] Converting 'services.md' to 'services.html'
+[2025-01-17 11:11:58] [LOG] Converting 'skills.md' to 'skills.html'
+[2025-01-17 11:11:59] [LOG] Converting 'social.md' to 'social.html'
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/icons.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/logo.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/nav.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/social.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/about.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/experiences.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/education.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/certifications.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/services.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/skills.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/page-control.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Replacing tag '<include src="includes/color-control.html">' in 'index.html' to content
+[2025-01-17 11:11:59] [LOG] Concat file 'theme.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Concat file 'reset.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Concat file 'layout.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Concat file 'nav.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Concat file 'pages.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Concat file 'animation.css' to style.css...
+[2025-01-17 11:11:59] [LOG] Removing tmp includes './build/public/includes'

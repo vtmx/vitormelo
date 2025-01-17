@@ -39,7 +39,7 @@ body {
   background: var(--body-bg);
   font: 500 1rem/1.5 Inter, system-ui, sans-serif;
   color: var(--body-fg);
-  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 ::-webkit-scrollbar {
@@ -106,6 +106,5 @@ a {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   border: 0;
 }
