@@ -115,7 +115,6 @@ build() {
   # Remove includes_dir
   log "removing tmp includes '$0/public/includes'"
   rm -rf "$includes_dir"
-
 }
 
 # Convert md to html

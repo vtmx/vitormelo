@@ -5,11 +5,13 @@ import PageControl from './page-control.js';
 const colorControl = new ColorControl();
 colorControl.init();
 
-document.querySelector('.btn-color-scheme').addEventListener('click', () => {
+document.querySelector('.btn-color-scheme').addEventListener('click', (e) => {
+  e.preventDefault();
   colorControl.toggleColorSheme();
 });
 
-document.querySelector('.btn-contrast-control').addEventListener('click', () => {
+document.querySelector('.btn-contrast-control').addEventListener('click', (e) => {
+  e.preventDefault();
   colorControl.toggleContrast();
 });
 

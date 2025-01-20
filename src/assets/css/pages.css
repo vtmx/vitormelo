@@ -121,7 +121,6 @@
     .skill {
       background: white;
       color: black;
-      border-bottom: 2px solid currentcolor;
       min-width: 140px;
       padding: 0;
     }

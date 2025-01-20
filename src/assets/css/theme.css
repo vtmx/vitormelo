@@ -72,7 +72,7 @@
 
   /* body */
   --body-bg: white;
-  --body-fg: var(--neutral-60);
+  --body-fg: var(--neutral-50);
 
   /* scroll */
   --scroll-bg: var(--neutral-90);
@@ -90,7 +90,7 @@
   /* nav */
   --nav-bg: white;
   --logo-fg: var(--neutral-50);
-  --menu-fg: var(--neutral-70);
+  --menu-fg: var(--neutral-50);
   --menu-fg-hover: var(--primary-70);
   --menu-fg-active: var(--primary-70);
   --menu-ripple-bg: var(--neutral-90);
