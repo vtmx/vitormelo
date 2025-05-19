@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-# Start browser sync
-browser-sync start --server public/ --no-open --files *

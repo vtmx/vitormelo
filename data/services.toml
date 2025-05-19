@@ -1,0 +1,16 @@
+title = 'Serviços'
+
+[[services]]
+name = 'Manutenção'
+description = 'Formatação e instalação de softwares, manutenção e limpeza de S.O.'
+icon = 'fas fa-laptop'
+
+[[services]]
+name = 'Edição de Imagens'
+description = 'Criação de banners, fotomontagens e tudo relacionado ao tratamento de imagens.'
+icon = 'fa-regular fa-image'
+
+[[services]]
+name = 'Desenvolvimento de Sites'
+description = 'Desenvolvo, e faço manutenção em sites priorizando a acessibilidade e simplicidade.'
+icon = 'fab fa-chrome'

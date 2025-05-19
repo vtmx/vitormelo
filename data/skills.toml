@@ -1,0 +1,41 @@
+title = 'Skills'
+
+accessibles = [
+  'Responsive Design',
+  'UI',
+  'UX',
+  'WAI-ARIA'
+]
+
+softwares = [
+  'Office',
+  'Photoshop',
+  'Illustrator',
+  'VSCode',
+  'Vim'
+]
+
+sos = [
+  'Windows',
+  'Linux'
+]
+
+systems = [
+  'ServiceNow',
+  'Wordpress'
+]
+
+languages = [
+'AutoIT',
+'Bash',
+'CSS',
+'HTML',
+'JavaScrpt',
+'jQuery',
+'Json',
+'Markdown',
+'PHP',
+'SASS',
+'SQL',
+'Vue',
+]
