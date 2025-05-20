@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+shopt -s extglob
+set -e
+
+ext="$1"
+src="$2"
+dst="$3"
+
+concat_css() {
+  # @import 'theme.css';
+  readarray -t files <<< "$(ls src/assets/css/*.$ext)"
+  echo $files
+}
+
+concat_js() {
+# import ColorControl from './color-control.js';
+}
+
+case $ext in
+  css) concat_css  ;;
+  *) exit 1 ;;
+esac
+
+
+
