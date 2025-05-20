@@ -3,11 +3,11 @@
 <section id="education">
   <h2 class="title">{{ data.title }}</h2>
   <div class="educations">
-    {% for item in data.education %}
+    {% for key in data.education %}
       <div class="education">
-        <h3 class="name">{{ item.name }}</h3>
-        <div class="org">{{ item.org_name }} </div>
-        <div class="time"><span>{{ item.year_start }}</span> - <span>{{ item.year_end }}</span></div>
+        <h3 class="name">{{ key.name }}</h3>
+        <div class="org">{{ key.org_name }} </div>
+        <div class="time"><span>{{ key.year_start }}</span> - <span>{{ key.year_end }}</span></div>
       </div>
     {% endfor %}
   </div>

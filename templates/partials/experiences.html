@@ -3,11 +3,11 @@
 <section id="experiences">
   <h2 class="title">{{ data.title }}</h2>
   <div class="experiences">
-    {% for item in data.experiences %}
+    {% for key in data.experiences %}
       <div class="experience">
-        <h3 class="name">{{ item.name }}</h3>
-        <div class="org">{{ item.org_name }}</div>
-        <div class="time"><span>{{ item.date_start }}</span> - <span>{{ item.date_end }}</span></div>
+        <h3 class="name">{{ key.name }}</h3>
+        <div class="org">{{ key.org_name }}</div>
+        <div class="time"><span>{{ key.date_start }}</span> - <span>{{ key.date_end }}</span></div>
       </div>
     {% endfor %}
   </div>

@@ -3,10 +3,10 @@
 <section id="services">
   <h2 class="title">{{ data.title }}</h2>
   <div class="services">
-    {% for item in data.services %}
+    {% for key in data.services %}
       <div class="service">
-        <h3 class="name">{{ item.name }}</h3>
-        <p class="description">{{ item.description }}</p>
+        <h3 class="name">{{ key.name }}</h3>
+        <p class="description">{{ key.description }}</p>
       </div>
     {% endfor %}
   </div>

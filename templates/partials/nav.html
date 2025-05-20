@@ -1,11 +1,11 @@
 {% set data = load_data(path='data/nav.toml') %}
 
 <ul id="menu">
-  {% for item in data.nav %}
+  {% for key in data.nav %}
     <li>
-      <a href="{{ item.link }}">
-        <svg class="icon icon-{{ item.icon }}"><use href="#icon-{{ item.icon }}"></use></svg>
-        <span class="name">{{ item.name }}</span>
+      <a href="{{ key.link }}">
+        <svg class="icon icon-{{ key.icon }}"><use href="#icon-{{ key.icon }}"></use></svg>
+        <span class="name">{{ key.name }}</span>
       </a>
     </li>
   {% endfor %}
