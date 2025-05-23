@@ -5,7 +5,7 @@
     <li>
       <a class="btn-icon" href="{{ key.link }}" aria-label="{{ key.name }}" target="_blank">
         <svg class="icon icon-{{ key.icon }}" aria-hidden="true" focusable="false"><use href="#icon-{{ key.icon }}"></use></svg>
-        <span class="invisible">${social.name}</span>
+        <span class="invisible">{{ key.name }}</span>
       </a>
     </li>
   {% endfor %}
