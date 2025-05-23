@@ -18,7 +18,6 @@ zola build
 
 # Minify
 echo Minifiy files...
-
 public="$(pwd)/public"
 cssdir="$public/css"
 jsdir="$public/js"
