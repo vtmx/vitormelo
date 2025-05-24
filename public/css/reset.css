@@ -39,6 +39,7 @@ body {
   background: var(--body-bg);
   font: 500 1rem/1.5 Inter, system-ui, sans-serif;
   color: var(--body-fg);
+  transition: all .2s;
 }
 
 ::-webkit-scrollbar {
