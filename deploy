@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Check arguments
 [[ $1 ]] || { echo error: need a comment; exit 1; }
 gitmsg="$*"

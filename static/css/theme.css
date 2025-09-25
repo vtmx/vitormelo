@@ -42,6 +42,7 @@
   --neutral-65: oklch(65% var(--neutral-c) var(--neutral-h));
   --neutral-70: oklch(70% var(--neutral-c) var(--neutral-h));
   --neutral-75: oklch(75% var(--neutral-c) var(--neutral-h));
+  --neutral-80: oklch(80% var(--neutral-c) var(--neutral-h));
   --neutral-85: oklch(85% var(--neutral-c) var(--neutral-h));
   --neutral-90: oklch(90% var(--neutral-c) var(--neutral-h));
   --neutral-95: oklch(95% var(--neutral-c) var(--neutral-h));
@@ -104,6 +105,7 @@
   --btn-active-fg: white;
 
   /* main */
+  --section-border: var(--neutral-25);
   --title-fg: var(--neutral-50);
   --subtitle-fg: var(--neutral-70);
 
@@ -144,6 +146,7 @@
     --btn-active-fg: white;
 
     /* main */
+  --section-border: var(--neutral-25);
     --title-fg: var(--neutral-90);
     --subtitle-fg: var(--neutral-90);
   }
@@ -191,6 +194,7 @@
     --btn-active-fg: white;
 
     /* main */
+    --section-border: black;
     --title-fg: black;
     --subtitle-fg: black;
   }
@@ -233,6 +237,7 @@
     --btn-active-fg: black;
 
     /* main */
+    --section-border: white;
     --title-fg: white;
     --subtitle-fg: white;
   }

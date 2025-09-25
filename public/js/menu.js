@@ -1,1 +1,0 @@
-class Menu{toggleMenu(e){this.removeActiveMenu(".menu a.active"),this.addActiveMenu(e);const t=document.getElementById(e.dataset.page);this.removeActivePage(),this.addActivePage(t)}removeActiveMenu(){let e=document.querySelectorAll(".menu a.active")[0];e&&e.classList.remove("active")}addActiveMenu(e){e.classList.add("active")}}const menu=new Menu

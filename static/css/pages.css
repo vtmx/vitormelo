@@ -91,7 +91,14 @@
     }
 
     section > div > div {
-      margin-bottom: var(--size-3);
+      margin: 0;
+      padding-block: var(--size-4);
+      border-bottom: 1px solid var(--section-border);
+    }
+
+    section > div > div:last-child {
+      padding: var(--size-4) 0 var(--size-3);
+      border-bottom: none;
     }
 
     .name, .org, .time {
