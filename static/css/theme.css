@@ -90,6 +90,7 @@
 
   /* nav */
   --nav-bg: white;
+  --nav-border: var(--neutral-25);
   --logo-fg: var(--neutral-50);
   --menu-fg: var(--neutral-50);
   --menu-fg-hover: var(--primary-70);
@@ -131,6 +132,7 @@
 
     /* nav */
     --nav-bg: var(--neutral-20);
+    --nav-border: var(--neutral-30);
     --logo-fg: var(--neutral-90);
     --menu-fg: var(--neutral-90);
     --menu-fg-hover: var(--primary-70);
@@ -146,7 +148,7 @@
     --btn-active-fg: white;
 
     /* main */
-  --section-border: var(--neutral-25);
+    --section-border: var(--neutral-30);
     --title-fg: var(--neutral-90);
     --subtitle-fg: var(--neutral-90);
   }
@@ -175,6 +177,7 @@
 
     /* nav */
     --nav-bg: white;
+    --nav-border: black;
 
     /* menu */
     --logo-fg: black;
@@ -219,6 +222,7 @@
 
     /* nav */
     --nav-bg: black;
+    --nav-border: white;
 
     /* menu */
     --logo-fg: white;

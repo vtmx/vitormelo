@@ -152,7 +152,7 @@
 @media(width <= 720px) {
   #nav-main {
     padding: 0;
-    border-top: 1px solid var(--neutral-25);
+    border-top: 1px solid var(--nav-border);
   }
 
   #logo, #social, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']) {
