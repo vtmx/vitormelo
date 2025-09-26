@@ -96,9 +96,15 @@
       border-bottom: 1px solid var(--section-border);
     }
 
-    section > div > div:last-child {
-      padding: var(--size-4) 0 var(--size-3);
-      border-bottom: none;
+    section > div > div {
+      &:first-child {
+        padding-top: var(--size-3);
+      }
+
+      &:last-child {
+        padding-bottom: var(--size-3);
+        border-bottom: none;
+      }
     }
 
     .name, .org, .time {
