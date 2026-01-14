@@ -1,0 +1,248 @@
+/* https://themer.dev */
+/* https://www.materialui.co/colors */
+/* https://www.carbondesignsystem.com/guidelines/color/overview */
+/* https://tailwind.simeongriggs.dev/brand */
+/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
+
+:root {
+  color-scheme: light;
+  --contrast-border: 3px;
+  --radius: 4px;
+
+  /* sizes */
+  --size-1: .25rem; /* 4px */
+  --size-2: .5rem;  /* 8px */
+  --size-3: 1rem;   /* 16px */
+  --size-4: 2rem;   /* 32px */
+
+  /* media size */
+  --xm: 480px;
+  --sm: 600px;
+  --md: 720px;
+  --lg: 960px;
+  --xl: 1280px;
+
+  /* neutral chroma and hue */
+  --neutral-c: .01;
+  --neutral-h: 250;
+
+  /* neutral scale */
+  --neutral-5: oklch(5% var(--neutral-c) var(--neutral-h));
+  --neutral-10: oklch(10% var(--neutral-c) var(--neutral-h));
+  --neutral-15: oklch(15% var(--neutral-c) var(--neutral-h));
+  --neutral-20: oklch(20% var(--neutral-c) var(--neutral-h));
+  --neutral-25: oklch(25% var(--neutral-c) var(--neutral-h));
+  --neutral-30: oklch(30% var(--neutral-c) var(--neutral-h));
+  --neutral-35: oklch(35% var(--neutral-c) var(--neutral-h));
+  --neutral-40: oklch(40% var(--neutral-c) var(--neutral-h));
+  --neutral-45: oklch(45% var(--neutral-c) var(--neutral-h));
+  --neutral-50: oklch(50% var(--neutral-c) var(--neutral-h));
+  --neutral-55: oklch(55% var(--neutral-c) var(--neutral-h));
+  --neutral-60: oklch(60% var(--neutral-c) var(--neutral-h));
+  --neutral-65: oklch(65% var(--neutral-c) var(--neutral-h));
+  --neutral-70: oklch(70% var(--neutral-c) var(--neutral-h));
+  --neutral-75: oklch(75% var(--neutral-c) var(--neutral-h));
+  --neutral-80: oklch(80% var(--neutral-c) var(--neutral-h));
+  --neutral-85: oklch(85% var(--neutral-c) var(--neutral-h));
+  --neutral-90: oklch(90% var(--neutral-c) var(--neutral-h));
+  --neutral-95: oklch(95% var(--neutral-c) var(--neutral-h));
+
+  /* primary chroma and hue */
+  --primary-c: 0.15;
+  --primary-h: 240;
+
+  /* primary scale */
+  --primary-10: oklch(10% var(--primary-c) var(--primary-h));
+  --primary-15: oklch(15% var(--primary-c) var(--primary-h));
+  --primary-20: oklch(20% var(--primary-c) var(--primary-h));
+  --primary-25: oklch(25% var(--primary-c) var(--primary-h));
+  --primary-30: oklch(30% var(--primary-c) var(--primary-h));
+  --primary-35: oklch(35% var(--primary-c) var(--primary-h));
+  --primary-40: oklch(40% var(--primary-c) var(--primary-h));
+  --primary-45: oklch(45% var(--primary-c) var(--primary-h));
+  --primary-50: oklch(50% var(--primary-c) var(--primary-h));
+  --primary-55: oklch(55% var(--primary-c) var(--primary-h));
+  --primary-60: oklch(60% var(--primary-c) var(--primary-h));
+  --primary-65: oklch(65% var(--primary-c) var(--primary-h));
+  --primary-70: oklch(70% var(--primary-c) var(--primary-h));
+  --primary-75: oklch(75% var(--primary-c) var(--primary-h));
+  --primary-80: oklch(80% var(--primary-c) var(--primary-h));
+  --primary-85: oklch(85% var(--primary-c) var(--primary-h));
+  --primary-90: oklch(90% var(--primary-c) var(--primary-h));
+  --primary-95: oklch(95% var(--primary-c) var(--primary-h));
+
+  /* body */
+  --body-bg: white;
+  --body-fg: var(--neutral-50);
+
+  /* scroll */
+  --scroll-bg: var(--neutral-90);
+  --scroll-thumb-bg: var(--neutral-75);
+  --scroll-thumb-bg-hover: var(--neutral-70);
+  --scroll-thumb-bg-active: var(--neutral-60);
+
+  /* selection */
+  --selection-bg: var(--primary-85);
+  --selection-fg: var(--neutral-50);
+
+  /* focus */
+  --focus-outline: var(--primary-70);
+
+  /* nav */
+  --nav-bg: white;
+  --nav-border: var(--neutral-25);
+  --logo-fg: var(--neutral-50);
+  --menu-fg: var(--neutral-50);
+  --menu-fg-hover: var(--primary-70);
+  --menu-fg-active: var(--primary-70);
+  --menu-ripple-bg: var(--neutral-90);
+
+  /* button */
+  --btn-bg: var(--neutral-95);
+  --btn-fg: var(--neutral-60);
+  --btn-hover-bg: var(--primary-65);
+  --btn-hover-fg: white;
+  --btn-active-bg: var(--primary-70);
+  --btn-active-fg: white;
+
+  /* main */
+  --section-border: var(--neutral-25);
+  --title-fg: var(--neutral-50);
+  --subtitle-fg: var(--neutral-70);
+
+  .dark {
+    color-scheme: dark;
+
+    /* body */
+    --body-bg: var(--neutral-20);
+    --body-fg: var(--neutral-90);
+
+    /* scroll */
+    --scroll-bg: var(--neutral-30);
+    --scroll-thumb-bg: var(--neutral-40);
+    --scroll-thumb-bg-hover: var(--neutral-50);
+    --scroll-thumb-bg-active: var(--neutral-40);
+
+    /* selection */
+    --selection-bg: var(--primary-70);
+    --selection-fg: var(--neutral-20);
+
+    /* focus */
+    --focus-outline: var(--primary-70);
+
+    /* nav */
+    --nav-bg: var(--neutral-20);
+    --nav-border: var(--neutral-30);
+    --logo-fg: var(--neutral-90);
+    --menu-fg: var(--neutral-90);
+    --menu-fg-hover: var(--primary-70);
+    --menu-fg-active: var(--primary-70);
+    --menu-ripple-bg: var(--neutral-70);
+
+    /* button */
+    --btn-bg: var(--neutral-25);
+    --btn-fg: var(--neutral-90);
+    --btn-hover-bg: var(--primary-55);
+    --btn-hover-fg: white;
+    --btn-active-bg: var(--primary-60);
+    --btn-active-fg: white;
+
+    /* main */
+    --section-border: var(--neutral-30);
+    --title-fg: var(--neutral-90);
+    --subtitle-fg: var(--neutral-90);
+  }
+
+  .contrast {
+    a {
+      transition: none;
+    }
+
+    /* body */
+    --body-bg: white;
+    --body-fg: black;
+
+    /* scroll */
+    --scroll-bg: var(--neutral-85);
+    --scroll-thumb-bg: black;
+    --scroll-thumb-bg-hover: blue;
+    --scroll-thumb-bg-active: purple;
+
+    /* selection */
+    --selection-bg: blue;
+    --selection-fg: white;
+
+    /* focus */
+    --focus-outline: blue;
+
+    /* nav */
+    --nav-bg: white;
+    --nav-border: black;
+
+    /* menu */
+    --logo-fg: black;
+    --menu-fg: black;
+    --menu-bg-hover: blue;
+    --menu-fg-hover: white;
+    --menu-bg-active: purple;
+    --menu-fg-active: white;
+    --menu-ripple-bg: transparent;
+
+    /* button */
+    --btn-bg: white;
+    --btn-fg: black;
+    --btn-hover-bg: blue;
+    --btn-hover-fg: white;
+    --btn-active-bg: purple;
+    --btn-active-fg: white;
+
+    /* main */
+    --section-border: black;
+    --title-fg: black;
+    --subtitle-fg: black;
+  }
+
+  .dark.contrast {
+    /* body */
+    --body-bg: black;
+    --body-fg: white;
+
+    /* scroll */
+    --scroll-bg: var(--neutral-30);
+    --scroll-thumb-bg: white;
+    --scroll-thumb-bg-hover: aqua;
+    --scroll-thumb-bg-active: yellow;
+
+    /* selection */
+    --selection-bg: yellow;
+    --selection-fg: black;
+
+    /* focus */
+    --focus-outline: cyan;
+
+    /* nav */
+    --nav-bg: black;
+    --nav-border: white;
+
+    /* menu */
+    --logo-fg: white;
+    --menu-fg: white;
+    --menu-bg-hover: aqua;
+    --menu-fg-hover: black;
+    --menu-bg-active: yellow;
+    --menu-fg-active: black;
+
+    /* button */
+    --btn-bg: black;
+    --btn-fg: white;
+    --btn-hover-bg: aqua;
+    --btn-hover-fg: black;
+    --btn-active-bg: yellow;
+    --btn-active-fg: black;
+
+    /* main */
+    --section-border: white;
+    --title-fg: white;
+    --subtitle-fg: white;
+  }
+}
