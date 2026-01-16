@@ -5,12 +5,17 @@ import PageControl from './page-control.js';
 const colorControl = new ColorControl();
 colorControl.init();
 
-document.querySelector('.btn-color-scheme').addEventListener('click', (e) => {
+// Get buttons
+const btnColorScheme = document.querySelector('.btn-color-scheme');
+const btnColorContrast = document.querySelector('.btn-contrast-control');
+
+// Add events
+btnColorScheme.addEventListener('click', (e) => {
   e.preventDefault();
   colorControl.toggleColorSheme();
 });
 
-document.querySelector('.btn-contrast-control').addEventListener('click', (e) => {
+btnColorContrast.addEventListener('click', (e) => {
   e.preventDefault();
   colorControl.toggleContrast();
 });
@@ -19,10 +24,15 @@ document.querySelector('.btn-contrast-control').addEventListener('click', (e) =>
 const pageControl = new PageControl();
 pageControl.init();
 
+// Get elements page
+const nextPageButton = document.querySelector('#next-page');
+const prevPageButton = document.querySelector('#prev-page');
+
 // Keys
 const keyLeft = ['KeyA', 'KeyW', 'KeyH', 'KeyK', 'ArrowLeft'];
 const keyRight = ['KeyD', 'KeyS', 'KeyL', 'KeyJ', 'Space', 'ArrowRight'];
 
+// Add events
 window.addEventListener('keydown', (e) => {
   if (keyRight.indexOf(e.code) !== -1) {
     pageControl.changePage('next');
@@ -30,10 +40,6 @@ window.addEventListener('keydown', (e) => {
     pageControl.changePage('prev');
   }
 });
-
-// Buttons control
-const nextPageButton = document.querySelector('#next-page');
-const prevPageButton = document.querySelector('#prev-page');
 
 nextPageButton.addEventListener('click', () => {
   pageControl.changePage('next');
@@ -43,9 +49,10 @@ prevPageButton.addEventListener('click', () => {
   pageControl.changePage('prev');
 });
 
-// Menu buttons
+// Get elements menu
 const menuItems = document.querySelectorAll('#menu a');
 
+// Add events
 menuItems.forEach((item) => {
   item.addEventListener('click', (event) => {
     pageControl.changePage(item.getAttribute('href').slice(1));

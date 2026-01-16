@@ -1,1 +1,67 @@
-.animation{will-change:transform;animation-fill-mode:forwards}.fade-in{animation:fade-in}.fade-out{animation:fade-out}@keyframes ripple{to{transform:scale(2.5);opacity:0}}@keyframes fade-in{from{opacity:0}to{opacity:1}}@keyframes fade-out{from{opacity:1}to{opacity:0}}.contrast{a { transition: none; } .animation, section.active { animation: none; }}@media(width <= 720px){a{transition:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}a{transition:none}.animation,section.active{animation:none}}
+.animation {
+  will-change: transform;
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  animation: fade-in;
+}
+
+.fade-out {
+  animation: fade-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.contrast {
+  a {
+    transition: none;
+  }
+
+  .animation, section.active  {
+    animation: none;
+  }
+}
+
+@media(width <= 720px) {
+  a {
+    transition: none;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  a {
+    transition: none;
+  }
+
+  .animation, section.active  {
+    animation: none;
+  }
+}
