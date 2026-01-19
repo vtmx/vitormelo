@@ -1,10 +1,49 @@
-export default class PageControl {
+export default {
   init() {
+    // Add active class on first elements
     document.querySelector('#menu a').classList.add('active');
     document.querySelector('main section').classList.add('active');
+
+    // Get first and last page
     this.firstPage = document.querySelector('main section:first-of-type');
     this.lastPage = document.querySelector('main section:last-of-type');
-  }
+
+    // Keys
+    this.keyLeft = ['KeyA', 'KeyW', 'KeyH', 'KeyK', 'ArrowLeft'];
+    this.keyRight = ['KeyD', 'KeyS', 'KeyL', 'KeyJ', 'Space', 'ArrowRight'];
+
+    // Add events
+    window.addEventListener('keydown', (e) => {
+      if (this.keyRight.indexOf(e.code) !== -1) {
+        this.changePage('next');
+      } else if (this.keyLeft.indexOf(e.code) !== -1) {
+        this.changePage('prev');
+      }
+    });
+
+    // Get elements page
+    this.nextPageButton = document.querySelector('#next-page');
+    this.prevPageButton = document.querySelector('#prev-page');
+
+    this.nextPageButton.addEventListener('click', () => {
+      this.changePage('next');
+    });
+
+    this.prevPageButton.addEventListener('click', () => {
+      this.changePage('prev');
+    });
+
+    // Get elements menu
+    this.menuItems = document.querySelectorAll('#menu a');
+
+    // Add events
+    this.menuItems.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        this.changePage(item.getAttribute('href').slice(1));
+        this.activateRippleEffect(event, 'span', 'ripple');
+      });
+    });
+  },
 
   changePage(page) {
     let activePage = document.querySelector('section.active');
@@ -17,7 +56,7 @@ export default class PageControl {
           activePage = activePage.nextElementSibling;
         }
         break;
-        
+
       case 'prev':
         if (this.firstPage.classList.contains('active')) {
           activePage = this.lastPage;
@@ -42,7 +81,7 @@ export default class PageControl {
     // Add active class
     activeMenuItem.classList.add('active');
     activePage.classList.add('active');
-  }
+  },
 
   activateRippleEffect(e, el, className) {
     const btn = e.currentTarget;
@@ -54,8 +93,6 @@ export default class PageControl {
     const ripple = document.createElement('div');
     ripple.style.width = ripple.style.height = `${diameter}px`;
     ripple.style.top = `${e.clientY - (btn.offsetTop + radius)}px`;
-    // Atributo stick provoca positionamento errado quando centralizado
-    // ripple.style.left = `${e.clientX - (btn.offsetLeft + radius)}px`;
     ripple.style.left = `-${btn.clientWidth / 2}px`;
     ripple.classList.add(className);
 
@@ -63,4 +100,4 @@ export default class PageControl {
     if (oldRipple) oldRipple.remove();
     btn.appendChild(ripple);
   }
-}
+};
