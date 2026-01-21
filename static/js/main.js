@@ -1,6 +1,5 @@
 import colorControl from './color-control.js';
-import pageControl from './page-control.js';
+import sectionControl from './section-control.js';
 
 colorControl.init();
-pageControl.init();
-
+sectionControl.init();

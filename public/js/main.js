@@ -1,1 +1,1 @@
-import colorControl from"./color-control.js";import pageControl from"./page-control.js";colorControl.init(),pageControl.init()
+import colorControl from"./color-control.js";import sectionControl from"./section-control.js";colorControl.init(),sectionControl.init()

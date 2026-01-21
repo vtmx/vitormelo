@@ -7,7 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitor Melo</title>
   <link rel="icon" type="image/svg+xml" href="/icons/favicon.png">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/theme.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/reset.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/layout.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/nav.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/sections.css">
+  <link rel="stylesheet" fetchpriority="high" href="/css/animation.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="low" href="/fonts/Poppins-SemiBold.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="low" href="/fonts/Inter-Medium.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" fetchpriority="low" href="/fonts/Inter-SemiBold.woff2">
   <script defer type="module" src="/js/main.js"></script>
 </head>
 <body>
@@ -27,7 +35,7 @@
       {% include 'partials/skills.html' %}
     </main>
     <nav id="nav-controls" aria-label="Controls">
-      {% include 'partials/page-control.html' %}
+      {% include 'partials/section-control.html' %}
       {% include 'partials/color-control.html' %}
     </nav>
   </div>

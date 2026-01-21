@@ -38,7 +38,7 @@
   justify-items: end;
   padding: var(--size-3);
 
-  #page-control {
+  #section-control {
     grid-area: page;
     display: flex;
     gap: 8px;
