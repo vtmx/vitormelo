@@ -12,33 +12,38 @@ for app in "${apps[@]}"; do
   fi
 done
 
-# get push msg
+# zola build
+zola build
+
+# public dir
+public="$(pwd)/public"
+
+# bundle and minify css
+esbuild "$public/css/style.css" \
+  --bundle \
+  --minify \
+  --allow-overwrite \
+  --loader:.woff2=copy \
+  --outfile="$public/css/style.css"
+
+# bundle and minify js
+esbuild "$public/js/script.js" \
+  --bundle \
+  --minify \
+  --allow-overwrite \
+  --outfile="$public/js/script.js"
+
+# minify html
+for file in "$public"/**/*.html; do
+  minify "$file" -o "$file"
+done
+
+# push to git
 while true; do
   read -p 'Push msg: ' msg
   [[ "$msg"  ]] && break
 done
 
-# zola build
-zola build
-
-# minify
-public="$(pwd)/public"
-
-for file in "$public"/**/*.{css,html,js}; do
-  [[ -f "$file"  ]] && minify "$file" -o "$file"
-done
-
-# bundle css
-# cat theme.css base.css layout.css nav.css section.css animation.css >"$public"/style.css
-
-# bundle js
-# esbuild "$public/js/script.js" \
-#   --bundle \
-#   --minify \
-#   --allow-overwrite \
-#   --outfile="$public/js/script.js"
-
-# push files
 git add -A
 git commit -m "${msg^}"
 git push

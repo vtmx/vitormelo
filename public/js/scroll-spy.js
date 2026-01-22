@@ -1,1 +1,44 @@
-export default{init(){document.addEventListener("DOMContentLoaded",()=>{const n=document.querySelectorAll("section[id]"),s=document.querySelectorAll('nav a[href^="#"]');let e="";function t(){let t="";n.forEach(e=>{const n=e.offsetTop,s=e.clientHeight;scrollY>=n-150&&(t=e.getAttribute("id"))}),t&&t!==e&&(history.replaceState(null,"",`#${t}`),e=t),s.forEach(e=>{e.classList.remove("active"),e.getAttribute("href")===`#${t}`&&e.classList.add("active")})}window.addEventListener("scroll",t),t()})}}
+export default {
+  init() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections  = document.querySelectorAll('section[id]');
+      const navLinks  = document.querySelectorAll('nav a[href^="#"]');
+      let lastActiveId = '';  // para evitar atualizações desnecessárias
+
+      function activateLink() {
+        let current = '';
+
+        // Encontra a seção mais relevante
+        sections.forEach(section => {
+          const sectionTop    = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          // Ajuste o -150 conforme a altura do seu header fixo
+          // Quanto maior o número, mais cedo a seção "ativa"
+          if (scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // Só atualiza se mudou
+        if (current && current !== lastActiveId) {
+          // Atualiza a URL (sem recarregar a página)
+          history.replaceState(null, '', `#${current}`);
+          lastActiveId = current;
+        }
+
+        // Atualiza as classes .active nos links
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      // Executa ao carregar e ao rolar
+      window.addEventListener('scroll', activateLink);
+      activateLink(); // chama uma vez no início
+    });
+  }
+}

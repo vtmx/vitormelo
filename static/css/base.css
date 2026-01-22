@@ -1,6 +1,6 @@
 @font-face {
   src: local('Inter-Medium.woff2'),
-  url(/fonts/Poppins-SemiBold.woff2) format('woff2');
+  url(../fonts/Poppins-SemiBold.woff2) format('woff2');
   font-family: 'Poppins-SemiBold';
   font-style: normal;
   font-weight: 600;
@@ -9,7 +9,7 @@
 
 @font-face {
   src: local('Inter'),
-  url(/fonts/Inter-Medium.woff2) format('woff2');
+  url(../fonts/Inter-Medium.woff2) format('woff2');
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
