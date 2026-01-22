@@ -22,9 +22,21 @@ done
 zola build
 
 # minify
-for file in "$(pwd)/public/"**/*.{css,html,js}; do
+public="$(pwd)/public"
+
+for file in "$public"/**/*.{css,html,js}; do
   [[ -f "$file"  ]] && minify "$file" -o "$file"
 done
+
+# bundle css
+# cat theme.css base.css layout.css nav.css section.css animation.css >"$public"/style.css
+
+# bundle js
+# esbuild "$public/js/script.js" \
+#   --bundle \
+#   --minify \
+#   --allow-overwrite \
+#   --outfile="$public/js/script.js"
 
 # push files
 git add -A
