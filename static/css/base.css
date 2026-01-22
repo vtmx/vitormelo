@@ -1,6 +1,6 @@
 @font-face {
   src: local('Inter-Medium.woff2'),
-  url(../fonts/Poppins-SemiBold.woff2) format('woff2');
+  url(/fonts/Poppins-SemiBold.woff2) format('woff2');
   font-family: 'Poppins-SemiBold';
   font-style: normal;
   font-weight: 600;
@@ -9,25 +9,17 @@
 
 @font-face {
   src: local('Inter'),
-  url(../fonts/Inter-Medium.woff2) format('woff2');
+  url(/fonts/Inter-Medium.woff2) format('woff2');
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 
-@font-face {
-  src: local('Inter-SemiBold'),
-  url(../fonts/Inter-SemiBold.woff2) format('woff2');
-  font-family: 'Inter-SemiBold';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   outline: none;
 }
 
@@ -73,22 +65,29 @@ body {
   outline: var(--contrast-border) solid var(--focus-outline);
 }
 
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Poppins, sans-serif;
   color: var(--title-fg);
 }
 
-h1, h2, h3, h4, h5, h6, ul, p {
-  padding: 0;
-  font: inherit;
+h1, h2, h3, h4, h5, h6, p {
   overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ul {
   list-style: none;
 }
 
-img, svg, video, canvas, audio, iframe, embed, object {
+img, svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -96,16 +95,6 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 a {
   text-decoration: none;
-  color: var(--primary-);
+  color: var(--primary-70);
   transition: all 0.2s;
-}
-
-.invisible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  border: 0;
 }

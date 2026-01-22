@@ -1,11 +1,12 @@
 export default {
   init() {
     // Add active class on first elements
-    document.querySelector('#menu a').classList.add('active');
-    document.querySelector('main section').classList.add('active');
+    this.menuItemFirst = document.querySelector('#menu a');
+    this.menuItemFirst.classList.add('active');
 
     // Get first and last section
     this.sectionFirst = document.querySelector('main section:first-of-type');
+    this.sectionFirst.classList.add('active');
     this.sectionLast = document.querySelector('main section:last-of-type');
 
     // Keys
@@ -24,6 +25,7 @@ export default {
     // Get elements section
     this.buttonSectionNext = document.querySelector('#section-control .next');
     this.buttonSectionPrev = document.querySelector('#section-control .prev');
+    this.buttonSectionTop = document.querySelector('#section-control .top');
 
     this.buttonSectionNext.addEventListener('click', () => {
       this.changeSection('next');
@@ -31,6 +33,10 @@ export default {
 
     this.buttonSectionPrev.addEventListener('click', () => {
       this.changeSection('prev');
+    });
+
+    this.buttonSectionTop.addEventListener('click', () => {
+      this.changeSection('top');
     });
 
     // Get elements menu
@@ -65,14 +71,18 @@ export default {
         }
         break;
 
+      case 'top':
+        sectionActive = this.sectionFirst;
+        break;
+
       default:
         sectionActive = document.querySelector(`main #${section}`);
         break;
     }
 
     // Get active menu and section
-    let activePageId = sectionActive.getAttribute('id');
-    let menuItemActive = document.querySelector(`#menu a[href*="${activePageId}"]`);
+    const sectionActiveId = sectionActive.getAttribute('id');
+    const menuItemActive = document.querySelector(`#menu a[href*="${sectionActiveId}"]`);
 
     // Remove active class
     const menuItemActiveOld = document.querySelector('#menu a.active');
@@ -88,6 +98,12 @@ export default {
     menuItemActive.setAttribute('aria-current', 'true');
     sectionActive.classList.add('active');
     sectionActive.setAttribute('aria-current', 'true');
+
+    // Go to section
+    sectionActive.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Change window location
+    history.replaceState(null, '', `#${sectionActiveId}`);
   },
 
   activateRippleEffect(e, el, className) {

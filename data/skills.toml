@@ -4,7 +4,7 @@ accessibles = [
   'Responsive Design',
   'UI',
   'UX',
-  'WAI-ARIA'
+  'WAI-ARIA',
 ]
 
 softwares = [
@@ -12,30 +12,30 @@ softwares = [
   'Photoshop',
   'Illustrator',
   'VSCode',
-  'Vim'
+  'Vim',
 ]
 
 sos = [
   'Windows',
-  'Linux'
+  'Linux',
 ]
 
 systems = [
   'ServiceNow',
-  'Wordpress'
+  'Wordpress',
 ]
 
 languages = [
-'AutoIT',
-'Bash',
-'CSS',
-'HTML',
-'JavaScrpt',
-'jQuery',
-'Json',
-'Markdown',
-'PHP',
-'SASS',
-'SQL',
-'Vue',
+  'AutoIT',
+  'Bash',
+  'CSS',
+  'HTML',
+  'JavaScrpt',
+  'jQuery',
+  'Json',
+  'Markdown',
+  'PHP',
+  'SASS',
+  'SQL',
+  'Vue',
 ]

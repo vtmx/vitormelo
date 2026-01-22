@@ -1,4 +1,4 @@
-#app {
+body {
   display: grid;
   grid-template-areas:
     'menu main controls'
@@ -20,7 +20,7 @@
   padding: var(--size-3);
 }
 
-#content {
+main {
   grid-area: main;
   position: relative;
   max-width: 720px;
@@ -55,7 +55,7 @@
 }
 
 @media (width <= 720px) {
-  #app {
+  body {
     grid-template-areas: 'main main main' 'menu menu menu';
     grid-template-columns: 1fr auto;
     place-content: space-between;
@@ -63,12 +63,11 @@
     height: 100svh;
   }
 
-  #content {
+  main {
     min-width: 100%;
     padding: 0 var(--size-3);
 
     section {
-      display: none;
       position: relative;
       width: auto;
       height: auto;

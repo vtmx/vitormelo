@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+shopt -s globstar
+
+# check pre-reqs
+apps=(esbuild minify zola)
+
+for app in "${apps[@]}"; do
+  if ! command -v $app > /dev/null; then
+    echo "error: need install $app" >&2
+    exit 1
+  fi
+done
+
+# get push msg
+while true; do
+  read -p 'Push msg: ' msg
+  [[ "$msg"  ]] && break
+done
+
+# zola build
+zola build
+
+# minify
+for file in "$(pwd)/public/"**/*.{css,html,js}; do
+  [[ -f "$file"  ]] && minify "$file" -o "$file"
+done
+
+# push files
+git add -A
+git commit -m "${msg^}"
+git push main
+
+exit 0

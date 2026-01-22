@@ -2,7 +2,7 @@
   font: 600 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
   text-transform: uppercase;
 
-  & a {
+  a {
     display: flex;
     align-items: center;
     padding: var(--size-3);
@@ -10,24 +10,30 @@
   }
 }
 
+#menu {
+  scroll-target-group: auto;
+}
+
 #menu a {
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
+  gap: 0 var(--size-2);
   height: 56px;
   padding: 0 var(--size-3);
   line-height: 1;
   color: var(--menu-fg);
   transition: all .2s;
   will-change: all;
-  gap: 0 var(--size-2);
 
   &:hover {
     background: var(--menu-bg-hover);
     color: var(--menu-fg-hover);
   }
 
+  /* falhando com target current js resolveu */
+  /* &:active, &:target-current, &.active { */
   &:active, &.active {
     background: var(--menu-bg-active);
     color: var(--menu-fg-active);
@@ -78,10 +84,12 @@
   height: 48px;
   font-size: 1.5rem;
   background: var(--btn-bg);
+  border: none;
   border-radius: var(--radius);
   color: var(--btn-fg);
 
   &:hover {
+    cursor: pointer;
     background: var(--btn-hover-bg);
     color: var(--btn-hover-fg);
   }
@@ -179,7 +187,6 @@
     gap: var(--size-2);
     padding: 0;
     border-top: 3px solid transparent;
-    font-family: 'Inter-SemiBold', system-ui, sans-serif;
     -webkit-tap-highlight-color: rgba(255 255 255 / .1);
 
     &:hover, &:active, &.active {

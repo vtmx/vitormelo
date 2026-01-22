@@ -1,9 +1,3 @@
-/* https://themer.dev */
-/* https://www.materialui.co/colors */
-/* https://www.carbondesignsystem.com/guidelines/color/overview */
-/* https://tailwind.simeongriggs.dev/brand */
-/* https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/ */
-
 :root {
   color-scheme: light;
   --contrast-border: 3px;
@@ -108,7 +102,6 @@
   /* main */
   --section-border: var(--neutral-25);
   --title-fg: var(--neutral-50);
-  --subtitle-fg: var(--neutral-70);
 
   .dark {
     color-scheme: dark;
@@ -150,7 +143,6 @@
     /* main */
     --section-border: var(--neutral-30);
     --title-fg: var(--neutral-90);
-    --subtitle-fg: var(--neutral-90);
   }
 
   .contrast {
@@ -199,7 +191,6 @@
     /* main */
     --section-border: black;
     --title-fg: black;
-    --subtitle-fg: black;
   }
 
   .dark.contrast {
@@ -243,6 +234,5 @@
     /* main */
     --section-border: white;
     --title-fg: white;
-    --subtitle-fg: white;
   }
 }
