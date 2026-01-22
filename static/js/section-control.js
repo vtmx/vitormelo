@@ -10,8 +10,8 @@ export default {
     this.sectionLast = document.querySelector('main section:last-of-type');
 
     // Keys
-    this.keyLeft = ['KeyA', 'KeyW', 'KeyH', 'KeyK', 'ArrowLeft'];
-    this.keyRight = ['KeyD', 'KeyS', 'KeyL', 'KeyJ', 'Space', 'ArrowRight'];
+    this.keyLeft = ['KeyK', 'ArrowLeft'];
+    this.keyRight = ['KeyJ', 'Space', 'ArrowRight'];
 
     // Add events
     window.addEventListener('keydown', (e) => {

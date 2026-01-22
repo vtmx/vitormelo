@@ -13,10 +13,14 @@ for app in "${apps[@]}"; do
 done
 
 # push to git
-while true; do
-  read -p 'Push msg: ' msg
-  [[ "$msg"  ]] && break
-done
+if [[ "$*"  ]]; then
+  msg="$*"
+else
+  while true; do
+    read -p 'Push msg: ' msg
+    [[ "$msg"  ]] && break
+  done
+fi
 
 # zola build
 zola build
