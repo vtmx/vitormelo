@@ -87,8 +87,8 @@
   --nav-border: var(--neutral-25);
   --logo-fg: var(--neutral-50);
   --menu-fg: var(--neutral-50);
-  --menu-fg-hover: var(--primary-60);
-  --menu-fg-active: var(--primary-60);
+  --menu-fg-hover: var(--primary-50);
+  --menu-fg-active: var(--primary-50);
   --menu-ripple-bg: var(--neutral-90);
 
   /* button */
