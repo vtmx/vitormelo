@@ -38,7 +38,6 @@
     background: var(--menu-bg-active);
     color: var(--menu-fg-active);
     transform: translate(0, 1px);
-    transition: none;
   }
 
   &:hover, &:active, &.active {
@@ -163,14 +162,18 @@
     border-top: 1px solid var(--nav-border);
   }
 
-  #logo, #social, #menu li:has(a[href='#services']), #menu li:has(a[href='#education']) {
+  #logo,
+  #social,
+  #menu li:has(a[href='#services']),
+  #services,
+  #menu li:has(a[href='#education']),
+  #education {
     display: none;
   }
 
   #menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    direction: rtl;
     min-width: 100%;
   }
 
@@ -187,13 +190,14 @@
     gap: var(--size-2);
     padding: 0;
     border-top: 3px solid transparent;
+    transition: all .3s;
     -webkit-tap-highlight-color: rgba(255 255 255 / .1);
 
     &:hover, &:active, &.active {
       transform: none;
     }
 
-    & i {
+    i {
       display: block;
       margin-bottom: 6px;
       text-align: center;

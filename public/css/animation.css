@@ -54,12 +54,10 @@
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
   *, ::before, ::after {
-    animation-delay: 0 !important;
-    animation-duration: 0 !important;
-    animation-iteration-count: 0 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0 !important;
-    transition-delay: 0 !important;
+    animation-delay: 0;
+    animation-duration: 0;
+    animation-iteration-count: 0;
+    transition-duration: 0;
+    transition-delay: 0;
   }
 }
