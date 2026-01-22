@@ -71,6 +71,7 @@ main {
     padding: 4px 12px;
     background: var(--neutral-95);
     color: var(--neutral-40);
+    border-radius: var(--radius);
   }
 }
 
