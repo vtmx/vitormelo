@@ -29,6 +29,6 @@ done
 # push files
 git add -A
 git commit -m "${msg^}"
-git push main
+git push
 
 exit 0
