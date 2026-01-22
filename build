@@ -12,6 +12,12 @@ for app in "${apps[@]}"; do
   fi
 done
 
+# push to git
+while true; do
+  read -p 'Push msg: ' msg
+  [[ "$msg"  ]] && break
+done
+
 # zola build
 zola build
 
@@ -36,12 +42,6 @@ esbuild "$public/js/script.js" \
 # minify html
 for file in "$public"/**/*.html; do
   minify "$file" -o "$file"
-done
-
-# push to git
-while true; do
-  read -p 'Push msg: ' msg
-  [[ "$msg"  ]] && break
 done
 
 git add -A
