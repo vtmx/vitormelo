@@ -44,6 +44,10 @@
     transform: translate(var(--size-1), 0);
   }
 
+  &:focus-visible {
+    transition: none;
+  }
+
   .icon {
     display: none;
     width: var(--size-3);
@@ -70,9 +74,15 @@
 }
 
 #social {
-  display: flex;
-  gap: var(--size-2);
-  line-height: 0;
+  ul {
+    display: flex;
+    gap: var(--size-2);
+    line-height: 0;
+  }
+
+  span {
+    display: none;
+  }
 }
 
 .btn-icon {
@@ -97,6 +107,10 @@
     background: var(--btn-active-bg);
     color: var(--btn-active-fg);
     transform: translate3d(0, 1px, 0);
+    transition: none;
+  }
+
+  &:focus-visible {
     transition: none;
   }
 
@@ -160,16 +174,21 @@
   #nav-main {
     padding: 0;
     border-top: 1px solid var(--nav-border);
+
+    header,
+    footer,
+    #menu li:has(a[href='#services']),
+    #services,
+    #menu li:has(a[href='#education']),
+    #education {
+      display: none;
+    }
+
+    nav {
+      flex: 1;
+    }
   }
 
-  #logo,
-  #social,
-  #menu li:has(a[href='#services']),
-  #services,
-  #menu li:has(a[href='#education']),
-  #education {
-    display: none;
-  }
 
   #menu {
     display: grid;

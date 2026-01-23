@@ -1,14 +1,16 @@
 {% set data = load_data(path='data/nav.toml') %}
 
-<ul id="menu">
-  {% for key in data.nav %}
-    <li>
-      <a href="{{ key.link }}">
-        <svg class="icon icon-{{ key.icon }}" aria-hiden="true" focusable="false">
-          <use href="#icon-{{ key.icon }}"></use>
-        </svg>
-        <span class="name">{{ key.name }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<nav aria-label="Main">
+  <ul id="menu">
+    {% for key in data.nav %}
+      <li>
+        <a href="{{ key.link }}">
+          <svg class="icon icon-{{ key.icon }}" aria-hiden="true" focusable="false" style="max-width: 24px; max-height: 24px; fill: currentcolor">
+            <use href="#icon-{{ key.icon }}"></use>
+          </svg>
+          <span class="name">{{ key.name }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
