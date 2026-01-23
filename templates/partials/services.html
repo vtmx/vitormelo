@@ -1,12 +1,12 @@
 {% set data = load_data(path='data/services.toml') %}
 
-<section id="services">
-  <h2 class="title">{{ data.title }}</h2>
-  <div class="services">
+<section id='services'>
+  <h2 class='title'>{{ data.title }}</h2>
+  <div class='services'>
     {% for key in data.services %}
-      <div class="service">
-        <h3 class="name">{{ key.name }}</h3>
-        <p class="description">{{ key.description }}</p>
+      <div class='service'>
+        <h3 class='name'>{{ key.name }}</h3>
+        <p class='description'>{{ key.description }}</p>
       </div>
     {% endfor %}
   </div>

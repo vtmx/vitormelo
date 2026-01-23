@@ -1,45 +1,45 @@
 {% set data = load_data(path='data/skills.toml') %}
 
-<section id="skills">
-  <h2 class="title">{{ data.title }}</h2>
+<section id='skills'>
+  <h2 class='title'>{{ data.title }}</h2>
   <div>
     <div>
-      <h3 class="name">Sistemas Operacionais</h3>
-      <ul class="skills">
+      <h3 class='name'>Sistemas Operacionais</h3>
+      <ul class='skills'>
         {% for key in data.sos %}
-          <li class="skill">{{ key }}</li>
+          <li class='skill'>{{ key }}</li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h3 class="name">Softwares</h3>
-      <ul class="skills">
+      <h3 class='name'>Softwares</h3>
+      <ul class='skills'>
         {% for key in data.softwares %}
-          <li class="skill">{{ key }}</li>
+          <li class='skill'>{{ key }}</li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h3 class="name">Linguagens</h3>
-      <ul class="skills">
+      <h3 class='name'>Linguagens</h3>
+      <ul class='skills'>
         {% for key in data.languages %}
-          <li class="skill">{{ key }}</li>
+          <li class='skill'>{{ key }}</li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h3 class="name">Sistemas</h3>
-      <ul class="skills">
+      <h3 class='name'>Sistemas</h3>
+      <ul class='skills'>
         {% for key in data.systems %}
-          <li class="skill">{{ key }}</li>
+          <li class='skill'>{{ key }}</li>
         {% endfor %}
       </ul>
     </div>
     <div>
-      <h3 class="name">Acessibilidade</h3>
-      <ul class="skills">
+      <h3 class='name'>Acessibilidade</h3>
+      <ul class='skills'>
         {% for key in data.accessibles %}
-          <li class="skill" v-for="accessible in skills.accessibles" :key="accessible.name">{{ key }}</li>
+          <li class='skill' v-for='accessible in skills.accessibles' :key='accessible.name'>{{ key }}</li>
         {% endfor %}
       </ul>
     </div>
