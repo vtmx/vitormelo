@@ -36,6 +36,11 @@ esbuild "$public/css/style.css" \
   --loader:.woff2=copy \
   --outfile="$public/css/style.css"
 
+esbuild "$public/css/print.css" \
+  --minify \
+  --allow-overwrite \
+  --outfile="$public/css/print.css"
+
 # bundle and minify js
 esbuild "$public/js/script.js" \
   --bundle \
