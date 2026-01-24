@@ -1,14 +1,14 @@
 {% set data = load_data(path='data/education.toml') %}
 
 <section id='education'>
-  <h2 class='title'>{{ data.title }}</h2>
+  <h2 class='title'>{{ data.title | safe }}</h2>
   <div class='educations'>
     {% for key in data.education %}
-      <div class='education'>
-        <h3 class='name'>{{ key.name }}</h3>
-        <div class='org'>{{ key.org_name }} </div>
-        <div class='time'><time>{{ key.year_start }}</time> - <time>{{ key.year_end }}</time></div>
-      </div>
+      <article class='education'>
+        <h3 class='name'>{{ key.name | safe }}</h3>
+        <div class='org'>{{ key.org_name | safe }} </div>
+        <div class='time'><time>{{ key.year_start | safe }}</time> - <time>{{ key.year_end | safe }}</time></div>
+      </article>
     {% endfor %}
   </div>
 </section>

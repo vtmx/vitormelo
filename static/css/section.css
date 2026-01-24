@@ -47,7 +47,7 @@ main {
 /* skills  */
 
 #skills {
-  .skills {
+  ul {
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-2);
@@ -55,16 +55,6 @@ main {
 
   .name {
     margin-bottom: var(--size-2);
-  }
-
-  .skills {
-    &:last-child {
-      margin: 0;
-    }
-
-    &:hover {
-      cursor: default;
-    }
   }
 
   .skill {
@@ -82,25 +72,21 @@ main {
     gap: var(--size-3);
 
     .title {
-      padding-block: var(--size-3);
+      padding-block: var(--size-4);
       font-size: 1.5rem;
     }
 
     section {
-      padding-top: var(--size-3);
       border-top: 1px solid var(--section-border-color);
+
       > div {
         gap: 0;
       }
     }
 
-    section > div > div {
+    article {
       padding-block: var(--size-4);
       border-bottom: 1px solid var(--section-border-color);
-
-      &:first-child {
-        padding-top: var(--size-3);
-      }
 
       &:last-child {
         padding-bottom: var(--size-3);
@@ -110,10 +96,6 @@ main {
 
     .name, .org, .time {
       line-height: 1.5;
-    }
-
-    .skills {
-      gap: var(--size-2);
     }
   }
 }

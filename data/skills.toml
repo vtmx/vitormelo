@@ -1,41 +1,46 @@
-title = 'Skills'
+title = 'Habilidades'
 
-accessibles = [
+[[ skills  ]]
+title = 'Sistemas Operacionais'
+items = [
+  'Windows',
+  'Linux'
+]
+
+[[ skills  ]]
+title = 'Softwares'
+items = [
+  'Office',
+  'Photoshop',
+  'VSCode',
+  'Nvim'
+]
+
+[[ skills  ]]
+title = 'Linguagens'
+items = [
+  'AutoIT',
+  'Bash',
+  'HTML',
+  'Markdown',
+  'CSS',
+  'JavaScript',
+  'jQuery',
+  'JSON'
+]
+
+[[ skills  ]]
+title = 'Sistemas'
+items = [
+  'ServiceNow',
+  'Wordpress'
+]
+
+[[ skills  ]]
+title = 'Acessibilidade'
+items = [
   'Responsive Design',
   'UI',
   'UX',
-  'WAI-ARIA',
-]
-
-softwares = [
-  'Office',
-  'Photoshop',
-  'Illustrator',
-  'VSCode',
-  'Vim',
-]
-
-sos = [
-  'Windows',
-  'Linux',
-]
-
-systems = [
-  'ServiceNow',
-  'Wordpress',
-]
-
-languages = [
-  'AutoIT',
-  'Bash',
-  'CSS',
-  'HTML',
-  'JavaScrpt',
-  'jQuery',
-  'Json',
-  'Markdown',
-  'PHP',
-  'SASS',
-  'SQL',
-  'Vue',
+  'WAI-ARIA'
 ]

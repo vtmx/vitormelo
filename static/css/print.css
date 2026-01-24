@@ -1,5 +1,5 @@
 @page {
-  size: A4 portrait;
+  size: a4 portrait;
   margin: .25cm 1cm;
 }
 
@@ -33,7 +33,7 @@ input, button {
 }
 
 #nav-main {
-  nav, footer {
+  nav, #social {
     display: none;
   }
 }

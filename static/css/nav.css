@@ -75,11 +75,9 @@ h1 {
 }
 
 #social {
-  ul {
-    display: flex;
-    gap: var(--size-2);
-    line-height: 0;
-  }
+  display: flex;
+  gap: var(--size-2);
+  line-height: 0;
 
   span {
     display: none;
@@ -175,12 +173,9 @@ h1 {
     padding: 0;
     border-top: 1px solid var(--nav-border-color);
 
-    header,
-    footer,
-    #menu li:has(a[href='#services']),
-    #services,
-    #menu li:has(a[href='#education']),
-    #education {
+    h1, #social,
+    #menu li:has(a[href='#services']), main #services,
+    #menu li:has(a[href='#education']), main #education {
       display: none;
     }
 
@@ -189,18 +184,17 @@ h1 {
     }
   }
 
-
   #menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
     min-width: 100%;
-  }
 
-  #menu li {
-    display: flex;
-    place-items: center;
-    flex-grow: 1;
+    li {
+        display: flex;
+        place-items: center;
+        flex-grow: 1;
+      }
   }
 
   #menu a {
