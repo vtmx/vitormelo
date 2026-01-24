@@ -1,45 +1,44 @@
 export default {
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      // Recebe elementos visíveis
-      const sections = [...document.querySelectorAll('section[id]')].filter(el => getComputedStyle(el).display !== 'none');
-      const navLinks  = [...document.querySelectorAll('nav a[href^="#"]')].filter(el => getComputedStyle(el).display !== 'none');
-      let lastActiveId = '';  // para evitar atualizações desnecessárias
+      const navLinks = document.querySelectorAll('#nav-main nav a[href^="#"]');
+      const sections = document.querySelectorAll('section[id]');
 
-      function activateLink() {
-        let current = '';
-
-        // Encontra a seção mais relevante
-        sections.forEach(section => {
-          const sectionTop    = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          // Ajuste o -300 conforme a altura do seu header fixo
-          // Quanto maior o número, mais cedo a seção "ativa"
-          if (scrollY >= sectionTop - 300) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        // Só atualiza se mudou
-        if (current && current !== lastActiveId) {
-          // Atualiza a URL (sem recarregar a página)
-          history.replaceState(null, '', `#${current}`);
-          lastActiveId = current;
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              updateActive(id);
+            }
+          });
+        },
+        {
+          rootMargin: '-300px 0px -60% 0px' // ajusta quando considera "visível"
+          // Exemplo: -300px no topo (header), 60% na parte de baixo
         }
+      );
 
-        // Atualiza as classes .active nos links
+      sections.forEach(section => observer.observe(section));
+
+      // Força último item no bottom (IntersectionObserver não detecta sozinho o final)
+      window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
+          const lastId = sections[sections.length - 1]?.getAttribute('id');
+          if (lastId) updateActive(lastId);
+        }
+      });
+
+      function updateActive(id) {
         navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
+        history.replaceState(null, '', `#${id}`);
       }
 
-      // Executa ao carregar e ao rolar
-      window.addEventListener('scroll', activateLink);
-      activateLink(); // chama uma vez no início
+      // Chamada inicial
+      const firstVisible = [...sections].find(s => s.getBoundingClientRect().top <= 300);
+      if (firstVisible) updateActive(firstVisible.getAttribute('id'));
     });
   }
-}
+};
