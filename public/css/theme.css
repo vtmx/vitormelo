@@ -1,7 +1,6 @@
 :root {
   color-scheme: light;
-  --contrast-border: 3px;
-  --radius: 4px;
+  --border-radius: 4px;
 
   /* sizes */
   --size-1: .25rem; /* 4px */
@@ -10,11 +9,11 @@
   --size-4: 2rem;   /* 32px */
 
   /* media size */
-  --xm: 480px;
-  --sm: 600px;
-  --md: 720px;
-  --lg: 960px;
-  --xl: 1280px;
+  --media-width-xm: 480px;
+  --media-width-sm: 600px;
+  --media-width-md: 720px;
+  --media-width-lg: 960px;
+  --media-width-xl: 1280px;
 
   /* neutral chroma and hue */
   --neutral-c: .01;
@@ -80,27 +79,29 @@
   --selection-fg: var(--neutral-50);
 
   /* focus */
-  --focus-outline: var(--primary-70);
+  --outline-width-focus: 3px;
+  --outline-color-focus: var(--primary-70);
 
   /* nav */
   --nav-bg: white;
-  --nav-border: var(--neutral-25);
-  --logo-fg: var(--neutral-50);
+  --nav-border-color: var(--neutral-90);
   --menu-fg: var(--neutral-50);
+  --menu-bg-hover: var(--neutral-95);
   --menu-fg-hover: var(--primary-50);
-  --menu-fg-active: var(--primary-50);
+  --menu-bg-active: var(--neutral-95);
+  --menu-fg-active: var(--primary-60);
   --menu-ripple-bg: var(--neutral-90);
 
   /* button */
   --btn-bg: var(--neutral-95);
   --btn-fg: var(--neutral-60);
-  --btn-hover-bg: var(--primary-65);
-  --btn-hover-fg: white;
-  --btn-active-bg: var(--primary-70);
-  --btn-active-fg: white;
+  --btn-bg-hover: var(--primary-65);
+  --btn-fg-hover: white;
+  --btn-bg-active: var(--primary-70);
+  --btn-fg-active: white;
 
   /* main */
-  --section-border: var(--neutral-25);
+  --section-border-color: var(--neutral-90);
   --title-fg: var(--neutral-50);
 
   .dark {
@@ -121,27 +122,28 @@
     --selection-fg: var(--neutral-20);
 
     /* focus */
-    --focus-outline: var(--primary-70);
+    --outline-color-focus: var(--primary-70);
 
     /* nav */
     --nav-bg: var(--neutral-20);
-    --nav-border: var(--neutral-30);
-    --logo-fg: var(--neutral-90);
+    --nav-border-color: var(--neutral-30);
     --menu-fg: var(--neutral-90);
+    --menu-bg-hover: var(--neutral-25);
     --menu-fg-hover: var(--primary-70);
+    --menu-bg-active: var(--neutral-25);
     --menu-fg-active: var(--primary-70);
     --menu-ripple-bg: var(--neutral-70);
 
     /* button */
     --btn-bg: var(--neutral-25);
     --btn-fg: var(--neutral-90);
-    --btn-hover-bg: var(--primary-55);
-    --btn-hover-fg: white;
-    --btn-active-bg: var(--primary-60);
-    --btn-active-fg: white;
+    --btn-bg-hover: var(--primary-55);
+    --btn-fg-hover: white;
+    --btn-bg-active: var(--primary-60);
+    --btn-fg-active: white;
 
     /* main */
-    --section-border: var(--neutral-30);
+    --section-border-color: var(--neutral-30);
     --title-fg: var(--neutral-90);
   }
 
@@ -165,14 +167,13 @@
     --selection-fg: white;
 
     /* focus */
-    --focus-outline: blue;
+    --outline-color-focus: blue;
 
     /* nav */
     --nav-bg: white;
-    --nav-border: black;
+    --nav-border-color: black;
 
     /* menu */
-    --logo-fg: black;
     --menu-fg: black;
     --menu-bg-hover: blue;
     --menu-fg-hover: white;
@@ -183,13 +184,13 @@
     /* button */
     --btn-bg: white;
     --btn-fg: black;
-    --btn-hover-bg: blue;
-    --btn-hover-fg: white;
-    --btn-active-bg: purple;
-    --btn-active-fg: white;
+    --btn-bg-hover: blue;
+    --btn-fg-hover: white;
+    --btn-bg-active: purple;
+    --btn-fg-active: white;
 
     /* main */
-    --section-border: black;
+    --section-border-color: black;
     --title-fg: black;
   }
 
@@ -209,14 +210,13 @@
     --selection-fg: black;
 
     /* focus */
-    --focus-outline: cyan;
+    --outline-color-focus: cyan;
 
     /* nav */
     --nav-bg: black;
-    --nav-border: white;
+    --nav-border-color: white;
 
     /* menu */
-    --logo-fg: white;
     --menu-fg: white;
     --menu-bg-hover: aqua;
     --menu-fg-hover: black;
@@ -226,13 +226,13 @@
     /* button */
     --btn-bg: black;
     --btn-fg: white;
-    --btn-hover-bg: aqua;
-    --btn-hover-fg: black;
-    --btn-active-bg: yellow;
-    --btn-active-fg: black;
+    --btn-bg-hover: aqua;
+    --btn-fg-hover: black;
+    --btn-bg-active: yellow;
+    --btn-fg-active: black;
 
     /* main */
-    --section-border: white;
+    --section-border-color: white;
     --title-fg: white;
   }
 }

@@ -62,12 +62,12 @@ body {
 }
 
 :focus-visible {
-  outline: var(--contrast-border) solid var(--focus-outline);
+  outline: var(--outline-width-focus) solid var(--outline-color-focus);
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, system-ui, sans-serif;
   color: var(--title-fg);
 }
 

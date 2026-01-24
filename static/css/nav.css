@@ -1,17 +1,18 @@
-#logo {
-  font: 600 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
+h1 {
+  display: flex;
+  align-items: center;
+  padding: var(--size-3);
+  font: 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
   text-transform: uppercase;
-
-  a {
-    display: flex;
-    align-items: center;
-    padding: var(--size-3);
-    color: var(--logo-fg);
-  }
+  color: var(--logo-fg);
 }
 
 #menu {
-  scroll-target-group: auto;
+  /* Ainda não funciona no FF */
+  /* scroll-target-group: auto; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
 }
 
 #menu a {
@@ -22,6 +23,7 @@
   gap: 0 var(--size-2);
   height: 56px;
   padding: 0 var(--size-3);
+  border-radius: var(--border-radius);
   line-height: 1;
   color: var(--menu-fg);
   transition: all .2s;
@@ -29,7 +31,6 @@
 
   &:hover {
     background: var(--menu-bg-hover);
-    color: var(--menu-fg-hover);
   }
 
   /* falhando com target current js resolveu */
@@ -94,18 +95,18 @@
   font-size: 1.5rem;
   background: var(--btn-bg);
   border: none;
-  border-radius: var(--radius);
+  border-radius: var(--border-radius);
   color: var(--btn-fg);
 
   &:hover {
     cursor: pointer;
-    background: var(--btn-hover-bg);
-    color: var(--btn-hover-fg);
+    background: var(--btn-bg-hover);
+    color: var(--btn-fg-hover);
   }
 
   &:active {
-    background: var(--btn-active-bg);
-    color: var(--btn-active-fg);
+    background: var(--btn-bg-active);
+    color: var(--btn-fg-active);
     transform: translate3d(0, 1px, 0);
     transition: none;
   }
@@ -122,9 +123,8 @@
 }
 
 .contrast {
-  #logo a, #menu a {
+  #menu a {
     border: 3px solid var(--menu-fg);
-    margin-block: var(--size-2);
     transition: none;
     transform: none;
 
@@ -140,32 +140,32 @@
       color: var(--menu-fg-active);
 
       &:focus-visible {
-        outline: var(--contrast-border) solid var(--menu-bg-active);
+        outline: var(--outline-width-focus) solid var(--menu-bg-active);
       }
     }
 
     &:focus-visible {
       border-color: currentcolor;
-      outline: var(--contrast-border) solid var(--menu-bg-hover);
+      outline: var(--outline-width-focus) solid var(--menu-bg-hover);
     }
   }
 
   .btn-icon {
-    border: var(--contrast-border) solid currentcolor;
+    border: var(--outline-width-focus) solid currentcolor;
 
     &:hover {
-      border-color: var(--btn-hover-bg);
+      border-color: var(--btn-bg-hover);
     }
 
     &:active {
-      border-color: var(--btn-active-bg);
+      border-color: var(--btn-bg-active);
     }
 
     &:focus-visible {
-      background: var(--btn-hover-bg);
+      background: var(--btn-bg-hover);
       border-color: currentcolor;
-      outline: var(--contrast-border) solid var(--btn-hover-bg);
-      color: var(--btn-hover-fg);
+      outline: var(--outline-width-focus) solid var(--btn-bg-hover);
+      color: var(--btn-fg-hover);
     }
   }
 }
@@ -173,7 +173,7 @@
 @media(width <= 720px) {
   #nav-main {
     padding: 0;
-    border-top: 1px solid var(--nav-border);
+    border-top: 1px solid var(--nav-border-color);
 
     header,
     footer,
@@ -193,6 +193,7 @@
   #menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 0;
     min-width: 100%;
   }
 
@@ -209,6 +210,7 @@
     gap: var(--size-2);
     padding: 0;
     border-top: 3px solid transparent;
+    border-radius: 0;
     transition: all .3s;
     -webkit-tap-highlight-color: rgba(255 255 255 / .1);
 
