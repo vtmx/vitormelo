@@ -32,7 +32,7 @@ main {
 
 /* about */
 
-#about {
+#sobre {
   .avatar {
     display: block;
     border-radius: var(--border-radius);
@@ -40,13 +40,13 @@ main {
   }
 
   .description {
-    padding-block: 16px;
+    padding-block: var(--size-3);
   }
 }
 
 /* skills  */
 
-#skills {
+.skills {
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -72,8 +72,12 @@ main {
     gap: var(--size-3);
 
     .title {
-      padding-block: var(--size-4);
+      padding-block: var(--size-4) 0;
       font-size: 1.5rem;
+    }
+
+    section:first-child .title {
+      padding-block: var(--size-3);
     }
 
     section {
@@ -105,7 +109,7 @@ main {
 }
 
 .dark {
-  #skills {
+  .skills {
     .skill {
       background: var(--neutral-25);
       color: var(--neutral-90);
@@ -114,7 +118,7 @@ main {
 }
 
 .contrast {
-  #skills {
+  .skills {
     .skill {
       background: white;
       color: black;
@@ -125,7 +129,7 @@ main {
 }
 
 .dark.contrast {
-  #skills {
+  .skills {
     .skill {
       background: black;
       color: white;

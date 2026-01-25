@@ -1,24 +1,19 @@
 export default {
   init() {
-    this.btnIconColorScheme = document.querySelector('.btn-color-scheme .icon');
+    this.btnColorScheme = document.querySelector('.btn-color-scheme');
+    this.btnColorSchemeIcon = this.btnColorScheme.querySelector('.icon');
+    this.btnColorContrast = document.querySelector('.btn-contrast-control');
 
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      this.setDark(this.btnIconColorScheme);
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      this.toggleColorSheme('dark');
     } else {
-      this.setLight(this.btnIconColorScheme);
+      this.toggleColorSheme('light');
     }
 
     if (localStorage.contrast === 'true' || window.matchMedia('(prefers-contrast: more)').matches) {
-      document.body.classList.add('contrast');
-      localStorage.contrast = 'true';
-    } else {
-      document.body.classList.remove('contrast');
-      localStorage.contrast = 'false';
+      this.toggleContrast('more');
     }
-
-    // Get buttons
-    this.btnColorScheme = document.querySelector('.btn-color-scheme');
-    this.btnColorContrast = document.querySelector('.btn-contrast-control');
 
     // Add events
     this.btnColorScheme.addEventListener('click', (e) => {
@@ -32,39 +27,22 @@ export default {
     });
   },
 
-  toggleColorSheme() {
-    const btnIconColorScheme = document.querySelector('.btn-color-scheme .icon');
+  toggleColorSheme(colorScheme = '') {
+    const isDark = colorScheme === '' ? document.body.classList.contains('light') : colorScheme === 'dark';
+    document.body.classList.toggle('dark', isDark);
+    document.body.classList.toggle('light', !isDark);
+    const iconName = isDark ? 'icon-sun' : 'icon-moon';
 
-    if (localStorage.theme === 'dark') {
-      this.setLight(btnIconColorScheme);
-    } else {
-      this.setDark(btnIconColorScheme);
-    }
+    this.btnColorSchemeIcon.classList.remove('icon-sun', 'icon-moon');
+    this.btnColorSchemeIcon.classList.add(iconName);
+    this.btnColorSchemeIcon.firstElementChild.setAttribute('href', `#${iconName}`);
+
+    localStorage.theme = isDark ? 'dark' : 'light';
   },
 
-  toggleContrast() {
-    if (localStorage.contrast === 'true') {
-      document.body.classList.remove('contrast');
-      localStorage.contrast = 'false';
-    } else {
-      document.body.classList.add('contrast');
-      localStorage.contrast = 'true';
-    }
-  },
-
-  setDark(btnIconColorScheme) {
-    document.body.classList.add('dark');
-    this.btnIconColorScheme.classList.remove('icon-moon');
-    this.btnIconColorScheme.classList.add('icon-sun');
-    this.btnIconColorScheme.firstElementChild.setAttribute('href', '#icon-sun');
-    localStorage.theme = 'dark';
-  },
-
-  setLight(btnIconColorScheme) {
-    document.body.classList.remove('dark');
-    this.btnIconColorScheme.classList.remove('icon-moon');
-    this.btnIconColorScheme.classList.add('icon-moon');
-    this.btnIconColorScheme.firstElementChild.setAttribute('href', '#icon-moon');
-    localStorage.theme = 'light';
+  toggleContrast(contrast = '') {
+    const force = contrast === '' ? undefined : contrast === 'more';
+    const hasContrast = document.body.classList.toggle('contrast', force);
+    localStorage.contrast = hasContrast ? 'true' : 'false';
   }
 };

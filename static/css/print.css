@@ -50,7 +50,7 @@ h2 {
 }
 
 main {
-  #about {
+  #sobre {
     display: none;
   }
 
@@ -95,7 +95,7 @@ section {
   }
 }
 
-#certifications {
+#certificacoes {
   break-after: always;
   border: none;
 }

@@ -2,31 +2,31 @@ title = 'Nav'
 
 [[nav]]
 name = 'Sobre'
-link = '#about'
+link = '#sobre'
 icon = 'user'
 
 [[nav]]
 name = 'Experiências'
-link = '#experiences'
+link = '#experiencias'
 icon = 'code'
 
 [[nav]]
 name = 'Formação'
-link = '#education'
+link = '#formacao'
 icon = 'graduation-cap'
 
 [[nav]]
 name = 'Certificações'
-link = '#certifications'
+link = '#certificacoes'
 icon = 'award'
 
 [[nav]]
 name = 'Serviços'
-link = '#services'
+link = '#servicos'
 icon = 'tools'
 
 [[nav]]
 name = 'Habilidades'
-link = '#skills'
+link = '#habilidades'
 icon = 'keyboard'
 
