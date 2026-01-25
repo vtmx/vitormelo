@@ -1,6 +1,6 @@
 {% set data = load_data(path='data/about.toml') %}
 
-<section id='about' class='active'>
+<section id='about'>
   <h2 class='title'>{{ data.title | safe }}</h2>
   <img class='avatar' src='/img/{{ data.image }}' width='688' height='255' alt='Foto do profissional Vitor Melo tentando ficar sério.'>
   <p class='description'>{{ data.bio | safe }}</p>

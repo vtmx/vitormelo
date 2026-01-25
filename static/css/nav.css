@@ -35,13 +35,13 @@ h1 {
 
   /* falhando com target current js resolveu */
   /* &:active, &:target-current, &.active { */
-  &:active, &.active {
+  &:active, &[aria-current='true'] {
     background: var(--menu-bg-active);
     color: var(--menu-fg-active);
     transform: translate(0, 1px);
   }
 
-  &:hover, &:active, &.active {
+  &:hover, &:active, &[aria-current='true'] {
     transform: translate(var(--size-1), 0);
   }
 
@@ -132,7 +132,7 @@ h1 {
       color: var(--menu-fg-hover);
     }
 
-    &:active, &.active {
+    &:active, &[aria-current='true'] {
       background: var(--menu-bg-active);
       border-color: var(--menu-bg-active);
       color: var(--menu-fg-active);
@@ -219,7 +219,7 @@ h1 {
       font-size: 18px;
     }
 
-    &.active {
+    &[aria-current='true'] {
       border-color: currentcolor;
     }
 

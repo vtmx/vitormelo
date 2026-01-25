@@ -1,109 +1,92 @@
 export default {
   init() {
-    // Add active class on first elements
-    this.menuItemFirst = document.querySelector('#menu a');
-    this.menuItemFirst.classList.add('active');
+    // Nav links
+    this.navLinks = document.querySelectorAll('#menu a[href^="#"]');
+    this.navLinkFirst = document.querySelector('#menu a[href^="#"]');
+    this.navLinkFirst.setAttribute('aria-current', 'true');
 
-    // Get first and last section
-    this.sectionFirst = document.querySelector('main section:first-of-type');
-    this.sectionFirst.classList.add('active');
-    this.sectionLast = document.querySelector('main section:last-of-type');
+    // Sections
+    this.sections = document.querySelectorAll('main section[id]');
+    this.sectionFirst = this.sections[0];
+    this.sectionLast = this.sections[this.sections.length - 1];
+    this.sectionFirst.setAttribute('aria-current', 'true');
 
-    // Keys
-    this.keyLeft = ['KeyK', 'ArrowLeft'];
-    this.keyRight = ['KeyJ', 'Space', 'ArrowRight'];
+    // Event keys
+    const keys = {
+      next: ['KeyJ', 'Space', 'ArrowRight'],
+      prev: ['KeyK', 'ArrowLeft']
+    };
 
-    // Add events
     window.addEventListener('keydown', (e) => {
-      if (this.keyRight.indexOf(e.code) !== -1) {
-        this.changeSection('next');
-      } else if (this.keyLeft.indexOf(e.code) !== -1) {
-        this.changeSection('prev');
-      }
+      if (keys.next.includes(e.code)) this.changeSection('next');
+      if (keys.prev.includes(e.code)) this.changeSection('prev');
     });
 
-    // Get elements section
-    this.buttonSectionNext = document.querySelector('#section-control .next');
-    this.buttonSectionPrev = document.querySelector('#section-control .prev');
-    this.buttonSectionTop = document.querySelector('#section-control .top');
-
-    this.buttonSectionNext.addEventListener('click', () => {
-      this.changeSection('next');
+    // Events click
+    document.querySelectorAll('#section-control button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const type = btn.classList.contains('next') ? 'next' :
+                     btn.classList.contains('prev') ? 'prev' : 'top';
+        this.changeSection(type);
+      });
     });
 
-    this.buttonSectionPrev.addEventListener('click', () => {
-      this.changeSection('prev');
-    });
-
-    this.buttonSectionTop.addEventListener('click', () => {
-      this.changeSection('top');
-    });
-
-    // Get elements menu
-    this.menuItems = document.querySelectorAll('#menu a');
-
-    // Add events
-    this.menuItems.forEach((item) => {
+    // Ripple effects
+    this.navLinks.forEach((item) => {
       item.addEventListener('click', (event) => {
         this.changeSection(item.getAttribute('href').slice(1));
         this.activateRippleEffect(event, 'span', 'ripple');
       });
     });
+
+    this.scrollSpy();
   },
 
-  changeSection(section) {
-    let sectionActive = document.querySelector('section.active');
+  updateUI(id) {
+    const section = document.getElementById(id);
+    if (!section) return;
 
-    switch(section) {
-      case 'next':
-        if (this.sectionLast.classList.contains('active')) {
-          sectionActive = this.sectionFirst;
-        } else {
-          sectionActive = sectionActive.nextElementSibling;
-        }
-        break;
+    // Atualiza ARIA
+    document.querySelectorAll('[aria-current="true"]').forEach(el => el.removeAttribute('aria-current'));
+    section.setAttribute('aria-current', 'true');
 
-      case 'prev':
-        if (this.sectionFirst.classList.contains('active')) {
-          sectionActive = this.sectionLast;
-        } else {
-          sectionActive = sectionActive.previousElementSibling;
-        }
-        break;
+    const navLink = document.querySelector(`#menu a[href="#${id}"]`);
+    if (navLink) navLink.setAttribute('aria-current', 'true');
 
-      case 'top':
-        sectionActive = this.sectionFirst;
-        break;
+    // Atualiza Título e URL
+    const title = section.querySelector('.title')?.textContent || '';
+    document.title = `Vitor Melo - ${title}`;
+    history.replaceState(null, '', `#${id}`);
+  },
 
-      default:
-        sectionActive = document.querySelector(`main #${section}`);
-        break;
+  changeSection(target) {
+    let current = document.querySelector('section[aria-current="true"]') || this.sectionFirst;
+    let destination;
+
+    if (target === 'next') {
+      destination = (current === this.sectionLast) ? this.sectionFirst : current.nextElementSibling;
+    } else if (target === 'prev') {
+      destination = (current === this.sectionFirst) ? this.sectionLast : current.previousElementSibling;
+    } else if (target === 'top') {
+      destination = this.sectionFirst;
+    } else {
+      destination = document.getElementById(target);
     }
 
-    // Get active menu and section
-    const sectionActiveId = sectionActive.getAttribute('id');
-    const menuItemActive = document.querySelector(`#menu a[href*="${sectionActiveId}"]`);
+    if (destination) {
+      destination.scrollIntoView({ behavior: 'smooth' });
+      this.updateUI(destination.id);
+    }
+  },
 
-    // Remove active class
-    const menuItemActiveOld = document.querySelector('#menu a.active');
-    menuItemActiveOld.classList.remove('active');
-    menuItemActiveOld.removeAttribute('aria-current');
+  scrollSpy() {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) this.updateUI(entry.target.id);
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
 
-    const sectionActiveOld = document.querySelector('section.active');
-    sectionActiveOld.classList.remove('active');
-    sectionActiveOld.removeAttribute('aria-current');
-
-    // Add active class
-    menuItemActive.classList.add('active');
-    menuItemActive.setAttribute('aria-current', 'true');
-    sectionActive.classList.add('active');
-    sectionActive.setAttribute('aria-current', 'true');
-
-    // Go to section
-    sectionActive.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Change window location
-    history.replaceState(null, '', `#${sectionActiveId}`);
+    this.sections.forEach(s => observer.observe(s));
   },
 
   activateRippleEffect(e, el, className) {
