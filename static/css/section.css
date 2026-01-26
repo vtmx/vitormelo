@@ -11,13 +11,13 @@ main {
 
   .title {
     padding-block: var(--size-4);
-    font: 600 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
     text-transform: uppercase;
     color: var(--title-fg);
   }
 
   .name {
-    font-family: Inter, system-ui, sans-serif;
     color: var(--title-fg);
   }
 

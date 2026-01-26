@@ -1,7 +1,7 @@
 @font-face {
   src: local('Inter-Medium.woff2'),
   url(../fonts/Poppins-SemiBold.woff2) format('woff2');
-  font-family: 'Poppins-SemiBold';
+  font-family: 'Poppins SemiBold';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -57,18 +57,17 @@ body {
   color: var(--selection-fg);
 }
 
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 :focus-visible {
   outline: var(--outline-width-focus) solid var(--outline-color-focus);
 }
 
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Poppins, system-ui, sans-serif;
-  color: var(--title-fg);
+  font-family: 'Poppins SemiBold', system-ui, sans-serif;
+  font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6, p {

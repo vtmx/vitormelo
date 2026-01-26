@@ -2,9 +2,9 @@ h1 {
   display: flex;
   align-items: center;
   padding: var(--size-3);
-  font: 2rem/1 'Poppins-SemiBold', system-ui, sans-serif;
+  font-size: 2rem;
+  line-height: 1;
   text-transform: uppercase;
-  color: var(--logo-fg);
 }
 
 #menu {

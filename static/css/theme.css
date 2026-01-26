@@ -102,7 +102,6 @@
 
   /* main */
   --section-border-color: var(--neutral-90);
-  --title-fg: var(--neutral-50);
 
   .dark {
     color-scheme: dark;
@@ -144,7 +143,6 @@
 
     /* main */
     --section-border-color: var(--neutral-30);
-    --title-fg: var(--neutral-90);
   }
 
   .contrast {
@@ -191,7 +189,6 @@
 
     /* main */
     --section-border-color: black;
-    --title-fg: black;
   }
 
   .dark.contrast {
@@ -233,6 +230,5 @@
 
     /* main */
     --section-border-color: white;
-    --title-fg: white;
   }
 }

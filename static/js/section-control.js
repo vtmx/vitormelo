@@ -39,21 +39,22 @@ export default {
       });
     });
 
+    this.isScrolling = false;
     this.scrollSpy();
   },
 
   updateUI(id) {
+    if (this.isScrolling) return;
+
     const section = document.getElementById(id);
     if (!section) return;
 
-    // Atualiza ARIA
     document.querySelectorAll('[aria-current="true"]').forEach(el => el.removeAttribute('aria-current'));
     section.setAttribute('aria-current', 'true');
 
     const navLink = document.querySelector(`#menu a[href="#${id}"]`);
     if (navLink) navLink.setAttribute('aria-current', 'true');
 
-    // Atualiza Título e URL
     const title = section.querySelector('.title')?.textContent || '';
     document.title = `Vitor Melo - ${title}`;
     history.replaceState(null, '', `#${id}`);
@@ -74,13 +75,23 @@ export default {
     }
 
     if (destination) {
-      destination.scrollIntoView({ behavior: 'smooth' });
+      this.isScrolling = false;
       this.updateUI(destination.id);
+      this.isScrolling = true;
+
+      destination.scrollIntoView({ behavior: 'smooth' });
+
+      // Libera o ScrollSpy após o término da animação
+      setTimeout(() => {
+        this.isScrolling = false;
+      }, 1000);
     }
   },
 
   scrollSpy() {
     const observer = new IntersectionObserver(entries => {
+      if (this.isScrolling) return;
+
       entries.forEach(entry => {
         if (entry.isIntersecting) this.updateUI(entry.target.id);
       });
