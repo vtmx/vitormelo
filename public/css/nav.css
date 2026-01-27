@@ -74,10 +74,12 @@ h1 {
   }
 }
 
-#social {
-  display: flex;
-  gap: var(--size-2);
-  line-height: 0;
+address {
+  ul {
+    display: flex;
+    gap: var(--size-2);
+    line-height: 0;
+  }
 
   span {
     display: none;
@@ -171,7 +173,7 @@ h1 {
 @media(width <= 720px) {
   header {
     h1,
-    #social,
+    address,
     #menu li:has(a[href='#formacao']),
     #menu li:has(a[href='#servicos']) {
       display: none;

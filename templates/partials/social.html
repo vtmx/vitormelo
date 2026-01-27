@@ -1,14 +1,16 @@
 {% set data = load_data(path='data/social.toml') %}
 
-<ul id="social">
-  {% for key in data.social %}
-    <li>
-      <a class='btn-icon' href='{{ key.link | safe }}' aria-label='{{ key.name | safe }}' target='_blank' rel='noopener noreferrer'>
-        <svg class='icon icon-{{ key.icon | safe }}' aria-hidden='true' focusable='false' style='max-width: 24px; max-height: 24px; fill: currentcolor'>
-          <use href='#icon-{{ key.icon | safe }}'></use>
-        </svg>
-        <span class='name'>{{ key.name | safe }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<address>
+  <ul>
+    {% for key in data.social %}
+      <li>
+        <a class='btn-icon' href='{{ key.link | safe }}' aria-label='{{ key.name | safe }}' target='_blank' rel='noopener noreferrer'>
+          <svg class='icon icon-{{ key.icon | safe }}' aria-hidden='true' focusable='false' style='max-width: 24px; max-height: 24px; fill: currentcolor'>
+            <use href='#icon-{{ key.icon | safe }}'></use>
+          </svg>
+          <span class='name'>{{ key.name | safe }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</address>

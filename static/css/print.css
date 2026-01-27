@@ -33,7 +33,7 @@ input, button {
 }
 
 header {
-  nav, #social {
+  nav, address {
     display: none;
   }
 }
