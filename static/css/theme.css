@@ -79,8 +79,8 @@
   --selection-fg: var(--neutral-50);
 
   /* focus */
-  --outline-width-focus: 3px;
   --outline-color-focus: var(--primary-70);
+  --outline-width-focus: 3px;
 
   /* nav */
   --nav-bg: white;
