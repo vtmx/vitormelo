@@ -169,10 +169,7 @@ h1 {
 }
 
 @media(width <= 720px) {
-  #nav-main {
-    padding: 0;
-    border-top: 1px solid var(--nav-border-color);
-
+  header {
     h1,
     #social,
     #menu li:has(a[href='#formacao']),
@@ -183,7 +180,6 @@ h1 {
     nav {
       flex: 1;
     }
-
   }
 
   main {

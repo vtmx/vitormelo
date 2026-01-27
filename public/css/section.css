@@ -1,8 +1,4 @@
 main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-4);
-
   section > div {
     display: flex;
     flex-direction: column;
@@ -69,7 +65,17 @@ main {
 
 @media(width <= 720px) {
   main {
-    gap: var(--size-3);
+    section {
+      position: relative;
+      width: auto;
+      height: auto;
+      margin-bottom: 0;
+      border-top: 1px solid var(--section-border-color);
+    }
+
+    section > div {
+      gap: 0;
+    }
 
     .title {
       padding-block: var(--size-4) 0;
@@ -78,14 +84,6 @@ main {
 
     section:first-child .title {
       padding-block: var(--size-3);
-    }
-
-    section {
-      border-top: 1px solid var(--section-border-color);
-
-      > div {
-        gap: 0;
-      }
     }
 
     article {
