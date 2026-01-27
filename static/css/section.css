@@ -66,11 +66,16 @@ main {
 @media(width <= 720px) {
   main {
     section {
+      display: none;
       position: relative;
       width: auto;
       height: auto;
       margin-bottom: 0;
       border-top: 1px solid var(--section-border-color);
+    }
+
+    section[aria-current='true'] {
+      display: block;
     }
 
     section > div {
@@ -83,7 +88,7 @@ main {
     }
 
     section:first-child .title {
-      padding-block: var(--size-3);
+      padding-block: var(--size-4);
     }
 
     article {
