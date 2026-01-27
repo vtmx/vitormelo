@@ -63,7 +63,7 @@ main {
     grid-template-columns: 1fr auto;
     place-content: space-between;
     gap: var(--size-3);
-    height: 100svh;
+    height: 100dvh;
   }
 
   header {
