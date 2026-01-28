@@ -52,7 +52,7 @@ body {
   background: var(--scroll-thumb-bg-active);
 }
 
-::selection {
+mark, ::selection, ::search-text:current {
   background: var(--selection-bg);
   color: var(--selection-fg);
 }

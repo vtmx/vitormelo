@@ -11,7 +11,8 @@ export default {
       this.toggleColorSheme('light');
     }
 
-    if (localStorage.contrast === 'true' || window.matchMedia('(prefers-contrast: more)').matches) {
+    if (localStorage.contrast === 'true' ||
+      window.matchMedia('(prefers-contrast: more)').matches) {
       this.toggleContrast('more');
     }
 
@@ -28,15 +29,19 @@ export default {
   },
 
   toggleColorSheme(colorScheme = '') {
-    const isDark = colorScheme === '' ? document.body.classList.contains('light') : colorScheme === 'dark';
-    document.body.classList.toggle('dark', isDark);
-    document.body.classList.toggle('light', !isDark);
-    const iconName = isDark ? 'icon-sun' : 'icon-moon';
+    // Update body class
+    const body = document.body;
+    const isDark = colorScheme === '' ? body.classList.contains('light') : colorScheme === 'dark';
+    body.classList.toggle('dark', isDark);
+    body.classList.toggle('light', !isDark);
 
+    // Update icons
+    const iconName = isDark ? 'icon-sun' : 'icon-moon';
     this.btnColorSchemeIcon.classList.remove('icon-sun', 'icon-moon');
     this.btnColorSchemeIcon.classList.add(iconName);
     this.btnColorSchemeIcon.firstElementChild.setAttribute('href', `#${iconName}`);
 
+    // Salva storage
     localStorage.theme = isDark ? 'dark' : 'light';
   },
 
