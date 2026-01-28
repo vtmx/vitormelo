@@ -1,8 +1,11 @@
 base_url = 'https://vitormelo.com.br'
+default_language = 'pt-br'
+title = 'Vitor Melo'
+description = 'Site pessoal do Vitor Melo – Suporte Técnico, Desenvolvimento Web e Design Digital.'
+author = 'Vitor Melo'
 compile_sass = false
 build_search_index = false
+minify_html = true
 
 [markdown]
 highlight_code = false
-
-[extra]

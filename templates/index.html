@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-  <title>Vitor Melo</title>
+  <title>{{ config.title | safe }}</title>
   <meta charset='utf-8'>
-  <meta name='theme-color' content='#13161a'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='description' content='Site pessoal do Vitor Melo – Suporte Técnico, Desenvolvimento Web e Design Digital'>
-  <meta name='author' content='Vitor Melo'>
-  <meta property='og:title' content='Vitor Melo – Profissional de TI'>
-  <meta property='og:description' content='Site pessoal do Vitor Melo – Suporte Técnico, Desenvolvimento Web e Design Digital'>
-  <meta property='og:image' content='/img/vitormelo.jpg'>
+  <meta name='theme-color' content='#13161a'>
+  <meta name='description' content='{{ config.description | safe }}'>
+  <meta name='author' content='{{ config.author | safe }}'>
+  <meta name='thumbnail' content='/img/vitormelo.avif'>
+
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:url' content='{{ config.base_url | safe }}'>
+  <meta name='twitter:title' content='{{ config.title | safe }}'>
+  <meta name='twitter:description' content='{{ config.description | safe }}'>
+  <meta name='twitter:image' content='/img/vitormelo.avif'>
+  <meta name='twitter:site' content='{{ config.title | safe }}'>
+  <meta name="twitter:creator" content="@vtmx22">
+
+  <meta property='og:type' content='website'>
+  <meta property='og:url' content='{{ config.base_url | safe }}'>
+  <meta property='og:title' content='{{ config.title | safe }}'>
+  <meta property='og:description' content='{{ config.description | safe }}'>
+  <meta property='og:image' content='/img/vitormelo.avif'>
+  <meta property='og:image:type' content='image/avif'>
+  <meta property='og:image:width' content='850'>
+  <meta property='og:image:height' content='315'>
+  <meta property='og:image:alt' content='Foto do profissional Vitor Melo tentando ficar sério.'>
+  <meta property='og:locale' content='pt_br'>
+  <meta property='og:site_name' content='{{ config.title | safe }}'>
+
   <link rel='icon' type='image/svg+xml' href='/icons/favicon.svg'>
   <link rel='icon' type='image/png' href='/icons/favicon.png'>
   <link rel='stylesheet' media='screen' fetchpriority='high' href='/css/style.css'>
   <link rel='stylesheet' media='print' href='/css/print.css'>
   <link rel='preload' as='image' type='image/avif' fetchpriority='high' href='/img/vitormelo.avif'>
+
+  <link rel='home' href='{{ config.base_url | safe }}'>
+  <link rel='canonical' href='{{ config.base_url | safe }}'>
+  <link rel='me' href='https://codepen.io/vtmx'>
+  <link rel='me' href='https://github.com/vtmx'>
+  <link rel='me' href='https://linkedin.com/in/vitormelo'>
+
+  <script type="application/ld+json">
+    {
+      "@context": "{{ config.base_url | safe }}",
+      "@type": "Person",
+      "name": "{{ config.author | safe }}",
+      "url": "{{ config.base_url | safe }}",
+      "image": "/img/vitormelo.avif",
+      "jobTitle": "Design Digital",
+      "description": "{{ config.description | safe }}",
+      "knowsAbout": ["HTML", "CSS", "JS", "Design"],
+      "sameAs": [
+        "https://codepen.io/vtmx",
+        "https://github.com/vtmx",
+        "https://linkedin.com/in/vitormelo"
+      ]
+    }
+  </script>
+
   <script defer type='module' src='/js/script.js'></script>
 </head>
 <body>
