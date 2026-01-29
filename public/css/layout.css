@@ -63,6 +63,10 @@ footer {
   position: sticky;
   bottom: 0;
   padding: var(--size-3);
+
+  @media (height < 520px) {
+    display: none;
+  }
 }
 
 @media (width <= 720px) {
