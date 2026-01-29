@@ -36,13 +36,9 @@
   }
 }
 
-.contrast {
+[date-contrast='more'] {
   a {
     transition: none;
-  }
-
-  .animation, section.active  {
-    animation: none;
   }
 }
 
@@ -54,10 +50,9 @@
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
   *, ::before, ::after {
+    transition: none;
     animation-delay: 0;
     animation-duration: 0;
     animation-iteration-count: 0;
-    transition-duration: 0;
-    transition-delay: 0;
   }
 }
