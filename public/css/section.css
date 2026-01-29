@@ -107,11 +107,11 @@ main {
   }
 }
 
-.dark main img {
-  filter: brightness(.8) contrast(1.2);
-}
+[data-theme='dark'] {
+   main img {
+    filter: brightness(.8) contrast(1.2);
+  }
 
-.dark {
   .skills {
     .skill {
       background: var(--neutral-25);
@@ -120,7 +120,7 @@ main {
   }
 }
 
-.contrast {
+[data-theme='contrast'] {
   .skills {
     .skill {
       background: white;
