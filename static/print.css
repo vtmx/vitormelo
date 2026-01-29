@@ -32,10 +32,8 @@ input, button {
   display: none;
 }
 
-header {
-  nav, address {
-    display: none;
-  }
+header nav, footer {
+  display: none;
 }
 
 h1 {
