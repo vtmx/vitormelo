@@ -120,7 +120,7 @@ main {
   }
 }
 
-[data-theme='contrast'] {
+[data-contrast='more'] {
   .skills {
     .skill {
       background: white;
@@ -131,7 +131,7 @@ main {
   }
 }
 
-.dark.contrast {
+[data-theme='dark'][data-contrast='more'] {
   .skills {
     .skill {
       background: black;
