@@ -1,0 +1,8 @@
+@layer theme, base, nav, section, animation;
+
+@import 'css/theme.css' layer(theme);
+@import 'css/base.css' layer(base);
+@import 'css/layout.css' layer(layout);
+@import 'css/nav.css' layer(nav);
+@import 'css/section.css' layer(section);
+@import 'css/animation.css' layer(animation);

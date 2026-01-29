@@ -232,3 +232,45 @@
     --section-border-color: white;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  color-scheme: dark;
+
+  /* body */
+  --body-bg: var(--neutral-20);
+  --body-fg: var(--neutral-90);
+
+  /* scroll */
+  --scroll-bg: var(--neutral-30);
+  --scroll-thumb-bg: var(--neutral-40);
+  --scroll-thumb-bg-hover: var(--neutral-50);
+  --scroll-thumb-bg-active: var(--neutral-40);
+
+  /* selection */
+  --selection-bg: var(--primary-70);
+  --selection-fg: var(--neutral-20);
+
+  /* focus */
+  --outline-color-focus: var(--primary-70);
+
+  /* nav */
+  --nav-bg: var(--neutral-20);
+  --nav-border-color: var(--neutral-30);
+  --menu-fg: var(--neutral-90);
+  --menu-bg-hover: var(--neutral-25);
+  --menu-fg-hover: var(--primary-70);
+  --menu-bg-active: var(--neutral-25);
+  --menu-fg-active: var(--primary-70);
+  --menu-ripple-bg: var(--neutral-70);
+
+  /* button */
+  --btn-bg: var(--neutral-25);
+  --btn-fg: var(--neutral-90);
+  --btn-bg-hover: var(--primary-55);
+  --btn-fg-hover: white;
+  --btn-bg-active: var(--primary-60);
+  --btn-fg-active: white;
+
+  /* main */
+  --section-border-color: var(--neutral-30);
+}

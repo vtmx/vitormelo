@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-  <title>{{ config.title | safe }}</title>
+  <title>{{ config.title }}</title>
+
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta name='theme-color' content='#13161a'>
   <meta name='description' content='{{ config.description | safe }}'>
-  <meta name='author' content='{{ config.author | safe }}'>
+  <meta name='author' content='{{ config.author }}'>
   <meta name='thumbnail' content='/img/vitormelo.avif'>
 
   <meta name='twitter:card' content='summary_large_image'>
   <meta name='twitter:url' content='{{ config.base_url | safe }}'>
-  <meta name='twitter:title' content='{{ config.title | safe }}'>
+  <meta name='twitter:title' content='{{ config.title }}'>
   <meta name='twitter:description' content='{{ config.description | safe }}'>
   <meta name='twitter:image' content='/img/vitormelo.avif'>
-  <meta name='twitter:site' content='{{ config.title | safe }}'>
-  <meta name="twitter:creator" content="@vtmx22">
+  <meta name='twitter:site' content='{{ config.title }}'>
+  <meta name='twitter:creator' content='@vtmx22'>
 
   <meta property='og:type' content='website'>
   <meta property='og:url' content='{{ config.base_url | safe }}'>
-  <meta property='og:title' content='{{ config.title | safe }}'>
+  <meta property='og:title' content='{{ config.title }}'>
   <meta property='og:description' content='{{ config.description | safe }}'>
   <meta property='og:image' content='/img/vitormelo.avif'>
   <meta property='og:image:type' content='image/avif'>
@@ -27,13 +28,13 @@
   <meta property='og:image:height' content='315'>
   <meta property='og:image:alt' content='Foto do profissional Vitor Melo tentando ficar sério.'>
   <meta property='og:locale' content='pt_br'>
-  <meta property='og:site_name' content='{{ config.title | safe }}'>
+  <meta property='og:site_name' content='{{ config.title }}'>
 
-  <link rel='icon' type='image/svg+xml' href='/icons/favicon.svg'>
-  <link rel='icon' type='image/png' href='/icons/favicon.png'>
-  <link rel='stylesheet' media='screen' fetchpriority='high' href='/css/style.css'>
-  <link rel='stylesheet' media='print' href='/css/print.css'>
-  <link rel='preload' as='image' type='image/avif' fetchpriority='high' href='/img/vitormelo.avif'>
+  <link rel='icon' type='image/png' sizes='96x96' href='/favicon-96x96.png'>
+  <link rel='icon' type='image/svg+xml' href='/favicon.svg'>
+  <link rel='shortcut icon' href='/favicon.ico' />
+  <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
+  <link rel='manifest' href='/site.webmanifest'>
 
   <link rel='home' href='{{ config.base_url | safe }}'>
   <link rel='canonical' href='{{ config.base_url | safe }}'>
@@ -41,11 +42,15 @@
   <link rel='me' href='https://github.com/vtmx'>
   <link rel='me' href='https://linkedin.com/in/vitormelo'>
 
-  <script type="application/ld+json">
+  <link rel='stylesheet' media='screen' fetchpriority='high' href='/style.css'>
+  <link rel='stylesheet' media='print' href='/print.css'>
+  <link rel='preload' as='image' type='image/avif' fetchpriority='high' href='/img/vitormelo.avif'>
+
+  <script type='application/ld+json'>
     {
       "@context": "{{ config.base_url | safe }}",
       "@type": "Person",
-      "name": "{{ config.author | safe }}",
+      "name": "{{ config.author }}",
       "url": "{{ config.base_url | safe }}",
       "image": "/img/vitormelo.avif",
       "jobTitle": "Design Digital",
@@ -59,7 +64,7 @@
     }
   </script>
 
-  <script defer type='module' src='/js/script.js'></script>
+  <script defer type='module' src='/script.js'></script>
 </head>
 <body>
   {% include 'partials/icons.html' %}
