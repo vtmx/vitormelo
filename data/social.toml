@@ -1,11 +1,6 @@
 title = 'Social'
 
 [[social]]
-name = 'E-mail'
-link = 'mailto:vitorme@proton.me'
-icon = 'envelope'
-
-[[social]]
 name = 'Linkedin'
 link = 'https://linkedin.com/in/vitormelo'
 icon = 'linkedin'
@@ -19,3 +14,9 @@ icon = 'github'
 name = 'Codepen'
 link = 'https://codepen.io/vtmx'
 icon = 'codepen'
+
+[[social]]
+name = 'Letterboxd'
+link = 'https://letterboxd.com/vtmx/films'
+icon = 'letterboxd'
+

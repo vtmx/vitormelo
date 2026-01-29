@@ -103,6 +103,9 @@
   /* main */
   --section-border-color: var(--neutral-90);
 
+  /* skill */
+  --skill-bg: var(--neutral-95);
+  --skill-fg: var(--neutral-40);
 }
 
 :root[data-contrast='more'] {
@@ -149,6 +152,10 @@
 
   /* main */
   --section-border-color: black;
+
+  /* skill */
+  --skill-bg: white;
+  --skill-fg: black;
 }
 
 :root[data-theme='dark'] {
@@ -191,6 +198,10 @@
 
   /* main */
   --section-border-color: var(--neutral-30);
+
+  /* skill */
+  --skill-bg: var(--neutral-25);
+  --skill-fg: var(--neutral-90);
 }
 
 :root[data-theme='dark'][data-contrast='more'] {
@@ -232,4 +243,8 @@
 
   /* main */
   --section-border-color: white;
+
+  /* skill */
+  --skill-bg: black;
+  --skill-fg: white;
 }

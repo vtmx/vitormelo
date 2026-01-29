@@ -3,7 +3,7 @@ body {
   grid-template-areas:
     'menu main controls'
     'menu main controls'
-    'menu main controls';
+    'footer main controls';
   grid-template-columns: auto 1fr auto;
   max-width: 1200px;
   margin-inline: auto;
@@ -15,8 +15,7 @@ header {
   top: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  width: auto;
-  height: 100vh;
+  align-self: start;
   padding: var(--size-3);
 }
 
@@ -30,7 +29,7 @@ main {
   padding: 0 var(--size-3) var(--size-3);
 }
 
-#nav-controls {
+aside {
   grid-area: controls;
   position: sticky;
   top: 0;
@@ -55,6 +54,15 @@ main {
     gap: 8px;
     line-height: 0;
   }
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-self: end;
+  position: sticky;
+  bottom: 0;
+  padding: var(--size-3);
 }
 
 @media (width <= 720px) {
@@ -86,7 +94,7 @@ main {
     padding: 0 var(--size-3);
   }
 
-  #nav-controls {
+  aside, footer {
     display: none;
   }
 }

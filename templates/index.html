@@ -87,10 +87,9 @@
 </head>
 <body>
   {% include 'partials/icons.html' %}
-  <header id='nav-main'>
+  <header>
     {% include 'partials/logo.html' %}
     {% include 'partials/nav.html' %}
-    {% include 'partials/social.html' %}
   </header>
   <main>
     {% include 'partials/about.html' %}
@@ -100,9 +99,12 @@
     {% include 'partials/services.html' %}
     {% include 'partials/skills.html' %}
   </main>
-  <aside id='nav-controls'>
+  <aside>
     {% include 'partials/section-control.html' %}
     {% include 'partials/color-control.html' %}
   </aside>
+  <footer>
+    {% include 'partials/social.html' %}
+  </footer>
 </body>
 </html>

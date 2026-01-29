@@ -56,8 +56,8 @@ main {
   .skill {
     flex: auto 0 0;
     padding: 4px 12px;
-    background: var(--neutral-95);
-    color: var(--neutral-40);
+    background: var(--skill-bg);
+    color: var(--skill-fg);
     border-radius: var(--border-radius);
   }
 }
@@ -107,36 +107,24 @@ main {
   }
 }
 
-[data-theme='dark'] {
-   main img {
-    filter: brightness(.8) contrast(1.2);
-  }
-
-  .skills {
-    .skill {
-      background: var(--neutral-25);
-      color: var(--neutral-90);
-    }
-  }
-}
-
 [data-contrast='more'] {
   .skills {
     .skill {
-      background: white;
-      color: black;
-      min-width: 140px;
       padding: 0;
+    }
+
+    .skill::after {
+      content: ',';
+    }
+
+    .skill:last-child:after {
+      content: '';
     }
   }
 }
 
-[data-theme='dark'][data-contrast='more'] {
-  .skills {
-    .skill {
-      background: black;
-      color: white;
-      border-color: currentcolor;
-    }
+[data-theme='dark'] {
+   main img {
+    filter: brightness(.8) contrast(1.2);
   }
 }
