@@ -29,24 +29,24 @@ zola build
 public="$(pwd)/public"
 
 # bundle and minify css
-esbuild "$public/css/style.css" \
+esbuild "$public/style.css" \
   --bundle \
   --minify \
   --allow-overwrite \
   --loader:.woff2=copy \
-  --outfile="$public/css/style.css"
+  --outfile="$public/style.css"
 
-esbuild "$public/css/print.css" \
+esbuild "$public/print.css" \
   --minify \
   --allow-overwrite \
-  --outfile="$public/css/print.css"
+  --outfile="$public/print.css"
 
 # bundle and minify js
-esbuild "$public/js/script.js" \
+esbuild "$public/script.js" \
   --bundle \
   --minify \
   --allow-overwrite \
-  --outfile="$public/js/script.js"
+  --outfile="$public/script.js"
 
 # minify html
 for file in "$public"/**/*.html; do
