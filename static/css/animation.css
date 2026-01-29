@@ -38,21 +38,21 @@
 
 [date-contrast='more'] {
   a {
+    animation: none;
     transition: none;
   }
 }
 
 @media(width <= 720px) {
   a {
+    animation: none;
     transition: none;
   }
 }
 
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
   *, ::before, ::after {
+    animation: none;
     transition: none;
-    animation-delay: 0;
-    animation-duration: 0;
-    animation-iteration-count: 0;
   }
 }
