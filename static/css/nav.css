@@ -170,6 +170,12 @@ address {
   }
 }
 
+[data-contrast='more'] {
+  #menu a .ripple {
+    display: none;
+  }
+}
+
 @media(width <= 720px) {
   header {
     h1,
@@ -238,16 +244,7 @@ address {
     }
 
     .ripple {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 8px;
-      height: 8px;
-      background: var(--menu-ripple-bg);
-      border-radius: 50%;
-      transform: scale(0);
-      animation: ripple 0.8s linear;
-      opacity: 0.4;
+      display: none;
     }
   }
 }
