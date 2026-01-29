@@ -103,137 +103,55 @@
   /* main */
   --section-border-color: var(--neutral-90);
 
-  .dark {
-    color-scheme: dark;
-
-    /* body */
-    --body-bg: var(--neutral-20);
-    --body-fg: var(--neutral-90);
-
-    /* scroll */
-    --scroll-bg: var(--neutral-30);
-    --scroll-thumb-bg: var(--neutral-40);
-    --scroll-thumb-bg-hover: var(--neutral-50);
-    --scroll-thumb-bg-active: var(--neutral-40);
-
-    /* selection */
-    --selection-bg: var(--primary-70);
-    --selection-fg: var(--neutral-20);
-
-    /* focus */
-    --outline-color-focus: var(--primary-70);
-
-    /* nav */
-    --nav-bg: var(--neutral-20);
-    --nav-border-color: var(--neutral-30);
-    --menu-fg: var(--neutral-90);
-    --menu-bg-hover: var(--neutral-25);
-    --menu-fg-hover: var(--primary-70);
-    --menu-bg-active: var(--neutral-25);
-    --menu-fg-active: var(--primary-70);
-    --menu-ripple-bg: var(--neutral-70);
-
-    /* button */
-    --btn-bg: var(--neutral-25);
-    --btn-fg: var(--neutral-90);
-    --btn-bg-hover: var(--primary-55);
-    --btn-fg-hover: white;
-    --btn-bg-active: var(--primary-60);
-    --btn-fg-active: white;
-
-    /* main */
-    --section-border-color: var(--neutral-30);
-  }
-
-  .contrast {
-    a {
-      transition: none;
-    }
-
-    /* body */
-    --body-bg: white;
-    --body-fg: black;
-
-    /* scroll */
-    --scroll-bg: var(--neutral-85);
-    --scroll-thumb-bg: black;
-    --scroll-thumb-bg-hover: blue;
-    --scroll-thumb-bg-active: purple;
-
-    /* selection */
-    --selection-bg: blue;
-    --selection-fg: white;
-
-    /* focus */
-    --outline-color-focus: blue;
-
-    /* nav */
-    --nav-bg: white;
-    --nav-border-color: black;
-
-    /* menu */
-    --menu-fg: black;
-    --menu-bg-hover: blue;
-    --menu-fg-hover: white;
-    --menu-bg-active: purple;
-    --menu-fg-active: white;
-    --menu-ripple-bg: transparent;
-
-    /* button */
-    --btn-bg: white;
-    --btn-fg: black;
-    --btn-bg-hover: blue;
-    --btn-fg-hover: white;
-    --btn-bg-active: purple;
-    --btn-fg-active: white;
-
-    /* main */
-    --section-border-color: black;
-  }
-
-  .dark.contrast {
-    /* body */
-    --body-bg: black;
-    --body-fg: white;
-
-    /* scroll */
-    --scroll-bg: var(--neutral-30);
-    --scroll-thumb-bg: white;
-    --scroll-thumb-bg-hover: aqua;
-    --scroll-thumb-bg-active: yellow;
-
-    /* selection */
-    --selection-bg: yellow;
-    --selection-fg: black;
-
-    /* focus */
-    --outline-color-focus: cyan;
-
-    /* nav */
-    --nav-bg: black;
-    --nav-border-color: white;
-
-    /* menu */
-    --menu-fg: white;
-    --menu-bg-hover: aqua;
-    --menu-fg-hover: black;
-    --menu-bg-active: yellow;
-    --menu-fg-active: black;
-
-    /* button */
-    --btn-bg: black;
-    --btn-fg: white;
-    --btn-bg-hover: aqua;
-    --btn-fg-hover: black;
-    --btn-bg-active: yellow;
-    --btn-fg-active: black;
-
-    /* main */
-    --section-border-color: white;
-  }
 }
 
-@media (prefers-color-scheme: dark) {
+:root[data-contrast='more'] {
+  a {
+    transition: none;
+  }
+
+  /* body */
+  --body-bg: white;
+  --body-fg: black;
+
+  /* scroll */
+  --scroll-bg: var(--neutral-85);
+  --scroll-thumb-bg: black;
+  --scroll-thumb-bg-hover: blue;
+  --scroll-thumb-bg-active: purple;
+
+  /* selection */
+  --selection-bg: blue;
+  --selection-fg: white;
+
+  /* focus */
+  --outline-color-focus: blue;
+
+  /* nav */
+  --nav-bg: white;
+  --nav-border-color: black;
+
+  /* menu */
+  --menu-fg: black;
+  --menu-bg-hover: blue;
+  --menu-fg-hover: white;
+  --menu-bg-active: purple;
+  --menu-fg-active: white;
+  --menu-ripple-bg: transparent;
+
+  /* button */
+  --btn-bg: white;
+  --btn-fg: black;
+  --btn-bg-hover: blue;
+  --btn-fg-hover: white;
+  --btn-bg-active: purple;
+  --btn-fg-active: white;
+
+  /* main */
+  --section-border-color: black;
+}
+
+:root[data-theme='dark'] {
   color-scheme: dark;
 
   /* body */
@@ -273,4 +191,45 @@
 
   /* main */
   --section-border-color: var(--neutral-30);
+}
+
+:root[data-theme='dark'][data-contrast='more'] {
+  /* body */
+  --body-bg: black;
+  --body-fg: white;
+
+  /* scroll */
+  --scroll-bg: var(--neutral-30);
+  --scroll-thumb-bg: white;
+  --scroll-thumb-bg-hover: aqua;
+  --scroll-thumb-bg-active: yellow;
+
+  /* selection */
+  --selection-bg: yellow;
+  --selection-fg: black;
+
+  /* focus */
+  --outline-color-focus: cyan;
+
+  /* nav */
+  --nav-bg: black;
+  --nav-border-color: white;
+
+  /* menu */
+  --menu-fg: white;
+  --menu-bg-hover: aqua;
+  --menu-fg-hover: black;
+  --menu-bg-active: yellow;
+  --menu-fg-active: black;
+
+  /* button */
+  --btn-bg: black;
+  --btn-fg: white;
+  --btn-bg-hover: aqua;
+  --btn-fg-hover: black;
+  --btn-bg-active: yellow;
+  --btn-fg-active: black;
+
+  /* main */
+  --section-border-color: white;
 }

@@ -11,7 +11,7 @@ export default {
       this.toggleColorSheme('light');
     }
 
-    if (localStorage.contrast === 'true' ||
+    if (localStorage.contrast === 'more' ||
       window.matchMedia('(prefers-contrast: more)').matches) {
       this.toggleContrast('more');
     }
@@ -30,10 +30,15 @@ export default {
 
   toggleColorSheme(colorScheme = '') {
     // Update body class
-    const body = document.body;
-    const isDark = colorScheme === '' ? body.classList.contains('light') : colorScheme === 'dark';
-    body.classList.toggle('dark', isDark);
-    body.classList.toggle('light', !isDark);
+    const html = document.documentElement;
+    const currentTheme = html.dataset.theme || 'light';
+
+    // Get value
+    const isDark = colorScheme === '' ? currentTheme === 'light' : colorScheme === 'dark';
+    const newTheme = isDark ? 'dark' : 'light';
+
+    // Update theme
+    html.dataset.theme = newTheme;
 
     // Update icons
     const iconName = isDark ? 'icon-sun' : 'icon-moon';
@@ -46,8 +51,16 @@ export default {
   },
 
   toggleContrast(contrast = '') {
-    const force = contrast === '' ? undefined : contrast === 'more';
-    const hasContrast = document.body.classList.toggle('contrast', force);
-    localStorage.contrast = hasContrast ? 'true' : 'false';
+    const html = document.documentElement;
+    const hasContrastMore = html.dataset.contrast === 'more';
+    const changeContrast = contrast === '' ? !hasContrastMore : contrast === 'more';
+
+    if (changeContrast) {
+      html.dataset.contrast = 'more';
+    } else {
+      html.removeAttribute('data-contrast');
+    }
+
+    localStorage.contrast = changeContrast ? 'more' : 'no-preference';
   }
 };

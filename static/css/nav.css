@@ -122,7 +122,7 @@ address {
   }
 }
 
-.contrast {
+[data-contrast='more'] {
   #menu a {
     border: 3px solid var(--menu-fg);
     transition: none;

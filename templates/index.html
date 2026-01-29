@@ -64,6 +64,25 @@
     }
   </script>
 
+  <script>
+    (function() {
+      const html = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (systemDark ? 'dark' : 'light');
+      html.dataset.theme = theme;
+
+      const savedContrast = localStorage.getItem('contrast');
+      const systemContrast = window.matchMedia('(prefers-contrast: more)').matches;
+      const contrast = savedContrast || (systemContrast ? 'more' : null);
+      if (contrast === 'more') {
+        html.dataset.contrast = 'more';
+      } else {
+        delete html.dataset.contrast;
+      }
+    })();
+  </script>
+
   <script defer type='module' src='/script.js'></script>
 </head>
 <body>
