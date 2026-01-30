@@ -10,11 +10,6 @@ main {
     font-size: 2rem;
     line-height: 1;
     text-transform: uppercase;
-    color: var(--title-fg);
-  }
-
-  .name {
-    color: var(--title-fg);
   }
 
   .name, .org, .time {
