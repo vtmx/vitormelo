@@ -26,12 +26,13 @@ main {
 #sobre {
   img {
     display: block;
+    padding-block-end: var(--size-3);
     border-radius: var(--border-radius);
     transition: all .2s;
   }
 
   p {
-    padding-block: var(--size-3);
+    padding-block: 0;
   }
 }
 
