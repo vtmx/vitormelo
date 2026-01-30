@@ -54,10 +54,6 @@ export default {
 
     const navLink = document.querySelector(`#menu a[href="#${id}"]`);
     if (navLink) navLink.setAttribute('aria-current', 'true');
-
-    const title = section.querySelector('.title')?.textContent || '';
-    document.title = `Vitor Melo - ${title}`;
-    history.replaceState(null, '', `#${id}`);
   },
 
   changeSection(target) {

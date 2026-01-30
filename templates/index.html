@@ -88,26 +88,26 @@
   <script defer type='module' src='/script.js'></script>
 </head>
 <body>
-  {% include 'partials/icons.html' %}
+  {% include 'includes/icons.html' %}
   <a id='skip-link' href='#sobre'>Pule para o conteúdo</a>
-  <header>
-    {% include 'partials/logo.html' %}
-    {% include 'partials/nav.html' %}
+  <header aria-label='Cabeçalho'>
+    {% include 'includes/logo.html' %}
+    {% include 'includes/nav.html' %}
   </header>
-  <main>
-    {% include 'partials/about.html' %}
-    {% include 'partials/experiences.html' %}
-    {% include 'partials/education.html' %}
-    {% include 'partials/certifications.html' %}
-    {% include 'partials/services.html' %}
-    {% include 'partials/skills.html' %}
+  <main aria-label='Conteúdo principal'>
+    {% include 'includes/about.html' %}
+    {% include 'includes/experiences.html' %}
+    {% include 'includes/education.html' %}
+    {% include 'includes/certifications.html' %}
+    {% include 'includes/services.html' %}
+    {% include 'includes/skills.html' %}
   </main>
-  <aside>
-    {% include 'partials/section-control.html' %}
-    {% include 'partials/color-control.html' %}
+  <aside aria-label='Controles da página'>
+    {% include 'includes/color-control.html' %}
+    {% include 'includes/section-control.html' %}
   </aside>
-  <footer>
-    {% include 'partials/social.html' %}
+  <footer aria-label='Redes sociais'>
+    {% include 'includes/social.html' %}
   </footer>
 </body>
 </html>
