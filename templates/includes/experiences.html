@@ -9,9 +9,9 @@
           <h3 class='name'>{{ key.name | safe }}</h3>
           <div class='org'>{{ key.org_name | safe }}</div>
           <div class='time'>
-            <time datetime='{{ key.date_start | safe }}' aria-label='Iniciei em'>{{ key.date_start | safe }}</time>
+            <time datetime='{{ key.date_start | safe }}'>{{ key.date_start | safe }}</time>
             <span aria-hidden='true'> - </span>
-            <time datetime='{{ key.date_end | safe }}' aria-label='Até'>{{ key.date_end | safe }}</time>
+            <time datetime='{{ key.date_end | safe }}'>{{ key.date_end | safe }}</time>
           </div>
         </article>
       </li>

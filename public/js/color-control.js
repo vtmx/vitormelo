@@ -46,6 +46,9 @@ export default {
     this.btnColorSchemeIcon.classList.add(iconName);
     this.btnColorSchemeIcon.firstElementChild.setAttribute('href', `#${iconName}`);
 
+    const btnColorSchemeLabel = isDark ? 'Alterar para tema claro' : 'Alterar para tema escuro';
+    this.btnColorScheme.setAttribute('aria-label', btnColorSchemeLabel);
+
     // Salva storage
     localStorage.theme = isDark ? 'dark' : 'light';
   },
@@ -57,8 +60,10 @@ export default {
 
     if (changeContrast) {
       html.dataset.contrast = 'more';
+      this.btnColorContrast.setAttribute('aria-label', 'Desativar alto contraste');
     } else {
       html.removeAttribute('data-contrast');
+      this.btnColorContrast.setAttribute('aria-label', 'Ativar alto contraste');
     }
 
     localStorage.contrast = changeContrast ? 'more' : 'no-preference';
