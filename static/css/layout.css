@@ -62,18 +62,6 @@ aside {
     display: flex;
     gap: 8px;
     line-height: 0;
-
-    .prev {
-      order: 1;
-    }
-
-    .next {
-      order: 2;
-    }
-
-    .top {
-      order: 3;
-    }
   }
 
   #color-control {
