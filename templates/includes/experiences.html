@@ -1,17 +1,20 @@
 {% set data = load_data(path='data/experiences.toml') %}
 
 <section id='experiencias'>
-  <h2 class='title'>{{ data.title | safe }}</h2>
-  <div class='experiences'>
+  <h2>{{ data.title | safe }}</h2>
+  <ul>
     {% for key in data.experiences %}
-      <article class='experience'>
-        <h3 class='name'>{{ key.name | safe }}</h3>
-        <div class='org'>{{ key.org_name | safe }}</div>
-        <div class='time'>
-          <time datetime='{{ key.date_start | safe }}'>{{ key.date_start | safe }}</time> -
-          <time datetime='{{ key.date_end | safe }}'>{{ key.date_end | safe }}</time>
-        </div>
-      </article>
+      <li>
+        <article>
+          <h3 class='name'>{{ key.name | safe }}</h3>
+          <div class='org'>{{ key.org_name | safe }}</div>
+          <div class='time'>
+            <time datetime='{{ key.date_start | safe }}' aria-label='Iniciei em'>{{ key.date_start | safe }}</time>
+            <span aria-hidden='true'> - </span>
+            <time datetime='{{ key.date_end | safe }}' aria-label='Até'>{{ key.date_end | safe }}</time>
+          </div>
+        </article>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </section>

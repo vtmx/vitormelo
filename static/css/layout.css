@@ -81,7 +81,7 @@ footer {
   bottom: 0;
   padding: var(--size-3);
 
-  @media (height < 520px) {
+  @media (height < 540px) {
     display: none;
   }
 }

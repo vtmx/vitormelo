@@ -1,17 +1,19 @@
 {% set data = load_data(path='data/skills.toml') %}
 
 <section id='habilidades'>
-  <h2 class='title'>{{ data.title | safe }}</h2>
-  <div class='skills'>
+  <h2>{{ data.title | safe }}</h2>
+  <ul>
     {% for skill in data.skills %}
-      <article>
-        <h3 class='name'>{{ skill.title | safe }}</h3>
-        <ul>
-          {% for item in skill.items %}
-            <li class='skill'>{{ item | safe }}</li>
-          {% endfor %}
-        </ul>
-      </article>
+      <li>
+        <article>
+          <h3 class='name'>{{ skill.title | safe }}</h3>
+          <ul class='skills'>
+            {% for item in skill.items %}
+              <li class='skill'>{{ item | safe }}</li>
+            {% endfor %}
+          </ul>
+        </article>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </section>

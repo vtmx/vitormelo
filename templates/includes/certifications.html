@@ -1,16 +1,18 @@
 {% set data = load_data(path='data/certifications.toml') %}
 
 <section id='certificacoes'>
-  <h2 class='title'>{{ data.title | safe }}</h2>
-  <div class='certifications'>
+  <h2>{{ data.title | safe }}</h2>
+  <ul>
     {% for key in data.certifications %}
-      <article class='certification'>
-        <h3 class='name'>{{ key.name | safe }}</h3>
-        <div class='org'>{{ key.org_name | safe }}</div>
-        <div class='time'>
-          <time datetime='{{ key.year | safe }}'>{{ key.year | safe }}</time>
-        </div>
-      </article>
+      <li>
+        <article>
+          <h3 class='name'>{{ key.name | safe }}</h3>
+          <div class='org'>{{ key.org_name | safe }}</div>
+          <div class='time'>
+            <time datetime='{{ key.year | safe }}' aria-label='Concluída no ano de'>{{ key.year | safe }}</time>
+          </div>
+        </article>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </section>

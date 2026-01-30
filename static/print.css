@@ -28,11 +28,11 @@ a {
   color: black;
 }
 
-input, button {
-  display: none;
+ul {
+  list-style: none;
 }
 
-header nav, footer {
+#skip-link, button, header nav, footer {
   display: none;
 }
 
@@ -67,28 +67,28 @@ section {
     border: none;
   }
 
-  > div {
+  > ul {
     display: grid;
     gap: var(--size-2);
     grid-template-columns: 1fr 1fr 1fr;
     margin-block: var(--size-2);
   }
 
-  ul {
+  .skills {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
   }
 
-  li {
+  .skill {
     margin-inline-end: .1cm;
   }
 
-  li::after {
+  .skill::after {
     content: ',';
   }
 
-  li:last-child:after {
+  .skill:last-child:after {
     content: '';
   }
 }

@@ -2,16 +2,19 @@
 
 <section id='formacao'>
   <h2 class='title'>{{ data.title | safe }}</h2>
-  <div class='educations'>
+  <ul>
     {% for key in data.education %}
-      <article class='education'>
-        <h3 class='name'>{{ key.name | safe }}</h3>
-        <div class='org'>{{ key.org_name | safe }} </div>
-        <div class='time'>
-          <time datetime='{{ key.year_start | safe }}'>{{ key.year_start | safe }}</time> -
-          <time datetime='{{ key.year_end | safe }}'>{{ key.year_end | safe }}</time>
-        </div>
-      </article>
+      <li>
+        <article>
+          <h3 class='name'>{{ key.name | safe }}</h3>
+          <div class='org'>{{ key.org_name | safe }}</div>
+          <div class='time'>
+            <time datetime='{{ key.year_start | safe }}' aria-label='Inicei no ano de'>{{ key.year_start | safe }}</time>
+            <span aria-hidden='true'> - </span>
+            <time datetime='{{ key.year_end | safe }}' aria-label='Finalizando no ano de'>{{ key.year_end | safe }}</time>
+          </div>
+        </article>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </section>

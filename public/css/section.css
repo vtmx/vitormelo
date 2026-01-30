@@ -1,11 +1,11 @@
 main {
-  section > div {
+  section > ul {
     display: flex;
     flex-direction: column;
     gap: var(--size-4);
   }
 
-  .title {
+  h2 {
     padding-block: var(--size-4);
     font-size: 2rem;
     line-height: 1;
@@ -29,13 +29,13 @@ main {
 /* about */
 
 #sobre {
-  .avatar {
+  img {
     display: block;
     border-radius: var(--border-radius);
     transition: all .2s;
   }
 
-  .description {
+  p {
     padding-block: var(--size-3);
   }
 }
@@ -43,11 +43,9 @@ main {
 /* skills  */
 
 .skills {
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--size-2);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-2);
 
   .name {
     margin-bottom: var(--size-2);
@@ -61,7 +59,6 @@ main {
     border-radius: var(--border-radius);
   }
 }
-
 
 @media(width <= 720px) {
   main {
@@ -78,20 +75,20 @@ main {
       display: block;
     }
 
-    section > div {
+    section > ul {
       gap: 0;
     }
 
-    .title {
+    h2 {
       padding-block: var(--size-4) 0;
       font-size: 1.5rem;
     }
 
-    section:first-child .title {
+    section:first-child h2 {
       padding-block: var(--size-4);
     }
 
-    article {
+    section > ul > li {
       padding-block: var(--size-4);
       border-bottom: 1px solid var(--section-border-color);
 
