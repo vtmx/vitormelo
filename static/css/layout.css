@@ -9,6 +9,23 @@ body {
   margin-inline: auto;
 }
 
+#skip-link {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+  z-index: 9999;
+  padding: 1rem;
+  background: var(--btn-bg);
+  color: var(--body-fg);
+  border-radius: var(--border-radius);
+  transition: none;
+}
+
+#skip-link:focus {
+  top: 1rem;
+  left: 1rem;
+}
+
 header {
   grid-area: menu;
   position: sticky;
