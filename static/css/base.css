@@ -95,7 +95,7 @@ img, svg {
 a {
   text-decoration: none;
   color: var(--primary-70);
-  transition: all 0.2s;
+  transition: all .2s;
 }
 
 .sr-only {
