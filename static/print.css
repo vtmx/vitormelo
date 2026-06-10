@@ -3,6 +3,8 @@
   margin: .25cm 1cm;
 }
 
+/* comment */
+
 :root {
   --font-size: 11pt;
   --size-1: .25cm;
@@ -74,6 +76,7 @@ section {
   .skills {
     display: flex;
     flex-wrap: wrap;
+    gap: 0;
     list-style: none;
   }
 

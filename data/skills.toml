@@ -4,7 +4,7 @@ title = 'Habilidades'
 title = 'Sistemas Operacionais'
 items = [
   'Windows',
-  'Linux'
+  'Linux',
 ]
 
 [[ skills  ]]
@@ -13,7 +13,7 @@ items = [
   'Office',
   'Photoshop',
   'VSCode',
-  'Nvim'
+  'Nvim',
 ]
 
 [[ skills  ]]
@@ -26,14 +26,14 @@ items = [
   'CSS',
   'JavaScript',
   'jQuery',
-  'JSON'
+  'JSON',
 ]
 
 [[ skills  ]]
 title = 'Sistemas'
 items = [
   'ServiceNow',
-  'Wordpress'
+  'Wordpress',
 ]
 
 [[ skills  ]]
@@ -42,5 +42,5 @@ items = [
   'Responsive Design',
   'UI',
   'UX',
-  'WAI-ARIA'
+  'WAI-ARIA',
 ]
