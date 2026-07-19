@@ -6,6 +6,3 @@ author = 'Vitor Melo'
 compile_sass = false
 build_search_index = false
 minify_html = true
-
-[markdown]
-highlight_code = false
