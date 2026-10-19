@@ -1,10 +1,16 @@
 title = 'Experiências'
 
 [[experiences]]
-name = 'Field Technical Spt Rep III'
+name = 'Técnico de Suporte em Campo II'
+org_name = 'Lenovo'
+date_start = '05/08/2026'
+date_end = 'atualmente'
+
+[[experiences]]
+name = 'Analis Serv Infra I'
 org_name = 'DXC'
 date_start = '01/01/2022'
-date_end = 'atualmente'
+date_end = '04/08/2026'
 
 [[experiences]]
 name = 'Field Technical Spt Rep II'

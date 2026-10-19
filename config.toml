@@ -1,8 +1,8 @@
 base_url = 'https://vitormelo.com.br'
-default_language = 'pt-br'
 title = 'Vitor Melo'
 description = 'Site pessoal de Vitor Melo.'
 author = 'Vitor Melo'
+default_language = 'pt-br'
 compile_sass = false
 build_search_index = false
 minify_html = true
